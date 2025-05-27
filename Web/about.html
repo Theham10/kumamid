@@ -17,22 +17,16 @@
     }
 </style>
 
-<!-- 헤더 이동 타이틀 -->
-<header class="header">
-    <div class="inner">
-        <h1 class="logo" style="font-size: 20px;"><a href="/">한국영상대학교 광고영상디자인과<br>제 24회 졸업전</a></h1>
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav class="nav">
-            <ul>
-                <li><a href="/About.html">About</a></li>
-                <li><a href="/Works.html">Works</a></li>
-                <li><a href="/Designer">Designer</a></li>
-                <li><a href="/ThanksTo.html">Thanks to</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+</script>
+
+<div id="header-md"></div>
 
 <!-- 이미지와 소개 -->
 <div class="slide-container">

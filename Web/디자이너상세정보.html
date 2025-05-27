@@ -7,9 +7,17 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="header-md"></div>
     <div id="designer-detail"></div>
 
 <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");

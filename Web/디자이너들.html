@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="header-md"></div>
     <div id="designer-list"></div>
 
 <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const year = sessionStorage.getItem("selectedYear") || "2023";
 

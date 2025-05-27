@@ -7,28 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="project-list"></div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const year = sessionStorage.getItem("selectedYear") || "2023";
-
-  fetch(`data/${year}.json`)
-    .then(res => res.json())
-    .then(data => {
-      const list = document.getElementById("project-list");
-      data.졸작.forEach(item => {
-        const el = document.createElement("div");
-        el.innerHTML = `
-          <h3>${item.title}</h3>
-          <img src="${item.image}" width="300">
-          <p>${item.description}</p>
-        `;
-        list.appendChild(el);
+    <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
       });
-    });
-});
+
+      //리스트관련 
+      document.addEventListener("DOMContentLoaded", () => {
+        const year = sessionStorage.getItem("selectedYear") || "2023";
+
+        fetch(`data/${year}.json`)
+            .then(res => res.json())
+            .then(data => {
+            const list = document.getElementById("project-list");
+            data.졸작.forEach(item => {
+                const el = document.createElement("div");
+                el.innerHTML = `
+                <h3>${item.title}</h3>
+                <img src="${item.image}" width="300">
+                <p>${item.description}</p>
+                `;
+                list.appendChild(el);
+            });
+            });
+        });
 </script>
+
+<div id="header-md"></div>
+
+<div id="project-list"></div>
+
 
 </body>
 </html>
