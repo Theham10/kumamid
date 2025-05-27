@@ -62,6 +62,11 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
+    .header {
+        padding-top: 4.5%;
+        min-height: 80px; /* ✅ 모바일에서 헤더 높이 유지 추가 */
+    }
+
     .inner {
         position: relative; /* 모달을 위한 기준점 */
     }

@@ -1,0 +1,12 @@
+/* 요소의 초기 상태 */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* 약간 아래에서 시작 */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* 활성화된 상태 (화면에 나타날 때) */
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}

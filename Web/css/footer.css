@@ -14,10 +14,10 @@
 }
 
 .sns-icon {
-    width: 40px; /* 원하는 이미지 너비 */
-    height: 40px; /* 원하는 이미지 높이 */
+    width: 30px; /* 원하는 이미지 너비 */
+    height: 30px; /* 원하는 이미지 높이 */
     object-fit: contain; /* 이미지 비율 유지하며 영역 안에 맞춤 */
-    margin-left: 10px; /* 아이콘 간 간격 (오른쪽 배치 고려) */
+    margin-left: 20px; /* 아이콘 간 간격 (오른쪽 배치 고려) */
 }
 
 /* 모바일 스타일 */
