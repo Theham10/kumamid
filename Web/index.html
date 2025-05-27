@@ -22,7 +22,6 @@
       position: relative;
     }
 
-    /* ✅ 배경 이미지용 오버레이 */
     .bg-overlay {
       position: absolute;
       top: 0;
@@ -42,6 +41,7 @@
       gap: 40px;
       position: relative;
       z-index: 1;
+      flex-wrap: wrap;
     }
 
     .year {
@@ -58,15 +58,14 @@
 </head>
 <body>
 
-  <!-- ✅ 배경 이미지가 바뀌는 영역 -->
   <div class="bg-overlay" id="bgOverlay"></div>
 
   <div class="year-container">
-    <div class="year" data-bg="img/item01.jpg">2025</div>
-    <div class="year" data-bg="img/bg2024.jpg">2024</div>
-    <div class="year" data-bg="img/item01.jpg">2023</div>
-    <div class="year" data-bg="img/bg2022.jpg">2022</div>
-    <div class="year" data-bg="img/bg2021.jpg">2021</div>
+    <div class="year" data-bg="img/item01.jpg" onclick="selectYear(2025)">2025</div>
+    <div class="year" data-bg="img/bg2024.jpg" onclick="selectYear(2024)">2024</div>
+    <div class="year" data-bg="img/item01.jpg" onclick="selectYear(2023)">2023</div>
+    <div class="year" data-bg="img/bg2022.jpg" onclick="selectYear(2022)">2022</div>
+    <div class="year" data-bg="img/bg2021.jpg" onclick="selectYear(2021)">2021</div>
   </div>
 
   <script>
@@ -77,13 +76,18 @@
       year.addEventListener('mouseenter', () => {
         const bg = year.getAttribute('data-bg');
         bgOverlay.style.backgroundImage = `url('${bg}')`;
-        bgOverlay.style.opacity = '0.5'; // 원하는 밝기로 조절 가능
+        bgOverlay.style.opacity = '0.5';
       });
 
       year.addEventListener('mouseleave', () => {
         bgOverlay.style.opacity = '0';
       });
     });
+
+    function selectYear(year) {
+        sessionStorage.setItem("selectedYear", year);
+        window.location.href = "intro.html";
+    }
   </script>
 
 </body>

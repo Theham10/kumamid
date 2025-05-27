@@ -1,0 +1,35 @@
+<!-- 디자이너 상세 정보 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="designer-detail"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  const year = sessionStorage.getItem("selectedYear") || "2023";
+
+  fetch(`data/${year}.json`)
+    .then(res => res.json())
+    .then(data => {
+      const designer = data.디자이너.find(d => d.id === id);
+      if (designer) {
+        const el = document.getElementById("designer-detail");
+        el.innerHTML = `
+          <h2>${designer.name}</h2>
+          <img src="${designer.photo}" width="300">
+          <p>${designer.bio}</p>
+        `;
+      }
+    });
+});
+</script>
+
+</body>
+</html>
