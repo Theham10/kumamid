@@ -54,6 +54,19 @@
     .year:hover {
       color: white;
     }
+
+    @media (max-width: 768px) {
+    .year-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .year {
+        font-size: 2rem; /* 모바일에서는 좀 더 작게 */
+    }
+}
+
   </style>
 </head>
 <body>
@@ -69,7 +82,7 @@
   </div>
 
   <!-- 이거 아래 배치할까 어따 배치할까.. -->
-  <div>한국영상대학교 영상디자인과 졸업작품 전시회</div>
+  <div class="bottom-text">한국영상대학교 영상디자인과 졸업작품 전시회<br>Exhibition of Graduation Projects from the Department of Film Design at Korea National University of Arts</div>
 
   <script>
     const years = document.querySelectorAll('.year');
@@ -91,9 +104,20 @@
         sessionStorage.setItem("selectedYear", year);
         window.location.href = "intro.html";
     }
-
-    
   </script>
-
+    <style>
+        .bottom-text {
+            position: absolute;
+            bottom: 5%; /* 화면 아래에서 5% 띄움 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10%; /* 화면 너비 기준 글자 크기 */
+            color: rgba(255, 255, 255, 0.6);
+            z-index: 2;
+            white-space: nowrap;
+            text-align: center; 
+            white-space: normal; 
+        }
+    </style>
 </body>
 </html>

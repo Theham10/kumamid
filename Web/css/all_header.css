@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* PC 폰트사이즈 */
     font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ body {
     .header {
         padding-top: 25px;
         height: 80px; /* ✅ 모바일에서 헤더 높이 유지 추가 */
-        
+       
     }
 
     .inner {
@@ -75,6 +75,7 @@ body {
     .logo {
         position: absolute;
         left: 20px;
+        font-size: 1.0rem; /* 모바일 폰트사이즈 */
     }
 
     .menu-icon {
