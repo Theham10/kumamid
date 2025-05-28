@@ -1,0 +1,103 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.project-header {
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+  letter-spacing: -1px;
+}
+.project-meta {
+  color: #aaa;
+  font-size: 1.1rem;
+  letter-spacing: 0.2px;
+}
+.project-visual-full {
+  position: relative;
+  width: 100vw;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.project-visual-blur {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background: url('https://lh3.googleusercontent.com/8DvlNOV-i2rMqMgSL8_nuHm4ENT7rSiL3Kdode8UKZkgb4flWv1K_U_lLOIqmmWzh5IUTTvvBwGGeqhHZyghIc65R0lgUUzID42qQEw-86zeEOpW6sg8jA') center/cover no-repeat;
+  filter: blur(32px) brightness(0.7);
+  z-index: 1;
+}
+.project-visual-img {
+  position: relative;
+  width: auto;
+  height: 100%;
+  max-height: 520px;
+  max-width: 100vw;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 2;
+}
+.project-desc-section {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #000;
+  padding: 48px 0 64px 0;
+}
+.project-desc-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+.project-desc-client {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.project-desc-text {
+  color: #aaa;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .project-visual-full {
+    height: 60vw;
+    min-height: 220px;
+    max-height: 70vw;
+  }
+  .project-visual-img {
+    max-height: 60vw;
+  }
+}
+@media (max-width: 600px) {
+  .project-header {
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .project-visual-full {
+    height: 48vw;
+    min-height: 120px;
+    max-height: 60vw;
+  }
+  .project-visual-img {
+    max-height: 48vw;
+  }
+  .project-desc-section {
+    padding: 32px 0 32px 0;
+  }
+}
