@@ -9,7 +9,38 @@
         projectDescription: "감정의 피어남을 모션 그래픽으로 표현한 작업입니다.",
         projectImg: "https://yourdomain.com/images/425321_project.jpg",
         email: "ghj_design@naver.com",
-        instagram: "https://instagram.com/ghj_design"
+        instagram: "https://instagram.com/ghj_design",
+        videos: [
+          {
+            title: "LocknRoll!",
+            type: "비디오",
+            imgBefore: "https://lh3.googleusercontent.com/lfMBmH0OEjKzLh2EZSrHDVVNfw7t-8sgUyPrPjakGzPMB5JtAf10odKWinpJZQc5FpQCJQSg78Xth-wawOQuJgq8cMfcIu6mAt0OjWRiZrfuc7CPkPWJbQ",
+            imgAfter: "https://lh3.googleusercontent.com/WhuxRCPmf_QvSirmC4ocIzxcI0hYnttlP_sAoywd7IBOj3nD3GHmjmkOUmxvXIW7EcITJLvhnWbBBan4kWM9zvyG8jGcfM9T2YGicqIF7GTS4ohM4Q9kwg",
+            projectLink: "/Projects/view/425556"
+          }
+        ],
+        posters: [
+          {
+            title: "LocknRoll!",
+            type: "포스터",
+            imgBefore: "https://lh3.googleusercontent.com/8DvlNOV-i2rMqMgSL8_nuHm4ENT7rSiL3Kdode8UKZkgb4flWv1K_U_lLOIqmmWzh5IUTTvvBwGGeqhHZyghIc65R0lgUUzID42qQEw-86zeEOpW6sg8jA",
+            imgAfter: "https://lh3.googleusercontent.com/8k_xDEmz9Jn1gnwXyh_gx2LG8H3UIdYqqfHObLlMkrMkrFiZFvthaBHZ1CM7u1zR3tXd8QncRtmt1B-QfJt0OlC9w79-0aGVfO4VdHOTNylr99dGNfDw2w=w650-h370-n",
+            projectLink: "/Projects/view/425557"
+          }
+        ],
+        teamProject: {
+          title: "Bass",
+          description: "팀프로젝트",
+          img: "https://lh3.googleusercontent.com/NjgBlO6hSIEAdaEd8CSNqIQSyVyIGuat9JSCsCK1wMRzNW2aQmIgBkg3zLT6ZnViFtNf5ls97zAYVtulxGH_bnMY6Dl8SR6TlEM7M207U2v4O4L_PC1L8w=w1920-h1080-n",
+          link: "https://kumamid.com/Projects/view/425095"
+        },
+        comments: [
+          {
+            author: "설",
+            date: "1년 전",
+            content: "영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!~!"
+          }
+        ]
       },
       {
         name: "김민주",
