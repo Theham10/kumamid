@@ -17,13 +17,11 @@
             <h2 class="designer-title">Designer</h2>
             <div class="designer-profile-row">
                 <div class="profile-img-container">
-                    <img src="https://lh3.googleusercontent.com/pQ8KP1yxUFyeYa48kXtk5nQIXtCStjcnlgKPHSN6Zxo5w26ksUOPLCRUBr9GpmycKXgPuXhcw2lex0bC7IM0CZx26XVp33-87IYF2MAd2lO7_OG8Y2fi=w800"
-                        alt="곽희진_프로필" class="profile-img">
+                    <img id="profileImg" src="" alt="" class="profile-img">
                 </div>
                 <div class="profile-text-box">
-                    <div class="profile-name">곽희진</div>
-                    <div class="profile-role">Creative Director</div>
-                    <div class="profile-email">heejink64@naver.com</div>
+                    <div id="designerName" class="profile-name"></div>
+                    <div id="designerInfo" class="profile-info"></div>
                 </div>
             </div>
             <hr class="divider">
@@ -108,7 +106,7 @@
                     style="width: 150px; border-radius: 10px;" alt="김사랑">
                 <div style="margin-top: 0.5rem;">김사랑</div>
             </a>
-            <a href="/Designer/view/425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
+            <a href="./view.html?id=425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
                 <img src="https://lh3.googleusercontent.com/jd2kbQm64AV99SMioTUUl4xyuSBdZ4Qin6czG4B-FiiS5LSi0B01OTJW0tt4gH371-8vobFhT9OgZPCqvyoC_zZUM6HHlg9qPRvcy-uVPnwzjv8dynC0FA=w600-h600-n"
                     style="width: 150px; border-radius: 10px;" alt="김은서">
                 <div style="margin-top: 0.5rem;">김은서</div>
@@ -145,7 +143,6 @@
         } else {
             document.querySelector(".detail-container").innerHTML = "<p>디자이너 정보를 찾을 수 없습니다.</p>";
         }
-        
 
         function getComments() {
             const saved = localStorage.getItem(`comments_${id}`);
@@ -164,7 +161,10 @@
             renderComments();
         }
 
-        // Call on load
+        function renderComments() {
+            // You can implement comment rendering here
+        }
+
         renderComments();
     </script>
 </body>
