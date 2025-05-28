@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디자이너 상세 보기</title>
+    <link rel="stylesheet" href="./view.css">
+</head>
+
+<body>
+    <div class="detail-container">
+        <div class="designer-header">
+            <div class="designer-school-info">
+                한국영상대학교 영상디자인과<br>제24회 2023 졸업전
+            </div>
+            <h2 class="designer-title">Designer</h2>
+            <div class="designer-profile-row">
+                <div class="profile-img-container">
+                    <img src="https://lh3.googleusercontent.com/pQ8KP1yxUFyeYa48kXtk5nQIXtCStjcnlgKPHSN6Zxo5w26ksUOPLCRUBr9GpmycKXgPuXhcw2lex0bC7IM0CZx26XVp33-87IYF2MAd2lO7_OG8Y2fi=w800"
+                        alt="곽희진_프로필" class="profile-img">
+                </div>
+                <div class="profile-text-box">
+                    <div class="profile-name">곽희진</div>
+                    <div class="profile-role">Creative Director</div>
+                    <div class="profile-email">heejink64@naver.com</div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="designer-quote">
+                BTS, 봉준호, 손흥민, 곽희진 레츠고!
+            </div>
+            <hr class="divider">
+        </div>
+    </div>
+
+    <div style="max-width: 960px; margin: 0 auto; padding: 0 1rem 4rem; text-align: left;">
+        <h2 style="color: #fff; font-size: 1.5rem; margin: 2rem 0 1rem;">Projects</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <a href="https://kumamid.com/Projects/view/425557" target="_blank"
+                style="flex: 1 1 300px; text-decoration: none; color: inherit;">
+                <div style="overflow: hidden; border-radius: 10px;">
+                    <img src="https://lh3.googleusercontent.com/8DvlNOV-i2rMqMgSL8_nuHm4ENT7rSiL3Kdode8UKZkgb4flWv1K_U_lLOIqmmWzh5IUTTvvBwGGeqhHZyghIc65R0lgUUzID42qQEw-86zeEOpW6sg8jA"
+                        alt="LocknRoll Poster" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="margin-top: 0.5rem; color: #ccc;">LocknRoll! (포스터)</div>
+            </a>
+            <a href="https://kumamid.com/Projects/view/425556" target="_blank"
+                style="flex: 1 1 300px; text-decoration: none; color: inherit;">
+                <div style="overflow: hidden; border-radius: 10px;">
+                    <img src="https://lh3.googleusercontent.com/lfMBmH0OEjKzLh2EZSrHDVVNfw7t-8sgUyPrPjakGzPMB5JtAf10odKWinpJZQc5FpQCJQSg78Xth-wawOQuJgq8cMfcIu6mAt0OjWRiZrfuc7CPkPWJbQ"
+                        alt="LocknRoll Video" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="margin-top: 0.5rem; color: #ccc;">LocknRoll! (비디오)</div>
+            </a>
+            <a href="https://kumamid.com/Projects/view/425095" target="_blank"
+                style="flex: 1 1 300px; text-decoration: none; color: inherit;">
+                <div style="overflow: hidden; border-radius: 10px;">
+                    <img src="https://lh3.googleusercontent.com/NjgBlO6hSIEAdaEd8CSNqIQSyVyIGuat9JSCsCK1wMRzNW2aQmIgBkg3zLT6ZnViFtNf5ls97zAYVtulxGH_bnMY6Dl8SR6TlEM7M207U2v4O4L_PC1L8w=w1920-h1080-n"
+                        alt="Bass" style="width: 100%; height: auto; display: block;">
+                </div>
+                <div style="margin-top: 0.5rem; color: #ccc;">Bass (팀 프로젝트)</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="comment-section">
+        <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
+        <div class="comment-box">
+            <div class="comment-avatar">👤</div>
+            <div class="comment-content">
+                <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
+                <div class="comment-options">
+                    <label><input type="checkbox" /> 비밀글</label>
+                    <button onclick="addComment()">등록</button>
+                </div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="comment-avatar">👤</div>
+            <div class="comment-body">
+                <div class="comment-header">
+                    <span class="comment-author">설</span>
+                    <span class="comment-time">1년 전</span>
+                </div>
+                <div class="comment-text">
+                    영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 960px; margin: 0 auto; padding: 4rem 1rem;">
+        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1.5rem;">다른 디자이너 보기</h3>
+        <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem;">
+            <a href="/Designer/view/425321" style="flex: 0 0 auto; text-align: center; color: #fff;">
+                <img src="https://lh3.googleusercontent.com/wJ640HEZP5IAl18qhPcbmO13LGwKByQ0Z4PO223esW8fAh-krFPIm0fhlmNfLy_qjs_V3jX0Gy0zFvKPuDP5QlVYRs2uwCkW0bKNJPyqhjR_G__nbsmz=w600-h600-n"
+                    style="width: 150px; border-radius: 10px;" alt="곽희진">
+                <div style="margin-top: 0.5rem;">곽희진</div>
+            </a>
+            <a href="/Designer/view/425320" style="flex: 0 0 auto; text-align: center; color: #fff;">
+                <img src="https://lh3.googleusercontent.com/NKDBAS9QpX9n9bEhP6hUhrdnJL_doFYtes5vzi3ZXpfVXJ0oERy8bFPLgEyhBh2soRFQ6f-xguFowpjJ8e_IJRWQT7flQw-Y70mU9sJxLjHNIO6E3277aQ=w600-h600-n"
+                    style="width: 150px; border-radius: 10px;" alt="김민주">
+                <div style="margin-top: 0.5rem;">김민주</div>
+            </a>
+            <a href="/Designer/view/425319" style="flex: 0 0 auto; text-align: center; color: #fff;">
+                <img src="https://lh3.googleusercontent.com/ZO-XHWjvHVXA8p7BzjcFhp0Vvl87HaVYZHUtbJ32RwT-9Ke9ARsFQjsU3Eqyt7bCsTCXpkn_S5eU1bdEztzH28KjpjrGpWIAScrJw0DDch3W2skYpVWoqA=w600-h600-n"
+                    style="width: 150px; border-radius: 10px;" alt="김사랑">
+                <div style="margin-top: 0.5rem;">김사랑</div>
+            </a>
+            <a href="/Designer/view/425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
+                <img src="https://lh3.googleusercontent.com/jd2kbQm64AV99SMioTUUl4xyuSBdZ4Qin6czG4B-FiiS5LSi0B01OTJW0tt4gH371-8vobFhT9OgZPCqvyoC_zZUM6HHlg9qPRvcy-uVPnwzjv8dynC0FA=w600-h600-n"
+                    style="width: 150px; border-radius: 10px;" alt="김은서">
+                <div style="margin-top: 0.5rem;">김은서</div>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+
+        const dummyData = {
+            "425321": {
+                img: "https://lh3.googleusercontent.com/pQ8KP1yxUFyeYa48kXtk5nQIXtCStjcnlgKPHSN6Zxo5w26ksUOPLCRUBr9GpmycKXgPuXhcw2lex0bC7IM0CZx26XVp33-87IYF2MAd2lO7_OG8Y2fi=w800",
+                name: "곽희진",
+                info: `Creative Director<br>
+이메일: heejink64@naver.com<br><br>
+<strong style="font-size:1.1em;">“BTS, 봉준호, 손흥민, 곽희진 레츠고!”</strong><br><br>
+<a href="https://kumamid.com/Projects/view/425557" target="_blank">▶ LocknRoll! (포스터)</a><br>
+<a href="https://kumamid.com/Projects/view/425556" target="_blank">▶ LocknRoll! (비디오)</a><br>
+<a href="https://kumamid.com/Projects/view/425095" target="_blank">▶ Bass (팀 프로젝트)</a>`
+            }
+        };
+
+        if (dummyData[id]) {
+            document.getElementById("profileImg").src = dummyData[id].img;
+            document.getElementById("profileImg").alt = `${dummyData[id].name}_프로필`;
+            document.getElementById("designerName").textContent = dummyData[id].name;
+            const infoHtml = dummyData[id].info
+                .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color:#66b2ff;">$1</a>')
+                .replace(/이메일:\s*([^\s]+)/g, '이메일: <a href="mailto:$1" style="color:#66b2ff;">$1</a>');
+            document.getElementById("designerInfo").innerHTML = infoHtml;
+        } else {
+            document.querySelector(".detail-container").innerHTML = "<p>디자이너 정보를 찾을 수 없습니다.</p>";
+        }
+        
+
+        function getComments() {
+            const saved = localStorage.getItem(`comments_${id}`);
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        function addComment() {
+            const input = document.getElementById('commentInput');
+            const comment = input.value.trim();
+            if (!comment) return;
+
+            const comments = getComments();
+            comments.push(comment);
+            localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
+            input.value = '';
+            renderComments();
+        }
+
+        // Call on load
+        renderComments();
+    </script>
+</body>
+
+</html>
