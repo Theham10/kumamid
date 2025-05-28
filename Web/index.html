@@ -1,11 +1,123 @@
-
 <!DOCTYPE html>
-<html lang="ko-KR" class="ut-no-js">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    
-        
-    </body>
-    
+  <meta charset="UTF-8">
+  <title>년도 선택</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: black;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 1s ease;
+      z-index: 0;
+    }
+
+    .year-container {
+      display: flex;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    .year {
+      font-size: 3rem;
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .year:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+    .year-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .year {
+        font-size: 2rem; /* 모바일에서는 좀 더 작게 */
+    }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="bg-overlay" id="bgOverlay"></div>
+
+  <div class="year-container">
+    <div class="year" data-bg="img/item01.jpg" onclick="selectYear(2025)">2025</div>
+    <div class="year" data-bg="img/bg2024.jpg" onclick="selectYear(2024)">2024</div>
+    <div class="year" data-bg="img/item01.jpg" onclick="selectYear(2023)">2023</div>
+    <div class="year" data-bg="img/bg2022.jpg" onclick="selectYear(2022)">2022</div>
+    <div class="year" data-bg="img/bg2021.jpg" onclick="selectYear(2021)">2021</div>
+  </div>
+
+  <!-- 이거 아래 배치할까 어따 배치할까.. -->
+  <div class="bottom-text">한국영상대학교 영상디자인과 졸업작품 전시회<br>Exhibition of Graduation Projects from the Department of Film Design at Korea National University of Arts</div>
+
+  <script>
+    const years = document.querySelectorAll('.year');
+    const bgOverlay = document.getElementById('bgOverlay');
+
+    years.forEach(year => {
+      year.addEventListener('mouseenter', () => {
+        const bg = year.getAttribute('data-bg');
+        bgOverlay.style.backgroundImage = `url('${bg}')`;
+        bgOverlay.style.opacity = '0.5';
+      });
+
+      year.addEventListener('mouseleave', () => {
+        bgOverlay.style.opacity = '0';
+      });
+    });
+
+    function selectYear(year) {
+        sessionStorage.setItem("selectedYear", year);
+        window.location.href = "intro.html";
+    }
+  </script>
+    <style>
+        .bottom-text {
+            position: absolute;
+            bottom: 5%; /* 화면 아래에서 5% 띄움 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10%; /* 화면 너비 기준 글자 크기 */
+            color: rgba(255, 255, 255, 0.6);
+            z-index: 2;
+            white-space: nowrap;
+            text-align: center; 
+            white-space: normal; 
+        }
+    </style>
+</body>
 </html>

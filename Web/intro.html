@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="ko" id="no-fouc">
+    <link rel="stylesheet" href="css/all_header.css" />
+    <script src="js/all_headerText.js"></script>
+<head>
+<title>한국영상대학교 광고영상디자인과 24회 졸업전시</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/intro_video.css">
+<script src="js/all_year.js"></script>
+</head>
+<style>
+  .menu-overlay {
+  position: absolute;
+  top: 50%;
+  left: 30%; /* 왼쪽으로 약간 이동 */
+  transform: translateY(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.menu-overlay button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.menu-overlay button:hover {
+  color: #ffcc00;
+}
+
+</style>
+<body>
+<script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+</script>
+
+<div id="header-md"></div>
+
+<div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="video/intro.mp4" type="video/mp4">
+      브라우저가 비디오 태그를 지원하지 않습니다.
+    </video>
+  </div>
+<div class="menu-overlay">
+    <button onclick="goTo('졸작.html')">Works</button>
+    <button onclick="goTo('디자이너들.html')">Designer</button>
+    <button onclick="goTo('ThanksTo.html')">Thanks To</button>
+</div>
+
+<script>
+function goTo(page) {
+  const year = sessionStorage.getItem("selectedYear");
+    if (!year) {
+        alert("먼저 연도를 선택해주세요!");
+        return;
+    }
+    window.location.href = page;
+    }
+</script>
+
+</body>
+</html>
