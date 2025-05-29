@@ -7,7 +7,8 @@
 
 ## ⚙️ 개발환경  
 
-• 언어: HTML CSS JavaScript   
+• CODE: HTML CSS JavaScript   
+• DB: Cloud Storage for Firebase  
 • IDE: Visual Studio Code  
 • VCS: Github desktop   
 
