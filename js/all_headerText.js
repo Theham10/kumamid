@@ -1,4 +1,4 @@
-fetch("module/header.html")
+fetch("../module/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
