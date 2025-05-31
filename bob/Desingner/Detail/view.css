@@ -44,13 +44,18 @@ body {
   .profile-img-container {
     width: 300px;
   }
-
+a.project-link:hover {
+  border: 2px solid #fff !important;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
   .profile-img {
     width: 300px;
     border-radius: 12px;
     object-fit: cover;
   }
 
+  
 .profile-text-box {
   display: flex;
   flex-direction: column;
