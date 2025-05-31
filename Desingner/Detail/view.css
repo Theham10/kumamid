@@ -13,7 +13,7 @@ body {
   }
 
   .designer-header {
-    width: 960px;
+    width: 1140px;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: left;
@@ -68,7 +68,7 @@ a.project-link:hover {
 
   .profile-name {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 700;
     color: #fff;
     margin-bottom: 0.75rem;
   }
@@ -85,15 +85,20 @@ a.project-link:hover {
 
   .divider {
     margin: 2rem 0;
-    border-color: #333;
+    border-color: #fafafa;
+    border: 1px solid;    border: 0;
+    border-top: 1px solid #e1e1e1;
+    height: 1px;
+    width: 100%;
   }
 
   .designer-quote {
     font-size: 1.2rem;
     color: #ccc;
-    font-style: italic;
-    margin-top: 3rem;
+    margin-top: 5rem;
     text-align: center;
+    font-weight: 700;
+    margin-bottom: 5rem;
   }
 
   .designer-img-box {

@@ -2,236 +2,180 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디자이너 상세 보기</title>
-    <link rel="stylesheet" href="./view.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>디자이너 상세 보기</title>
+  <link rel="stylesheet" href="./view.css">
 </head>
+
 <body>
-    
-    <div class="detail-container">
-        <div class="designer-header">
-            <div class="designer-school-info">
-                한국영상대학교 영상디자인과<br>제24회 2023 졸업전
-            </div>
-            <h2 class="designer-title">Designer</h2>
-            <div class="designer-profile-row">
-                <div class="profile-img-container">
-                    <img id="profileImg" src="" alt="" class="profile-img">
-                </div>
-                <div class="profile-text-box">
-                    <div id="designerName" class="profile-name"></div>
-                    <div id="designerInfo" class="profile-info"></div>
-                </div>
-            </div>
-            <hr class="divider">
-            <div class="designer-quote">
-                BTS, 봉준호, 손흥민, 곽희진 레츠고!
-            </div>
-            <hr class="divider">
+
+  <div class="detail-container">
+    <div class="designer-header">
+      <div class="designer-school-info">
+        한국영상대학교 영상디자인과<br>제24회 2023 졸업전
+      </div>
+      <h2 class="designer-title">Designer</h2>
+      <div class="designer-profile-row">
+        <div class="profile-img-container">
+          <img id="profileImg" src="" alt="" class="profile-img">
         </div>
+        <div class="profile-text-box">
+          <div id="designerName" class="profile-name"></div>
+          <div id="designerInfo" class="profile-info"></div>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="designer-quote">
+       
+      </div>
+      <hr class="divider">
     </div>
-<!-- 
-    <div style="max-width: 1140px; margin: 0 auto; padding: 0 1rem 4rem; text-align: left;">
-        <h2 style="color: #fff; font-size: 1.5rem; margin: 2rem 0 1rem;">Projects</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-            <a class="project-link" href="https://kumamid.com/Projects/view/425557" target="_blank"
-                style="flex: 1 1 550px; text-decoration: none; color: inherit;">
-                <div style="overflow: hidden; border-radius: 10px;">
-                    <img src="https://lh3.googleusercontent.com/8DvlNOV-i2rMqMgSL8_nuHm4ENT7rSiL3Kdode8UKZkgb4flWv1K_U_lLOIqmmWzh5IUTTvvBwGGeqhHZyghIc65R0lgUUzID42qQEw-86zeEOpW6sg8jA"
-                        alt="LocknRoll Poster" style="width: 100%; height: auto; display: block;">
-                </div>
-                <div style="margin-top: 0.5rem; color: #ccc;"><strong>LocknRoll!</strong> <br>포스터</div>
-            </a>
-            <a class="project-link" href="https://kumamid.com/Projects/view/425556" target="_blank"
-                style="flex: 1 1 550px; text-decoration: none; color: inherit;">
-                <div style="overflow: hidden; border-radius: 10px;">
-                    <img src="https://lh3.googleusercontent.com/lfMBmH0OEjKzLh2EZSrHDVVNfw7t-8sgUyPrPjakGzPMB5JtAf10odKWinpJZQc5FpQCJQSg78Xth-wawOQuJgq8cMfcIu6mAt0OjWRiZrfuc7CPkPWJbQ"
-                        alt="LocknRoll Video" style="width: 100%; height: auto; display: block;">
-                </div>
-                <div style="margin-top: 0.5rem; color: #ccc;"><strong>LocknRoll!</strong> <br>비디오</div>
-            </a>
-            <a class="project-link" href="https://kumamid.com/Projects/view/425095" target="_blank"
-                style="flex: 1 1 300px; text-decoration: none; color: inherit;">
-                <div style="overflow: hidden; border-radius: 10px;">
-                    <img src="https://lh3.googleusercontent.com/NjgBlO6hSIEAdaEd8CSNqIQSyVyIGuat9JSCsCK1wMRzNW2aQmIgBkg3zLT6ZnViFtNf5ls97zAYVtulxGH_bnMY6Dl8SR6TlEM7M207U2v4O4L_PC1L8w=w1920-h1080-n"
-                        alt="Bass" style="width: 100%; height: auto; display: block;">
-                </div>
-                <div style="margin-top: 0.5rem; color: #ccc;"><strong>Bass</strong> <br>팀 프로젝트</div>
-            </a>
-        </div>
-    </div> -->
+  </div>
 
-    <div class="comment-section">
-        <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
-        <div class="comment-box">
-            <div class="comment-avatar">👤</div>
-            <div class="comment-content">
-                <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
-                <div class="comment-options">
-                    <label><input type="checkbox" /> 비밀글</label>
-                    <button onclick="addComment()">등록</button>
-                </div>
-            </div>
+  <div class="comment-section">
+    <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
+    <div class="comment-box">
+      <div class="comment-avatar">👤</div>
+      <div class="comment-content">
+        <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
+        <div class="comment-options">
+          <label><input type="checkbox" /> 비밀글</label>
+          <button onclick="addComment()">등록</button>
         </div>
-        <div class="comment-item">
-            <div class="comment-avatar">👤</div>
-            <div class="comment-body">
-                <div class="comment-header">
-                    <span class="comment-author">설</span>
-                    <span class="comment-time">1년 전</span>
-                </div>
-                <div class="comment-text">
-                    영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
-    <div style="max-width: 960px; margin: 0 auto; padding: 4rem 1rem;">
-        <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1.5rem;">다른 디자이너 보기</h3>
-        <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem;">
-            <a href="/Designer/view/425321" style="flex: 0 0 auto; text-align: center; color: #fff;">
-                <img src="https://lh3.googleusercontent.com/wJ640HEZP5IAl18qhPcbmO13LGwKByQ0Z4PO223esW8fAh-krFPIm0fhlmNfLy_qjs_V3jX0Gy0zFvKPuDP5QlVYRs2uwCkW0bKNJPyqhjR_G__nbsmz=w600-h600-n"
-                    style="width: 150px; border-radius: 10px;" alt="곽희진">
-                <div style="margin-top: 0.5rem;">곽희진</div>
-            </a>
-            <a href="/Designer/view/425320" style="flex: 0 0 auto; text-align: center; color: #fff;">
-                <img src="https://lh3.googleusercontent.com/NKDBAS9QpX9n9bEhP6hUhrdnJL_doFYtes5vzi3ZXpfVXJ0oERy8bFPLgEyhBh2soRFQ6f-xguFowpjJ8e_IJRWQT7flQw-Y70mU9sJxLjHNIO6E3277aQ=w600-h600-n"
-                    style="width: 150px; border-radius: 10px;" alt="김민주">
-                <div style="margin-top: 0.5rem;">김민주</div>
-            </a>
-            <a href="/Designer/view/425319" style="flex: 0 0 auto; text-align: center; color: #fff;">
-                <img src="https://lh3.googleusercontent.com/ZO-XHWjvHVXA8p7BzjcFhp0Vvl87HaVYZHUtbJ32RwT-9Ke9ARsFQjsU3Eqyt7bCsTCXpkn_S5eU1bdEztzH28KjpjrGpWIAScrJw0DDch3W2skYpVWoqA=w600-h600-n"
-                    style="width: 150px; border-radius: 10px;" alt="김사랑">
-                <div style="margin-top: 0.5rem;">김사랑</div>
-            </a>
-            <a href="./view.html?id=425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
-                <img src="https://lh3.googleusercontent.com/jd2kbQm64AV99SMioTUUl4xyuSBdZ4Qin6czG4B-FiiS5LSi0B01OTJW0tt4gH371-8vobFhT9OgZPCqvyoC_zZUM6HHlg9qPRvcy-uVPnwzjv8dynC0FA=w600-h600-n"
-                    style="width: 150px; border-radius: 10px;" alt="김은서">
-                <div style="margin-top: 0.5rem;">김은서</div>
-            </a>
+    <div class="comment-item">
+      <div class="comment-avatar">👤</div>
+      <div class="comment-body">
+        <div class="comment-header">
+          <span class="comment-author">설</span>
+          <span class="comment-time">1년 전</span>
         </div>
+        <div class="comment-text">
+          영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!
+        </div>
+      </div>
     </div>
+  </div>
 
-<script src="../script.js"></script>
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    console.log("id:", id);
+  <div style="max-width: 960px; margin: 0 auto; padding: 4rem 1rem;">
+    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1.5rem;">다른 디자이너 보기</h3>
+    <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem;">
+      <a href="/Designer/view/425321" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/wJ640HEZP5IAl18qhPcbmO13LGwKByQ0Z4PO223esW8fAh-krFPIm0fhlmNfLy_qjs_V3jX0Gy0zFvKPuDP5QlVYRs2uwCkW0bKNJPyqhjR_G__nbsmz=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="곽희진">
+        <div style="margin-top: 0.5rem;">곽희진</div>
+      </a>
+      <a href="/Designer/view/425320" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/NKDBAS9QpX9n9bEhP6hUhrdnJL_doFYtes5vzi3ZXpfVXJ0oERy8bFPLgEyhBh2soRFQ6f-xguFowpjJ8e_IJRWQT7flQw-Y70mU9sJxLjHNIO6E3277aQ=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김민주">
+        <div style="margin-top: 0.5rem;">김민주</div>
+      </a>
+      <a href="/Designer/view/425319" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/ZO-XHWjvHVXA8p7BzjcFhp0Vvl87HaVYZHUtbJ32RwT-9Ke9ARsFQjsU3Eqyt7bCsTCXpkn_S5eU1bdEztzH28KjpjrGpWIAScrJw0DDch3W2skYpVWoqA=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김사랑">
+        <div style="margin-top: 0.5rem;">김사랑</div>
+      </a>
+      <a href="./view.html?id=425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/jd2kbQm64AV99SMioTUUl4xyuSBdZ4Qin6czG4B-FiiS5LSi0B01OTJW0tt4gH371-8vobFhT9OgZPCqvyoC_zZUM6HHlg9qPRvcy-uVPnwzjv8dynC0FA=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김은서">
+        <div style="margin-top: 0.5rem;">김은서</div>
+      </a>
+    </div>
+  </div>
 
-    const getImgUrl = window.getImgUrl;
-    const getUserAssetUrl = (name, type, filename) => {
-      const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
-      const fullPath = type
-        ? `2023/UsersWorkData/${name}/${type}/${filename}`
-        : `2023/UsersWorkData/${name}/${filename}`;  // flat path if type is empty
-      return `${base}${encodeURIComponent(fullPath)}?alt=media`;
-    };
+  <script src="../script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const year = sessionStorage.getItem("selectedYear") || "2023";
 
-    const designer = window.designers.find(d => d.name === id);
-    console.log("designer:", designer);
+      const getImgUrl = window.getImgUrl;
+      const getUserAssetUrl = (name, type, filename) => {
+        const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
+        const fullPath = type
+          ? `2023/UsersWorkData/${name}/${type}/${filename}`
+          : `2023/UsersWorkData/${name}/${filename}`;  // flat path if type is empty
+        return `${base}${encodeURIComponent(fullPath)}?alt=media`;
+      };
 
-    if (designer) {
-      const profileImgEl = document.getElementById("profileImg");
-      if (profileImgEl) {
-        const profileImgUrl = getImgUrl(designer.name);
-        console.log("profileImgUrl:", profileImgUrl);
-        profileImgEl.src = profileImgUrl;
-        profileImgEl.alt = `${designer.name}_프로필`;
-      }
+      fetch(`/data/${year}.json`)
+        .then(res => res.json())
+        .then(data => {
+          const designer = data.디자이너.find(d => d.name === id);
+          console.log(designer)
 
-      document.getElementById("designerName").textContent = designer.name;
-
-      const infoHtml = (designer.info || "")
-        .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" style="color:#66b2ff;">$1</a>')
-        .replace(/이메일:\s*([^\s]+)/g, '이메일: <a  style="color:white; text-decoration:none">$1</a>');
-      document.getElementById("designerInfo").innerHTML = infoHtml;
-
-      if (designer.posterFile) {
-        const poster = document.createElement("img");
-        poster.src = getUserAssetUrl(designer.name, "PosterSorce", designer.posterFile);
-        poster.alt = `${designer.name}_포스터`;
-        poster.style = "width:100%; margin-top:2rem;";
-        document.querySelector(".detail-container").appendChild(poster);
-      }
-
-      if (designer.videoFile) {
-        const video = document.createElement("video");
-        video.src = getUserAssetUrl(designer.name, "VideoSorce", designer.videoFile);
-        video.controls = true;
-        video.style = "width:100%; margin-top:2rem;";
-        document.querySelector(".detail-container").appendChild(video);
-      }
-
-      // Render specific labeled content from .txt file if profileText exists
-      if (designer.profileText) {
-        const textUrl = getUserAssetUrl(designer.name, "", designer.profileText);
-        fetch(textUrl)
-          .then(response => response.ok ? response.text() : "")
-          .then(data => {
-            const lines = data.split('\n');
-            const result = { "한마디": "", "이메일": "", "장래희망": "" };
-            for (let i = 0; i < lines.length; i++) {
-              const key = lines[i].trim();
-              if (key.includes("한마디")) result["한마디"] = lines[i + 1]?.trim() || "";
-              if (key.includes("이메일")) result["이메일"] = lines[i + 1]?.trim() || "";
-              if (key.includes("장래희망")) result["장래희망"] = lines[i + 1]?.trim() || "";
+          if (designer) {
+            const profileImgEl = document.getElementById("profileImg");
+            if (profileImgEl) {
+              const profileImgUrl = getImgUrl(designer.name);
+              console.log("profileImgUrl:", profileImgUrl);
+              profileImgEl.src = profileImgUrl;
+              profileImgEl.alt = `${designer.name}_프로필`;
             }
 
-            // 각각의 값을 변수로 분리
-            const comment = result["한마디"];
-            const email = result["이메일"];
-            const hope = result["장래희망"];
+            document.getElementById("designerName").textContent = designer.name;
 
-            console.log("한마디:", comment);
-            console.log("이메일:", email);
-            console.log("장래희망:", hope);
+            if (designer.posterFile) {
+              const poster = document.createElement("img");
+              poster.src = getUserAssetUrl(designer.name, "PosterSorce", designer.posterFile);
+              poster.alt = `${designer.name}_포스터`;
+              poster.style = "width:100%; margin-top:2rem;";
+              document.querySelector(".detail-container").appendChild(poster);
+            }
 
-            // 각각 개별 DOM 요소로 활용 가능
-            const textDiv = document.createElement("div");
-            textDiv.style = "white-space: pre-wrap; margin-top: 2rem; font-size: 1rem; color: #fff;";
-            textDiv.innerHTML = `
-              <p><strong>한마디:</strong> <span id="bioMotto">${comment}</span></p>
-              <p><strong>이메일:</strong> <span id="bioEmail">${email}</span></p>
-              <p><strong>장래희망:</strong> <span id="bioHope">${hope}</span></p>
-            `;
-            document.querySelector(".detail-container").appendChild(textDiv);
-          })
-          .catch(err => {
-            console.error("텍스트 로딩 실패:", err);
-          });
-      }
+            if (designer.videoFile) {
+              const video = document.createElement("video");
+              video.src = getUserAssetUrl(designer.name, "VideoSorce", designer.videoFile);
+              video.controls = true;
+              video.style = "width:100%; margin-top:2rem;";
+              document.querySelector(".detail-container").appendChild(video);
+            }
 
-    } else {
-      document.querySelector(".detail-container").innerHTML = "<p>디자이너 정보를 찾을 수 없습니다.</p>";
-    }
+            // Render specific labeled content from .txt file if profileText exists
+              // JSON 안에 값이 있다면 바로 DOM에 출력
+              const comment = designer.profileComment || "";
+              const email = designer.profileEmail || "";
+              const hope = designer.profileDream || "";
+              console.log("comment:", comment);
+              document.querySelector(".designer-quote").innerHTML = `<strong>${comment}</stong>`;
+              document.querySelector(".profile-info").innerHTML = `${hope}<br>${email}`;
 
-    function getComments() {
-      const saved = localStorage.getItem(`comments_${id}`);
-      return saved ? JSON.parse(saved) : [];
-    }
+          } else {
+            document.querySelector(".detail-container").innerHTML = "<p>디자이너 정보를 찾을 수 없습니다.</p>";
+          }
 
-    function addComment() {
-      const input = document.getElementById('commentInput');
-      const comment = input.value.trim();
-      if (!comment) return;
+          function getComments() {
+            const saved = localStorage.getItem(`comments_${id}`);
+            return saved ? JSON.parse(saved) : [];
+          }
 
-      const comments = getComments();
-      comments.push(comment);
-      localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
-      input.value = '';
-      renderComments();
-    }
+          function addComment() {
+            const input = document.getElementById('commentInput');
+            const comment = input.value.trim();
+            if (!comment) return;
 
-    function renderComments() {
-      // Implement comment rendering
-    }
+            const comments = getComments();
+            comments.push(comment);
+            localStorage.setItem(`comments_${id}`, JSON.stringify(comments));
+            input.value = '';
+            renderComments();
+          }
 
-    renderComments();
-  });
-</script>
+          function renderComments() {
+            // Implement comment rendering
+          }
+
+          renderComments();
+        });
+    });
+  </script>
 </body>
 
 </html>

@@ -1,139 +1,270 @@
 { 
   "디자이너":  [
     {
-      "name": "곽희진"
+      "name": "곽희진",
+    "profileComment":"BTS, 봉준호, 손흥민, 곽희진 레츠고!",
+    "profileEmail" : "heejink64@naver.com",
+    "profileDream" : "Creative Director"
     },
     {
-      "name": "김민주"
+      "name": "김민주",
+    "profileComment":"감사합니다. ",
+    "profileEmail" : "rlaalswn3378@naver.com",
+    "profileDream" : "Creative Director"
     },
     {
-      "name": "김사랑"
+      "name": "김사랑",
+    "profileComment":"함께한 광고영상디자인과 여러분들 모두 감사합니다.",
+    "profileEmail" :"02amorekim@naver.com",
+    "profileDream" : "2D Designer (노후엔 이삭토스트 운영 예정)"
     },
     {
-      "name": "김은서"
+      "name": "김은서",
+    "profileComment":"종강, 졸업, 취업, 명예 모두 나에게 씨몬(C'mon)...",
+    "profileEmail" : "es1016034@naver.com",
+    "profileDream" : "3D modeler"
     },
     {
-      "name": "김참슬"
+      "name": "김참슬",
+    "profileComment":"얘들아 3년 동안 수고했고 나중에 웃으면서 보자",
+    "profileEmail" : "ckatmf0575@naver.com",
+    "profileDream" : "2D Designer, 스토리보드 작가"
     },
     {
-      "name": "김태영"
+      "name": "김태영",
+    "profileComment":"꾸준히 나아가는 사람이 되도록 노력하겠습니다.",
+    "profileEmail" : "ehowl2474@naver.com",
+    "profileDream" : "2D Designer"
     },
     {
-      "name": "김혜령"
+      "name": "김혜령",
+    "profileComment":"Let's get it~!",
+    "profileEmail" : "hrkim3407@naver.com",
+    "profileDream" : "AE / 광고PD / 마케터"
     },
     {
-      "name": "김효진"
+      "name": "김효진",
+    "profileComment":"이제 겨우 대학 졸업. 아기효진 아자아자 화이팅♥",
+    "profileEmail" : "jenkim0796@gmail.com",
+    "profileDream" : "2D Designer/Copy writer"
     },
     {
-      "name": "노동균"
+      "name": "노동균",
+    "profileComment":"원하는 바를 이룰 때까지 멈추지 않겠습니다.",
+    "profileEmail" : "ndg8912@gmail.com",
+    "profileDream" : "2D Graphic Designer"
     },
     {
-      "name": "서지원"
+      "name": "서지원",
+    "profileComment":"다들 3년간 정말 고생 많으셨습니다! 벌써 졸업이라니 기분이 이상하네요..ㅎ<br/>지금까지 힘든 일도 많았지만 다들 즐거운 추억이 더 많았을거라 생각해요!<br/>저도 동기들 선배,후배님들과 좋은 추억을 한 가득 만들 수 있어서 정말 기뻤습니다!<br/>모두 같은 길을 가진 않겠지만 현장에서 만난다면 꼭 반갑게 인사 나누자구요!!<br/>수고 하셨습니다!! 우리 고생 했으니까 쪼끔만 놀아요!! 히히",
+    "profileEmail" : "fnzk0620@naver.com",
+    "profileDream" : "2D Designer"
     },
     {
-      "name": "송정호"
+      "name": "송정호",
+    "profileComment":"영업이 반이다.",
+    "profileEmail" : "agriartist@icloud.com",
+    "profileDream" : "광고기획부터 제작까지 하는 광고대행사 사장"
     },
     {
-      "name": "안성현"
+      "name": "안성현",
+    "profileComment":"새로운 시작은 늘 설레이는거 같아요",
+    "profileEmail" : "imsunghyun43@gmail.com",
+    "profileDream" : "2D Designer"
     },
     {
-      "name": "안장현"
+      "name": "안장현",
+    "profileComment":"스스로에게 부끄럽지 않은 사람이 되겠습니다.",
+    "profileEmail" : "lov21868@naver.com",
+    "profileDream" : "광고PD/ AE"
     },
     {
-      "name": "여수지"
+      "name": "여수지",
+    "profileComment":"항상 끝과 동시에 시작이라는 점 잊지 않기",
+    "profileEmail" : "km21.zhizhi@gmail.com",
+    "profileDream" : "2D graphic designer"
     },
     {
-      "name": "예주은"
+      "name": "예주은",
+    "profileComment":"우리 모두 행복해요!(•̀ᴗ•́)و ̑̑",
+    "profileEmail" : "memyyeeeee@gmail.com",
+    "profileDream" : "2D Designer / 광고PD"
     },
     {
-      "name": "오수경"
+      "name": "오수경",
+    "profileComment":"포트폴리오 열심히 만들겠습니당",
+    "profileEmail" : "insz22@naver.com",
+    "profileDream" : "2D&3D Graphic Designer"
     },
     {
-      "name": "오승은"
+      "name": "오승은",
+    "profileComment": "졸업작품을 준비하면서 많은 것을 배우고 느낄 수 있었습니다! 앞으로도 더욱 성장하는 디자이너가 될 수 있도록 노력하겠습니다 :)",
+    "profileEmail" : "example@gmail.com",
+    "profileDream" : "2D&3D Graphic Designer"
     },
     {
-      "name": "왕영은"
+      "name": "왕영은",
+    "profileComment":"먼저 3년 동안 다들 너무 너무 수고했고 고생했다는 말을 제일 먼저 하고 싶어요 졸업이 끝이 아니래요!<br/>사회에 나가서 마주치면 꼬옥 반갑게 인사해요 :)<br/>그리구 졸업작품이 끝나면 술이 마시고 싶네요 <br/>술도 마시고 싶고 졸업작품하느라 못 갔던 어나더도 가고 싶고 홍대도 너무 가고 싶고...너무 놀고 싶어요 ㅜㅜ<br/>아무래도 저는 뽀로로인가봐요 노는 게 최고입니다",
+    "profileEmail" : "dhkd123dud@naver.com",
+    "profileDream" : "Graphic Designer" 
     },
     {
-      "name": "위혜림"
+      "name": "위혜림",
+    "profileComment":"작품을 준비하며 많은 것들을 배우고 느낄 수 있었습니다! 앞으로도 더욱 성장하는 디자이너가 될 수 있도록 노력하겠습니다 :)",
+    "profileEmail" : "weehl5954@naver.com<br/>weehl5954@hanmail.net",
+    "profileDream" : "2D&3D Graphic Designer"
     },
     {
-      "name": "유영훈"
+      "name": "유영훈",
+    "profileComment":"다들 좋은 삶을 살길 '-'v",
+    "profileEmail" : "rotn4861@gmail.com",
+    "profileDream" : "Production PD"
     },
     {
-      "name": "이건희"
+      "name": "이건희",
+    "profileComment":"먼저 졸업하신 선배님들의 뒤를 이을 수 있을만한 작품을 만든 것 같아 좋은 경험이었던 같습니다.",
+    "profileEmail" : "gunhee2412@naver.com",
+    "profileDream" : "Look Developer / 3D Visualist"
     },
     {
-      "name": "이기석"
+      "name": "이기석",
+    "profileComment":"졸업작품을 준비하면서 많은 힘든 일들도 있었지만 얻었던 것도 많았던 거 같습니다. ",
+    "profileEmail" : "lsglsg0207@naver.com",
+    "profileDream" : "광고 기획자"
     },
     {
-      "name": "이민혁"
+      "name": "이민혁",
+    "profileComment":"Ad astra Per Aspera - 역경을 헤치고 별을 향하여",
+    "profileEmail" : "the_min@kakao.com",
+    "profileDream" : "2D Graphics & UI/UX Designer"
     },
     {
-      "name": "이성준"
+      "name": "이성준",
+    "profileComment":"성공한 사람이 되려고 노력하기보단 가치 있는 사람이 되려고 노력하겠습니다.",
+    "profileEmail" : "tjdwns750@naver.com",
+    "profileDream" : "Dance Music Video Director"
     },
     {
-      "name": "이승호"
+      "name": "이승호",
+    "profileComment":"None",
+    "profileEmail" : "tmdgh7750@naver.com",
+    "profileDream" : "2D&3D motion Graphic Designer"
     },
     {
-      "name": "이윤정"
+      "name": "이윤정",
+    "profileComment":"그동안 고생 많았어. 바라는 일 모두 이루어지길! 행복한 사람이 되자 :)",
+    "profileEmail" : "lyj0308way@naver.com",
+    "profileDream" : "광고 PD"
     },
     {
-      "name": "이윤지"
+      "name": "이윤지",
+    "profileComment":"다들 졸업작품 작업하시느라 고생많았고 수고하셨습니다! ( ·̑.̮·̑ )",
+    "profileEmail" : "yunji7860@gmail.com",
+    "profileDream" : "Poster Designer 포스터 디자이너"
     },
     {
-      "name": "이지혁"
+      "name": "이지혁",
+    "profileComment":"멋있는(돈 많은) 사람이 되겠습니다.",
+    "profileEmail" : "leehak456@gmail.com",
+    "profileDream" : "3D Graphic Disigner"
     },
     {
-      "name": "이채원"
+      "name": "이채은",
+    "profileComment":"빈틈 없이 행복을 찾으며 살아가요, 우리!",
+    "profileEmail" : "ce.lee0475@gmail.com",
+    "profileDream" :"2D Designer" 
     },
     {
-      "name": "이채은"
+      "name": "이채원",
+    "profileComment":"우리 모두.. 해삐해삐해삐~♫^^",
+    "profileEmail" : "codnjs4147@naver.com",
+    "profileDream" : "AE, 2D Designer"
     },
     {
-      "name": "이혜린"
+      "name": "이혜린",
+    "profileComment":"졸업작품을 마지막이 아닌 발판삼아 망설임 없이 시도해보는 멋진 사람이 되겠습니다",
+    "profileEmail" : "coldhyerin@gmail.com",
+    "profileDream" : "2D Graphic Designer"
     },
     {
-      "name": "이희창"
+      "name": "이희창",
+    "profileComment":"이제 떠나자! 속세로!",
+    "profileEmail" : "leehc8324@gmail.com",
+    "profileDream" : "Branding Director"
     },
     {
-      "name": "임수현"
+      "name": "임수현",
+    "profileComment":"모든 분들 그리고 제 자신에게 정말 고생했다고 하고싶습니다 다들 수고하셨습니다!",
+    "profileEmail" : "dlatngus0306@gmail.com",
+    "profileDream" : "2D&3D Graphic Designer"
     },
     {
-      "name": "장소정"
+      "name": "장소정",
+    "profileComment":"다들 졸작 수고하셨습니다!!",
+    "profileEmail" : "sojung8518@naver.com",
+    "profileDream" : "모션그래픽디자이너"
     },
     {
-      "name": "장인규"
+      "name": "장인규",
+    "profileComment":"- 감사합니다!",
+    "profileEmail" : "memagic03@naver.com",
+    "profileDream" : "2D Designer,creative Director"
     },
     {
-      "name": "정우경"
+      "name": "정우경",
+    "profileComment":"적당히 말고 열심히 살자!!!",
+    "profileEmail" : "rse1313@naver.com",
+    "profileDream" : "2D&3D 모션그래픽 디자이너"
     },
     {
-      "name": "정진모"
+      "name": "정진모",
+    "profileComment":"인스타그램 팔로우 부탁드립니다! @adobe_slave",
+    "profileEmail" : "jinmo6901@daum.net",
+    "profileDream" : "Adobe Instructor(어도비 강사)"
     },
     {
-      "name": "조민국"
+      "name": "조민국",
+    "profileComment":"개혁, 혁신, 창조",
+    "profileEmail" : "motionjho5409@gmail.com",
+    "profileDream" : "Art Director"
     },
     {
-      "name": "최명진"
+      "name": "최명진",
+    "profileComment":"개인 졸업작품 뿐만 아니라 인스타그램 Vaccine_attack계정에도 3D개인작업물을 업로드하고 있습니다.다른 작업물들도 감상해주시면 감사하겠습니다.",
+    "profileEmail" : "4252c@naver.com",
+    "profileDream" : "3d motion graphics designer"
     },
     {
-      "name": "최하현"
+      "name": "최하현",
+    "profileComment":"열심히 하겠습니다",
+    "profileEmail" : "chlgk713@naver.com",
+    "profileDream" : "2D&3D Graphic Designer"
     },{
-        "name": "최효민"
+        "name": "최효민",
+    "profileComment":"Cheers.",
+    "profileEmail" : "orter@kakao.com",
+    "profileDream" : "AE / Producer"
     },
     {
-      "name": "한유정"
+      "name": "한유정",
+    "profileComment":"다들 수고하셨습니다, 나 자신도 수고했다 ^^7",
+    "profileEmail" : "hbydksvm1227@naver.com",
+    "profileDream" : "2D Motion Graphic Designer"
     },
     {
-      "name": "홍은택"
+    "name": "홍은택",
+    "profileComment":"수적천석(水滴穿石)",
+    "profileEmail" : "honget02@naver.com",
+    "profileDream" : "2D Motion Graphic Designer"
     },
    {
     "name": "홍채은",
-    "profileText":"홍채은.txt",
+    "profileComment":"항상 열심히 하는 제가 되도록 노력하겠습니다!",
+    "profileEmail" : "hce1121@naver.com",
+    "profileDream" : "2D Motion Graphic Designer",
     "posterFile": "홍채은.png",   
     "posterThumb": "홍채은1x1.png",  
-    "posterText": "Text_Poster.txt"  
+    "posterText": "Text_Poster.txt"
   }
   ],
   "졸작": [
