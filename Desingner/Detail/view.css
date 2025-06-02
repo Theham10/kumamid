@@ -24,19 +24,30 @@ body {
 }
 
 .detail-project-img:hover,
-.detail-project-vidio:hover {
+.detail-project-vidio:hover,
+.detail-project-tproject:hover {
   border: 3px solid #fff;
   border-radius: 15px;
 }
 
 .detail-project-img>div,
-.detail-project-vidio>div {
+.detail-project-vidio>div,
+.detail-project-tproject>div {
   padding: 1rem 1rem;
 }
 
 .detail-project-img,
-.detail-project-video {
+.detail-project-video{
   width: 555px;
+}
+.detail-project-tproject img{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+
 }
 
 

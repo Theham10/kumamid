@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>디자이너 상세 보기</title>
+  <title></title>
   <link rel="stylesheet" href="./view.css">
 </head>
 
@@ -114,6 +114,11 @@
           : `2023/UsersWorkData/${name}/${filename}`;  // flat path if type is empty
         return `${base}${encodeURIComponent(fullPath)}?alt=media`;
       };
+      const TeamAssetUrl = (projectname,thumnail) => {
+        const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
+        const fullPath = `2023/TeamWorkData/${projectname}/${thumnail}`;
+        return `${base}${encodeURIComponent(fullPath)}?alt=media`;
+      };
 
       fetch(`/data/${year}.json`)
         .then(res => res.json())
@@ -130,6 +135,7 @@
               profileImgEl.alt = `${designer.name}_프로필`;
             }
 
+            document.title = designer.name;
             document.getElementById("designerName").textContent = designer.name;
 
             if (designer.posterThumb) {
@@ -154,15 +160,15 @@
             if (designer.teamProjectThum) {
               const tproject = document.createElement("img");
               const tprojectName = document.createElement("div");
-              tproject.src = getUserAssetUrl(designer.name, "VideoSorce", designer.vidioName);
+              tproject.src = TeamAssetUrl(designer.teamWork, designer.teamProjectThum);
               tproject.controls = true;
-              tprojectName.innerHTML = `<strong style="font-size:20px">${designer.vidioName}</strong><br/><p style="font-size:14px; color:#e5e5e5">비디오</p>`;
+              tprojectName.innerHTML = `<strong style="font-size:20px">${designer.teamWorkEng}</strong><br/><p style="font-size:14px; color:#e5e5e5">팀 프로젝트</p>`;
               document.querySelector(".detail-project-tproject").appendChild(tproject);
               document.querySelector(".detail-project-tproject").appendChild(tprojectName);
             }
 
             // Render specific labeled content from .txt file if profileText exists
-              // JSON 안에 값이 있다면 바로 DOM에 출력
+            // JSON 안에 값이 있다면 바로 DOM에 출력
               const comment = designer.profileComment || "";
               const email = designer.profileEmail || "";
               const hope = designer.profileDream || "";
