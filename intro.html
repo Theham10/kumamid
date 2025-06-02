@@ -56,12 +56,22 @@
       <source src="video/intro.mp4" type="video/mp4">
       브라우저가 비디오 태그를 지원하지 않습니다.
     </video>
-  </div>
+</div>
 <div class="menu-overlay">
     <button onclick="goTo('졸작.html')">Works</button>
     <button onclick="goTo('디자이너들.html')">Designer</button>
     <button onclick="goTo('ThanksTo.html')">Thanks To</button>
 </div>
+
+
+<!-- footer 렌더링 -->
+<div id="footer-text" style="text-align: left; margin: 10px 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
+  © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
+</div>
+<script>
+  const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
+  document.getElementById("footer-year").textContent = selectedYear;
+</script>
 
 <script>
 function goTo(page) {
@@ -73,6 +83,7 @@ function goTo(page) {
     window.location.href = page;
     }
 </script>
+
 
 </body>
 </html>
