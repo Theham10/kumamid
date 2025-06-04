@@ -1,45 +1,106 @@
-<!-- 디자이너 상세 정보 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/all_headerText.js"></script>
-<title>한국영상대학교 영상디자인과 졸업전시</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="./css/desinger_Detailview.css">
+  <link rel="stylesheet" href="./css/all_header.css" />
 </head>
+
 <body>
-    <div id="header-md"></div>
-    <div id="designer-detail"></div>
+  <div id="header-md"></div>
+  <div class="detail-container">
+    <div class="designer-header">
+      <div class="designer-school-info">
+        한국영상대학교 영상디자인과<br>제24회 2023 졸업전
+      </div>
+      <h2 class="designer-title">Designer</h2>
+      <div class="designer-profile-row">
+        <div class="profile-img-container">
 
-<script>
-    // 공통 header 삽입
-    fetch("module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-      });
+          <img id="profileImg" src="" alt="" class="profile-img">
 
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(location.search);
-  const id = params.get("id");
-  const year = sessionStorage.getItem("selectedYear") || "2023";
+        </div>
+        <div class="profile-text-box">
+          <div id="designerName" class="profile-name"></div>
+          <div id="designerInfo" class="profile-info"></div>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="designer-quote">
 
-  fetch(`data/${year}.json`)
-    .then(res => res.json())
-    .then(data => {
-      const designer = data.디자이너.find(d => d.id === id);
-      if (designer) {
-        const el = document.getElementById("designer-detail");
-        el.innerHTML = `
-          <h2>${designer.name}</h2>
-          <img src="${designer.photo}" width="300">
-          <p>${designer.bio}</p>
-        `;
-      }
-    });
-});
-</script>
+      </div>
+      <hr class="divider">
+      <h1>Project</h1>
+      <div class="detail-project">
+        <div class="detail-project-img"></div>
+        <div class="detail-project-vidio"></div>
+      </div>
+      <div class="detail-project-tproject">
 
+      </div>
+    </div>
+  </div>
+
+  <div class="comment-section">
+    <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
+    <div class="comment-box">
+      <div class="comment-avatar">👤</div>
+      <div class="comment-content">
+        <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
+        <div class="comment-options">
+          <label><input type="checkbox" /> 비밀글</label>
+          <button onclick="addComment()">등록</button>
+        </div>
+      </div>
+    </div>
+    <div class="comment-item">
+      <div class="comment-avatar">👤</div>
+      <div class="comment-body">
+        <div class="comment-header">
+          <span class="comment-author">설</span>
+          <span class="comment-time">1년 전</span>
+        </div>
+        <div class="comment-text">
+          영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width: 960px; margin: 0 auto; padding: 4rem 1rem;">
+    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1.5rem;">다른 디자이너 보기</h3>
+    <div style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 2rem;">
+      <a href="/Designer/view/425321" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/wJ640HEZP5IAl18qhPcbmO13LGwKByQ0Z4PO223esW8fAh-krFPIm0fhlmNfLy_qjs_V3jX0Gy0zFvKPuDP5QlVYRs2uwCkW0bKNJPyqhjR_G__nbsmz=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="곽희진">
+        <div style="margin-top: 0.5rem;">곽희진</div>
+      </a>
+      <a href="/Designer/view/425320" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/NKDBAS9QpX9n9bEhP6hUhrdnJL_doFYtes5vzi3ZXpfVXJ0oERy8bFPLgEyhBh2soRFQ6f-xguFowpjJ8e_IJRWQT7flQw-Y70mU9sJxLjHNIO6E3277aQ=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김민주">
+        <div style="margin-top: 0.5rem;">김민주</div>
+      </a>
+      <a href="/Designer/view/425319" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/ZO-XHWjvHVXA8p7BzjcFhp0Vvl87HaVYZHUtbJ32RwT-9Ke9ARsFQjsU3Eqyt7bCsTCXpkn_S5eU1bdEztzH28KjpjrGpWIAScrJw0DDch3W2skYpVWoqA=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김사랑">
+        <div style="margin-top: 0.5rem;">김사랑</div>
+      </a>
+      <a href="./view.html?id=425318" style="flex: 0 0 auto; text-align: center; color: #fff;">
+        <img
+          src="https://lh3.googleusercontent.com/jd2kbQm64AV99SMioTUUl4xyuSBdZ4Qin6czG4B-FiiS5LSi0B01OTJW0tt4gH371-8vobFhT9OgZPCqvyoC_zZUM6HHlg9qPRvcy-uVPnwzjv8dynC0FA=w600-h600-n"
+          style="width: 150px; border-radius: 10px;" alt="김은서">
+        <div style="margin-top: 0.5rem;">김은서</div>
+      </a>
+    </div>
+  </div>
+
+<script type="module" src="./js/desinger_Detail.js"></script>
 </body>
+
 </html>

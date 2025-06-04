@@ -7,7 +7,6 @@ body {
 }
 
 .detail-container {
-  padding: 84px 20px;
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +51,7 @@ body {
 
 
 .detail-project img {
-  width: 555px;
+  width: 545px;
   height: 555px;
   border-radius: 15px;
   object-fit: cover;
