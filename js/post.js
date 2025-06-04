@@ -31,9 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const designer = data.디자이너.find(d => d.name === postData.designerName);
-
       // 타이틀 및 설명 채우기
-      document.querySelector('.project-title').innerHTML  = postData.postName;
+      document.title = postData.postName;
       document.querySelector('.project-client').innerHTML  = `클라이언트 : ${postData.client}`;
       document.querySelector('.project-description').innerHTML  = postData.clientDescription;
       document.querySelector('.project-section-text').innerHTML  = postData.subDescription;

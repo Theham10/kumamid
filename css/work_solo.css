@@ -1,0 +1,51 @@
+/* work_solo.css */
+
+body {
+  background-color: #111;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 40px 60px;
+  justify-items: center;
+  align-items: start;
+}
+
+.grid-item {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+}
+
+.designer-img-wrap {
+  width: 200px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.designer-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.head_title {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}

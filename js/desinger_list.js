@@ -10,6 +10,7 @@ const year = localStorage.getItem("selectedYear") || "2023";
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
   });
+  
   fetch(`/data/${year}.json`)
   .then(res => res.json())
   .then(data => {
