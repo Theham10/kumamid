@@ -49,3 +49,38 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: #000;
+}
+
+.tab-button {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.tab-button.active {
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+
+.tab-panel {
+  display: none;
+  padding: 20px 40px;
+}
+
+.tab-panel.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  padding: 40px 60px;
+}

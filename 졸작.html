@@ -11,9 +11,23 @@
     <title>한국영상대학교 영상디자인과 졸업전시</title>
 </head>
 <body>
-<div id="header-md"></div>
-<div id="project-list"></div>
+  <div id="header-md"></div>
 
-<script type="module"  src="./js/work_solo.js"></script>
+  <!-- ✅ 탭 메뉴 영역 추가 -->
+  <div class="tab-menu">
+    <button class="tab-button active" data-tab="post">Post</button>
+    <button class="tab-button" data-tab="video">Video</button>
+    <button class="tab-button" data-tab="team">Team</button>
+  </div>
+
+  <!-- ✅ 탭 콘텐츠 영역 -->
+  <div id="tab-content">
+    <div id="post" class="tab-panel active"></div>
+    <div id="video" class="tab-panel"></div>
+    <div id="team" class="tab-panel"></div>
+  </div>
+
+  <script type="module" src="./js/work_solo.js"></script>
 </body>
+
 </html>
