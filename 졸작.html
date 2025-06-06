@@ -11,6 +11,14 @@
     <title>한국영상대학교 영상디자인과 졸업전시</title>
 </head>
 <body>
+  <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+  </script>
   <div id="header-md"></div>
 
   <!-- ✅ 탭 메뉴 영역 추가 -->
@@ -28,6 +36,16 @@
   </div>
 
   <script type="module" src="./js/work_solo.js"></script>
+  <script>
+  function goTo(page) {
+  const year = sessionStorage.getItem("selectedYear");
+    if (!year) {
+        alert("먼저 연도를 선택해주세요!");
+        return;
+    }
+    window.location.href = page;
+    }
+</script>
 </body>
 
 </html>
