@@ -7,7 +7,7 @@ export const getUserAssetUrl = (name, type, filename) => {
   const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
 
   const tryTypes = type === "PosterSorce"
-    ? ["PosterSorce", "PosterSorce01", "PosterSorce02"]
+    ? ["PosterSorce", "PosterSorce1", "PosterSorce2"]
     : [type];
 
   const urls = tryTypes.map(folder => {

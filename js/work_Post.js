@@ -63,26 +63,26 @@ fetch(`/data/${year}.json`)
 
     // ✅ TEAM 탭 (신 구조 - data.팀 사용)
 
+    // ✅ TEAM 탭
     data.팀.forEach(team => {
       const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+      const description = team.teamDescription || "";
 
       const teamDiv = document.createElement('div');
       teamDiv.innerHTML = `
-        <div class="grid-item">
+        <a href="./view/teamView.html?team=${encodeURIComponent(team.teamName)}" class="grid-item">
           <div class="designer-img-wrap">
-            <img src="${imgUrl}" alt="${team.teamName}_팀썸네일" class="img-responsive">
+            <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
           </div>
           <h2 class="head_title"><span>${team.teamName}</span></h2>
-        
-          
-        </div>
+        </a>
       `;
-    teamGrid.appendChild(teamDiv);
+      teamGrid.appendChild(teamDiv);
+    });
   });
-});
 
 {/* <p class="eng_sub">${team.teamNameEng}</p>
         <p class="kor_sub">팀원: ${team.teamMembers.join(", ")}</p>
-*/}
+  */}
 
   

@@ -996,77 +996,151 @@
   ,
   "팀": [
     {
+      "id" : "100",
       "teamName": "Teamwow_web",
-      "teamMembers": ["",""],
+      "client":"KT&G",
+      "teamtitle": "Team WOW",
+      "teamSubTitle": "FUNNYcycling starts at 'SANG SANG ZONE' in KT&G!",
+      "teamMembers": ["이건희","이민혁", "장인규", "조민국"],
       "teamThumbnail": "01.jpg",
       "video": "https://vimeo.com/835133108",
-      "teamDescription": "이상한팀설명"
+      "teamDescription01": "국내1위, 세계4위 규모의 담배 회사입니다. KGC인삼공사, 코스모코스 등의 계열사를 보유하고 있습니다. KT&G의 추정 자산은 84억달러로, 한화 11조원 입니다. 매출액은 4천억달러로 한화 5조원에 육박합니다. 순이익은 년도 별로 상이하지만, 7억 달러로 한화 9700억원에 육박합니다. 또한 한국 성인의 흡연율은 전제 성인 인구 중 19.3%, 전 세계 만 15세 이상 흡연율은 2020년 기준 22.3％로 점점 증가추세에 있습니다", 
+      "teamDescription02":"흡연자들은 어플리케이션을 통해 흡연부스 'SANG SANG ZONE'을 이용합니다.<br>KT&G의 어플리케이션을 다운로드한 상태로 흡연부스를 이용하면 포켓몬고와 같은 스팟 시스템을 통해 리워드로 포인트가 적립됩니다.<br>이를 통해 자신의 나무를 디자인할 수 있는 아이템을 구매할 수 있으며，앱 내 피드 시스템을 통해 서로의 나무를 공유하고 피드백을 할 수 있습니다<br>인기 디자인으로 선정된 나무는 각종 광고판에 게재되어 사용자들은 환경 캠페인의 주인공이 될 수 있습니다．또한 수거된 꽁초를 이용하여 흡연부스 인근 또는 홍보용으로 이용 가능한 벤치로 업사이클링합니다." 
     }, 
     {
+      "id" : "101",
       "teamName": "경석주니어",
-      "teamMembers": ["",""],
+      "client":"Sportify",
+      "teamtitle": "경석주니어",
+      "teamSubTitle": "Play Your Memory",
+      "teamMembers": ["이혜린","서지원", "왕영은", "임수현"],
       "teamThumbnail": "01.jpg",
       "video": " https://vimeo.com/835144674?share=copy", 
-      "teamDescription": "이상한팀설명"      
+      "teamDescription01": "2006년에 설립된 스웨덴의 음악 스트리밍 및 미디어 서비스 제공 업체입니다. 음반사 및 미디어 회사의 6천만 곡 이상의 노래를 포함하여 DRM 제한 녹음 음악 및 팟캐스트를 제공하고 있습니다.<br>유료 구독을 통해 오프라인 감상 , 광고없는 감상 등의 기능을 제공합니다."
     }, {
+      "id" : "102",
       "teamName": "골리앗",
-      "teamMembers": ["",""],
+      "client":"쿠캣",
+      "teamtitle": "골리앗",
+      "teamSubTitle": "우리집 요리사 쿠캣",
+      "teamMembers": ["이기석"],
       "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "video": "https://vimeo.com/835042912",
+      "teamDescription01": "쿠캣은 GS리테일에 2022년 인수가 되면서 점점 인지도가 늘어나고 있는 앱 사이트입니다.<br>그러나 다른 앱 사이트에 비해 인지도가<br>떨어지는 편이지만 인수가 된 후부터 MZ 세대들을 겨냥한 상품들도 늘어나고 있습니다.<br>여성의 앱 사용 비율은 높지만 남성의 비율은 낮기 때문에<br>20대 남성을 타켓으로 선정하여 아이디어를 구상했습니다."      
     },  {
+      "id" : "103",
       "teamName": "르세라팀",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpeg",
-      "teamDescription": "이상한팀설명"      
+      "client":"여다",
+      "teamtitle": "LE SSERATEAM",
+      "teamSubTitle": "1분안에 떠나는 국내여행",
+      "teamMembers": ["예주은", "김사랑", "김혜령", "정우경"],
+      "teamThumbnail": "01.jpg",
+      "video": "https://vimeo.com/835025595",
+      "teamDescription01": "소개팅에서 찐따남을 만난 여자가 당장 떠나고 싶다는 생각이 드는데 그때 여다를 통해 여행을 떠나는 이야기입니다.<br>전하고자 하는 핵심 메시지는 굳이 긴 시간을 할애하지 않아도 여다만 있으면 내가 원할 때 1분 안에 여행을 떠날 수 있다는 점입니다.", 
+      "teamDescription02": "여다의 강점인 ‘1분 안에 여행 일정을 짜준다는 점’을 내세워 20~30대에게 인지도를 쌓는 것을 목표로 잡았습니다. <br>여다는 경쟁 앱 대비 인지도가 낮기 때문에 소비자에게 왜 여다를 사용해야 하는지 설득하기 위해 차별화되는 점을 뽑아 기획을 했습니다. <br>기능 광고임으로 자칫 지루해질 수 있기 때문에 20~30대가 공감할 수 있는 상황과 재미를 넣어봤습니다."
     },  {
+      "id" : "105",
       "teamName": "박수",
-      "teamMembers": ["",""],
+      "client":"트리플",
+      "teamtitle": "박수",
+      "teamSubTitle": "스마트한 여행앱",
+      "teamMembers": ["오승은", "이윤정", "최하현", "한유정"],
       "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "video": "죄송합니다 이 동영상은 존재하지 않습니다.",
+      "teamDescription01": "트리플은 780만 명의 여행자와 110만 개의 여행 리뷰<590만 개의 여행일정이 있으며, 여행에 필요한 비행기표, 숙소, 맛집 뿐만 아니라 해외여행 최적의<br>경로를 알려주고, 경비를 함께 관리하고, 커뮤니티가 있어 리뷰를 쓸 수 있고, 리얼한 여행 후기로 <br>숨은 꿀팁도 알 수 있어 여행 전, 여행 중, 여행 후를 모두 관리할 수 있습니다.", 
+      "teamDescription02": "트리플의 AI빅데이터 서비스로 맞춤 여행지 추천을 받아 박여진을 살 찌우려고 관광보다<br>고칼로리 맛집 투어와 여유롭게 힐링하는 여행을 계획해 살을 찌워 복수하는 내용입니다.", 
+      "teamDescription03": "제품 분석으로 다양한 강점 중 하나인 AI빅데이터 서비스로 개인 맞춤 여행지 추천 기능으로 <br>더 글로리 패러디인 더 칼로리를 패러디하여 내 스타일에 맞는 여행을 하고 싶은 mz세대 여성을 타겟으로 잡았습니다."
     },  {
+      "id" : "106",
       "teamName": "베이스",
-      "teamMembers": ["",""],
+      "client":"Discord",
+      "teamtitle": "BASS",
+      "teamSubTitle": "이럴 때 필요한 건?",
+      "teamMembers": ["곽희진", "노동균", "오수경", "이승호"],
       "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "video": "https://vimeo.com/835138364",
+      "teamDescription01": "현재 디스코드는 범용 커뮤니티를 지향하고 있습니다.<br>그러나 우리는 게임 커뮤니티의 입지를 다지는 것이 더 중요하다고 생각하였기에<br>태초로 돌아가 '게임 커뮤니티'를 중심으로 기획하였습니다.<br>게임을 하다가 오류가 걸리는 일반적인 상황을 유머러스하게 문제해결형 광고를 만들어 풀어보았습니다.", 
+      "teamDescription02": "디스코드의 수많은 장점을 다시 게이머에 초점을 맞추어 광고해보면 어떨까?<br>디스코드는 게이머들을 연결하는 최고의 커뮤니티인데, '너무 아깝지 않은가?'라는 생각을 하였습니다."
     },  {
+      "id" : "107",
       "teamName": "암리방범대",
-      "teamMembers": ["",""],
+      "client":"Notion",
+      "teamtitle": "암리방범대",
+      "teamSubTitle": "이제는 AI와 팀플하는 시대.",
+      "teamMembers": ["김민주", "김효진", "이채은", "장소정"],
       "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "video": "https://vimeo.com/835132660", 
+      "teamDescription01": "메모, 문서, 지식 정리, 프로젝트 관리, 데이터베이스, 공개 웹사이트 등의 기능을 하나로 통합한 종합 어플리케이션 입니다.", 
+      "teamDescription02": "많은 과제로 힘들어하고 있는 주인공, Notion Ai 요정을 만나게 됩니다. <br>신기하고 궁금한 마음에 요정을 따라 커서를 움직이며 마우스를 클릭하니 Ai가 체크리스트를 만들어 주고, 글도 작성해 줍니다. <br>주인공은 요정과 함께 협업하며 과제를 마칠 수 있게 됩니다.<br>Notion Ai 요정 Notion 박스에 들어가며 광고는 마무리가 됩니다."
     },  {
+      "id" : "108",
       "teamName": "어메이징필름",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.png",
-      "teamDescription": "이상한팀설명"      
+      "client": "Heineken 0.0", 
+      "teamtitle": "어메이징필름",
+      "teamSubTitle": "Heineken 0.0",
+      "teamMembers": ["송정호"],
+      "teamThumbnail": "01.jpg",
+      "video": "https://vimeo.com/835143490",
+      "teamDescription01": "무알콜 맥주의 USP인 취하지않는 속성을 이용해 과음을 한 다음날 아침 숙취가 없음을 반전형식을 이용해 표현했다.", 
+      "teamDescription02": "Target - 알쓰 20 30대 여성<br>what to say - 알콜 ZERO, 숙취 ZERO, 나의 아침이 다른 이유, 하이네켄 ZERO"
     },  {
+      "id" : "109",
       "teamName": "오우예씨몬",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "client": "TOSS", 
+      "teamtitle": "오우예~씨몬(C'mon)",
+      "teamSubTitle": "내 손 안의 주민센터",
+      "teamMembers": ["김은서", "여수지"],
+      "teamThumbnail": "01.jpg", 
+      "video": "https://vimeo.com/835137803", 
+      "teamDescription01": "누구에게나 쉽고 상식적인 금융을 만들어내는 것을 목표로 삼고 있는 대한민국의 종합금융플랫폼입니다.", 
+      "teamDescription02": "우주인이 달로 여행을 갔습니다. <br>들뜬 마음으로 달에 착륙한 우주인, 하지만 외계인에게 입장 거부를 당하며 본인의 신원확인이 필요하다는 말을 듣습니다. <br>우주인은 아무것도 없는데 다시 지구에 가서 가지고 와야 하냐면서 당황합니다.<br>그러자 외계인은 굳이 지구까지 갈 필요 없이 토스 주민센터로 증명서를 발급 받으면 된다고 말하며,<br>증명서 발급 모션이 나오고 광고는 마무리가 됩니다."
     },  {
+      "id" : "110",
       "teamName": "용호마차",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "client": "SONY", 
+      "teamtitle": "용호마차",
+      "teamSubTitle": "보이는 것이 다가 아니다",
+      "teamMembers": ["이성준", "이윤지", "정진모", "최효민"],
+      "teamThumbnail": "01.jpg", 
+      "video": "https://player.vimeo.com/video/835133615", 
+      "teamDescription01": "PlayStation은 Sony의 콘솔 비디오 게임기 브랜드이며, 제품 VR2는 가상현실 체험이 가능한 VR1세대의 후속 기기입니다.", 
+      "teamDescription02": "평범한 주말을 보내는 부부는 미세먼지 뉴스와 함께 공기청정기로 위장한 PS5를 켭니다.<br>와이프를 속이기 위해 꼼수를 쓴 남편은 디스크가 빠져나오며 들키게 됩니다.<br>하지만 이 광고는 아랑곳 않고 공청기&눈 안마기를 이야기합니다."
     },  {
+      "id" : "111",
       "teamName": "초아",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "client": "Durex Feel Ultra Thin", 
+      "teamtitle": "초아",
+      "teamSubTitle": "Feel It As It",
+      "teamMembers": ["위혜림", "유영훈", "이채원", "홍은택"],
+      "teamThumbnail": "01.jpg", 
+      "video": "https://vimeo.com/835040144", 
+      "teamDescription01": "Durex는 유럽 콘돔 브랜드 종합 판매량 1위 브랜드로, ”성에 대한 관습을 버리고 성을 보다 포괄적으로” 라는 아이덴티티를 가지고 있습니다.", 
+      "teamDescription02": "국내에서 콘돔을 비롯한 성 관련 콘텐츠는 대다수가 부정적으로 인식하여 성에 대한 거부감 등에 따라 사회적 문제들이 제기되고 있습니다.<br>듀렉스는 기존에 고착화된 성에 대한 부정적 이미지를 깨고, '진정성, 신뢰감 있는 성 문화'를 만들고자 하는 가치관을 가지고 있기에<br>이러한 듀렉스의 브랜드 신념을 기반으로 남녀 간의 사랑을 나누는 과정을 현대무용을 통해 춤의 형태로 표현하고자 합니다.", 
+      "teamDescription03": "국내 콘돔 광고는 부정적인 시선과 그로 인한 심의 문제로 상업적인 송출이 어렵다는 벽을 마주하고 있습니다.<br>그렇기에 이러한 관념들을 한번에 깨뜨릴 수 있는 강력한 컨셉이 필요했고, '남녀가 사랑하는 과정 또한 하나의 예술이다'라는<br>핵심 키워드를 기반으로 Durex Feel Ultra Thin의 특성을 예술적으로 표현할 방안에 대하여 고민하였습니다.<br>기존 듀렉스 광고에 없었던 현대무용이라는 소재를 컨셉으로 피부 접촉에 의한 색감의 변화를<br>메인 크리에이티브 컨셉으로 설정하여 기획하였습니다."
     },  {
-      "teamName": "트라이아스기",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "id" : "112",
+      "teamName": "트라이아스키",
+      "client": "당근마텟", 
+      "teamtitle": "트라이아스키",
+      "teamSubTitle": "중고차 거래도 당근이지",
+      "teamMembers": ["김태영", "안성현", "이지혁", "최명진"],
+      "teamThumbnail": "01.jpg", 
+      "video": "https://vimeo.com/835123205", 
+      "teamDescription01": "MAU 1800만을 자랑하는 대한민국의 대표적인 지역 생활 애플리케이션.<br>대표적인 중고 거래 애플리케이션으로도 알려져 있다.",
+      "teamDescription02": "우리의 키 아이디어는 당근마켓의 친근한 이미지를 중고차<br>거래에서도 그대로 이어 나가자는 것이었습니다. 그런 이미지를<br>살리기 위해 여성 배우를 섭외하고, 영상의 톤을 따뜻하게 잡아<br>다른 중고차 어플들과 차별화를 둘 수 있도록 했습니다."
     },  {
+      "id" : "113",
       "teamName": "하입보이",
-      "teamMembers": ["",""],
-      "teamThumbnail": "01.jpg",
-      "teamDescription": "이상한팀설명"      
+      "client": "OpenAI", 
+      "teamtitle": "HypeBoy",
+      "teamSubTitle": "Open Your Eyes",
+      "teamMembers": ["이희창", "김참슬", "안장현", "홍채은"],
+      "teamThumbnail": "01.jpg", 
+      "video": "https://vimeo.com/835126366",   
+      "teamDescription01": "OpenAI는 Chat GPT라는 대표 서비스를 보유한 인공지능 연구 단체입니다.", 
+      "teamDescription02": "OpenAI의 기업 이념은 인공지능이 공공의 선이 되도록 인공지능을 개발하는 것입니다.<br>우리는 이러한 인공지능의 장점과 기업 이념을 담기 위해 'Open Your Eyes'라는 키워드를 생각했습니다.<br>OpenAI는 방대한 양의 데이터를 학습하고 재정의하며 인류가 없던 시절이나 인류가 볼 수 없는 영역(가령 빅뱅 이전의 모습, 혹은 원자 단위의 관찰 등)에 대한<br>정보를 사람보다 더 효과적으로 전달해 줄 수 있습니다. 이러한 사실을 토대로 영상에서 우주의 탄생인 빅뱅부터 인간의 역사를 인공지능의 시점에서 보여주었고,<br>현재 시점에서 인공지능과 만난 인류에게 또 다른 두 번째 '디지털 빅뱅'이 일어날 것이라는 내용을 담았습니다.", 
+      "teamDescription03": "Open AI는 인류에게 이로운 인공지능을 만들고자 Y콤비네이터의 사장인 샘앨트만과 익히 알고 있는 테슬라의 사장 일론 머스크가 함께 2015년 설립한 인공지능 기술 연구소입니다.<br>인공지능이라는 시장 자체는 1950년도부터 시도되었고, 수많은 실패 끝에 성공적으로 기계가 세상을 알아보는 시대가 시작했습니다.<br>그리고 우리의 OpenAI는 그 중 선두를 달리고 있습니다.<br>자료를 토대로 OpenAI의 SOWT 분석을 하였고 SO(강점, 기회)에 집중해 보았습니다.<br>소비자 타겟을 정하고 과거부터 현재까지 인공지능의 시점으로 빅뱅부터 인류 문명의 발전을 보여주는 'I=AI eye(시선)',<br>미래를 여는 인공지능의 두 번째 빅뱅이라는 아이디어를 구상했습니다."
     }
-
-    
-
   ]
 
 } 
