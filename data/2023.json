@@ -49,7 +49,7 @@
     "profileDream" : "3D modeler",
     "posterFile": "김은서.png",   
     "posterThumb": "김은서1x1.png",  
-    "posterName": " 오늘은 누구를 끌고갈까 ",
+    "posterName": "오늘은 누구를 끌고갈까",
     "videoFile" : "01.jpg",
     "vidioName": "굳은 의지와 명예",
     "teamWork": "오우예씨몬",
@@ -991,4 +991,82 @@
       "subDescription" : "맛집을 방문해 맛있는 음식을 즐기는 것이 트렌드인 요즘, 원격 웨이팅 어플인 “테이블링”을 사용하여 시간적인 효율성을 높이며 음식을 즐기는 것이 진정한 미식도사 라는 점을 포인트로 잡아 영상을 제작하였습니다.<br/>테이블링에서 제공하는 선도적이고 현대적인 서비스를 강조하고자 조선을 시대적 배경으로 하여 극대화하였으며<br/>조선시대 아트웍에 집중하여 제작하였습니다."
     }
   ]
-}
+
+
+  ,
+  "팀": [
+    {
+      "teamName": "Teamwow_web",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "video": "https://vimeo.com/835133108",
+      "teamDescription": "이상한팀설명"
+    }, 
+    {
+      "teamName": "경석주니어",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "video": " https://vimeo.com/835144674?share=copy", 
+      "teamDescription": "이상한팀설명"      
+    }, {
+      "teamName": "골리앗",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "르세라팀",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpeg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "박수",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "베이스",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "암리방범대",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "어메이징필름",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.png",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "오우예씨몬",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "용호마차",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "초아",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "트라이아스기",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    },  {
+      "teamName": "하입보이",
+      "teamMembers": ["",""],
+      "teamThumbnail": "01.jpg",
+      "teamDescription": "이상한팀설명"      
+    }
+
+    
+
+  ]
+
+} 
