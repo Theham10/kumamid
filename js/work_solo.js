@@ -48,30 +48,30 @@ fetch(`/data/${year}.json`)
     });
 
     // ✅ VIDEO 탭 (예시)
-    data.디자이너.forEach(designer => {
-      const videoDiv = document.createElement('div');
-      videoDiv.innerHTML = `
-        <div class="grid-item">
-          <div class="designer-img-wrap">
-            <img src="${getUserAssetUrl(designer.name, "VideoThumb", designer.videoFile)}" alt="${designer.name}_비디오썸네일" class="img-responsive">
-          </div>
-          <h2 class="head_title"><span>${designer.vidioName}</span></h2>
-        </div>
-      `;
-      videoGrid.appendChild(videoDiv);
-    });
+    // data.디자이너.forEach(designer => {
+    //   const videoDiv = document.createElement('div');
+    //   videoDiv.innerHTML = `
+    //     <div class="grid-item">
+    //       <div class="designer-img-wrap">
+    //         <img src="${getUserAssetUrl(designer.name, "VideoThumb", designer.videoFile)}" alt="${designer.name}_비디오썸네일" class="img-responsive">
+    //       </div>
+    //       <h2 class="head_title"><span>${designer.vidioName}</span></h2>
+    //     </div>
+    //   `;
+    //   videoGrid.appendChild(videoDiv);
+    // });
 
     // ✅ TEAM 탭 (예시)
-    data.디자이너.forEach(designer => {
-      const teamDiv = document.createElement('div');
-      teamDiv.innerHTML = `
-        <div class="grid-item">
-          <div class="designer-img-wrap">
-            <img src="${getUserAssetUrl(designer.name, "PosterSorce", designer.posterThumb)}" alt="${designer.name}" class="img-responsive">
-          </div>
-          <h2 class="head_title"><span>${designer.teamWork}</span></h2>
-        </div>
-      `;
-      teamGrid.appendChild(teamDiv);
-    });
+    // data.디자이너.forEach(designer => {
+    //   const teamDiv = document.createElement('div');
+    //   teamDiv.innerHTML = `
+    //     <div class="grid-item">
+    //       <div class="designer-img-wrap">
+    //         <img src="${getUserAssetUrl(designer.name, "PosterSorce", designer.posterThumb)}" alt="${designer.name}" class="img-responsive">
+    //       </div>
+    //       <h2 class="head_title"><span>${designer.teamWork}</span></h2>
+    //     </div>
+    //   `;
+    //   teamGrid.appendChild(teamDiv);
+    // });
   });
