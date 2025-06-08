@@ -38,16 +38,54 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector('.project-description').innerHTML = team.teamSubTitle;
       document.querySelector(".project-team-names").textContent = team.teamMembers?.join(", ") || "팀원 정보 없음";
 
-      document.querySelector('.project-section-text').innerHTML = `
+      // ✅ teamDescription들만 별도 영역에 출력
+      /*  document.querySelector('.project-section-text').innerHTML = `
         ${team.teamDescription01 || ""}
         <br><br>${team.teamDescription02 || ""}
         <br><br>${team.teamDescription03 || ""}
-      `;
+        `;*/
 
       // 이미지 설정
-const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+    const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.mainImage)}?alt=media`;
+    document.querySelector('.project-main-img').src = imgUrl;
 
-document.querySelector('.project-main-img').src = imgUrl;
+      const vimeoUrl = team.video;
+    if (vimeoUrl && vimeoUrl.includes("vimeo.com")) {
+    const videoId = vimeoUrl.split("/").pop(); // 835133108
+    const embedUrl = `https://player.vimeo.com/video/${videoId}`;
+    const iframe = document.querySelector('.project-video');
+    if (iframe) iframe.src = embedUrl;
+    }
+
+    // 🔽 PPM 슬라이드
+    const ppmList = team.teamPPMNote || [];
+    let currentIndex = 0;
+
+    if (ppmList.length > 0) {
+    const ppmImg = document.querySelector('.ppm-image');
+    const prevBtn = document.querySelector('.ppm-btn.prev');
+    const nextBtn = document.querySelector('.ppm-btn.next');
+
+    const updateImage = () => {
+        const file = ppmList[currentIndex];
+        const src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(file)}?alt=media`;
+        ppmImg.src = src;
+    };
+
+    // 처음 이미지 설정
+    updateImage();
+
+    // 버튼 기능
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + ppmList.length) % ppmList.length;
+        updateImage();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % ppmList.length;
+        updateImage();
+    });
+    }
 
 
 
