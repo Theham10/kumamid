@@ -87,6 +87,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     }
 
+   // 
+    // 자동슬라이더 이미지 
+   function setupAutoSlider(imageList, teamName, containerId) {
+    if (!imageList || imageList.length === 0) return;
+
+    const container = document.getElementById(containerId);
+    const imgEl = container?.querySelector("img");
+    if (!imgEl) return;
+
+    let index = 0;
+
+    const updateImg = () => {
+        const filename = imageList[index];
+        const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
+        
+        console.log("✅ 슬라이드:", url); // 디버깅용
+        imgEl.src = url;
+    };
+
+    updateImg();
+
+    setInterval(() => {
+        index = (index + 1) % imageList.length;
+        updateImg();
+    }, 4000);
+    }
+
+    setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
+    setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider");
+
+    //디저이너 데이터 렌더링 
+    const memberWrap = document.getElementById("team-members-wrap");
+    if (memberWrap && team.teamMembers?.length) {
+    team.teamMembers.forEach(name => {
+        const div = document.createElement("div");
+        div.classList.add("member-box");
+
+        const img = document.createElement("img");
+        img.src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(name)}.jpg?alt=media`;
+        img.alt = name;
+        img.classList.add("member-img");
+
+        const span = document.createElement("span");
+        span.textContent = name;
+        span.classList.add("member-name");
+
+        div.appendChild(img);
+        div.appendChild(span);
+        memberWrap.appendChild(div);
+    });
+    }
 
 
       // 푸터
