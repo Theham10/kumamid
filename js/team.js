@@ -30,20 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      
       // 타이틀 및 설명
       document.title = team.teamtitle || team.teamName;
       document.querySelector('.project-title').textContent = team.teamtitle || team.teamName;
       document.querySelector('.project-client').innerHTML = `클라이언트 : ${team.client}`;
       document.querySelector('.project-description').innerHTML = team.teamSubTitle;
+      document.querySelector(".project-team-names").textContent = team.teamMembers?.join(", ") || "팀원 정보 없음";
+
       document.querySelector('.project-section-text').innerHTML = `
         ${team.teamDescription01 || ""}
         <br><br>${team.teamDescription02 || ""}
         <br><br>${team.teamDescription03 || ""}
       `;
 
-      // 이미지
-      const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
-      document.querySelector('.project-main-img').src = imgUrl;
+      // 이미지 설정
+const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+
+document.querySelector('.project-main-img').src = imgUrl;
+
+
 
       // 푸터
       document.querySelector('.footer-author-name').textContent = `팀원: ${team.teamMembers?.join(", ") || "정보 없음"}`;
