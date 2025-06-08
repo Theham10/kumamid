@@ -1,3 +1,4 @@
+
 .project-section-image img {
   width: 100%;
   height: auto;
@@ -239,4 +240,11 @@ object-fit: cover;
     gap: 1rem;
     font-size: 1rem;
   }
+}
+
+/* 이미지 아래 텍스트 */
+
+.v-text, .m-text, .s-text, .ppt-text {
+  margin: 5% auto;
+  max-width: 80%;
 }

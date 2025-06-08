@@ -139,6 +139,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     }
 
+    /* 비디오, 사진, 사진, 사진 설명 텍스트 출력구간 */
+    const vText = team["v-text"];
+    const sText = team["s-text"];
+    const mText = team["m-text"];
+    const pptText = team["ppt-text"];
+
+    if (vText) {
+    const vEl = document.querySelector(".v-text");
+    if (vEl) vEl.innerHTML = vText;
+    }
+
+    if (sText) {
+    const sEl = document.querySelector(".s-text");
+    if (sEl) sEl.innerHTML = sText;
+    }
+
+    if (mText) {
+    const mEl = document.querySelector(".m-text");
+    if (mEl) mEl.innerHTML = mText;
+    }
+
+    if (pptText) {
+    const pptEl = document.querySelector(".ppt-text");
+    if (pptEl) pptEl.innerHTML = pptText;
+    }
+
 
       // 푸터
       document.querySelector('.footer-author-name').textContent = `팀원: ${team.teamMembers?.join(", ") || "정보 없음"}`;
