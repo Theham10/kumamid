@@ -87,32 +87,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     }
 
-   // 
     // 자동슬라이더 이미지 
-   function setupAutoSlider(imageList, teamName, containerId) {
-    if (!imageList || imageList.length === 0) return;
+function setupAutoSlider(imageList, teamName, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || !imageList || !Array.isArray(imageList) || imageList.length === 0) {
+    if (container) container.style.display = "none"; // 컨테이너까지 안보이게
+    return;
+  }
 
-    const container = document.getElementById(containerId);
-    const imgEl = container?.querySelector("img");
-    if (!imgEl) return;
+  const imgEl = container.querySelector("img");
+  const prev = container.querySelector(".prev");
+  const next = container.querySelector(".next");
 
-    let index = 0;
+  if (!imgEl) {
+    container.style.display = "none";
+    return;
+  }
 
-    const updateImg = () => {
-        const filename = imageList[index];
-        const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
-        
-        console.log("✅ 슬라이드:", url); // 디버깅용
-        imgEl.src = url;
-    };
+  // 이미지가 1개인 경우 → 슬라이드 없이 1장만 표시 + 버튼 숨김
+  if (imageList.length === 1) {
+    const filename = imageList[0];
+    const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
+    imgEl.src = url;
 
+    if (prev) prev.style.display = "none";
+    if (next) next.style.display = "none";
+    return;
+  }
+
+  // 슬라이더 동작
+  let index = 0;
+
+  const updateImg = () => {
+    const filename = imageList[index];
+    const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
+    imgEl.src = url;
+  };
+
+  updateImg();
+
+  setInterval(() => {
+    index = (index + 1) % imageList.length;
     updateImg();
+  }, 4000);
 
-    setInterval(() => {
-        index = (index + 1) % imageList.length;
-        updateImg();
-    }, 4000);
-    }
+  // 버튼 작동
+  if (prev && next) {
+    prev.addEventListener("click", () => {
+      index = (index - 1 + imageList.length) % imageList.length;
+      updateImg();
+    });
+
+    next.addEventListener("click", () => {
+      index = (index + 1) % imageList.length;
+      updateImg();
+    });
+  }
+}
+
 
     setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
     setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider");
