@@ -88,14 +88,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 자동슬라이더 이미지 
-function setupAutoSlider(imageList, teamName, containerId) {
+function setupAutoSlider(imageList, teamName, containerId, textList = []) {
   const container = document.getElementById(containerId);
-  if (!container || !imageList || !Array.isArray(imageList) || imageList.length === 0) {
-    if (container) container.style.display = "none"; // 컨테이너까지 안보이게
+  if (!container || !Array.isArray(imageList) || imageList.length === 0) {
+    if (container) container.style.display = "none";
     return;
   }
 
   const imgEl = container.querySelector("img");
+  const textEl = container.querySelector(".overlay-text");
   const prev = container.querySelector(".prev");
   const next = container.querySelector(".next");
 
@@ -104,23 +105,25 @@ function setupAutoSlider(imageList, teamName, containerId) {
     return;
   }
 
-  // 이미지가 1개인 경우 → 슬라이드 없이 1장만 표시 + 버튼 숨김
-  if (imageList.length === 1) {
-    const filename = imageList[0];
-    const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
-    imgEl.src = url;
-
-    if (prev) prev.style.display = "none";
-    if (next) next.style.display = "none";
-    return;
-  }
-
-  // 슬라이더 동작
   let index = 0;
 
+  // ✅ 이미지 로드 후에 텍스트 보여주기 (onload 동기화)
   const updateImg = () => {
     const filename = imageList[index];
     const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
+
+    imgEl.onload = () => {
+      const currentText = textList[index];
+      if (textEl) {
+        if (currentText && currentText.trim() !== "") {
+          textEl.innerHTML = currentText;
+          textEl.style.display = "block";
+        } else {
+          textEl.style.display = "none";
+        }
+      }
+    };
+
     imgEl.src = url;
   };
 
@@ -131,7 +134,6 @@ function setupAutoSlider(imageList, teamName, containerId) {
     updateImg();
   }, 4000);
 
-  // 버튼 작동
   if (prev && next) {
     prev.addEventListener("click", () => {
       index = (index - 1 + imageList.length) % imageList.length;
@@ -146,8 +148,9 @@ function setupAutoSlider(imageList, teamName, containerId) {
 }
 
 
+
     setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
-    setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider");
+    setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider", team["m-inner-text"]);
 
     //디저이너 데이터 렌더링 
     const memberWrap = document.getElementById("team-members-wrap");

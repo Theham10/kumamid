@@ -117,3 +117,32 @@
 .content-box h1 {
   margin-bottom: 5%;
 }
+
+/* 슬라이더 이미지 내 텍스트 삽입용 */
+
+.auto-slider {
+  position: relative;
+  width: fit-content;
+}
+
+
+.auto-slide-img {
+  width: 100%;
+  display: block;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 13px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: none; /* 초기 숨김 */
+}
