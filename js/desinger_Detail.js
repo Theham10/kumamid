@@ -109,10 +109,18 @@ document.addEventListener("DOMContentLoaded", () => {
         allProjects.push({ type: 'video', data: videoData, designerName: designer.name });
       });
 
-      // 팀 프로젝트 추가
-      if (designer.teamProjectThum) {
-        allProjects.push({ type: 'team', data: designer, designerName: designer.name });
+      const teamProjects = data.팀.filter(t => {
+      if (Array.isArray(t.teamMembers)) {
+        return t.teamMembers.includes(designer.name);
+      } else {
+        return t.designerName === designer.name;
       }
+    });
+      // 팀 프로젝트 추가
+      teamProjects.forEach(teamData => {
+        allProjects.push({ type: 'team', data: teamData, designerName: designer.name });
+      });
+
 
       // 모든 프로젝트 렌더링
       allProjects.forEach(project => {
@@ -150,12 +158,12 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         } else if (project.type === 'team') {
           mediaElement = document.createElement("img");
-          mediaElement.src = TeamAssetUrl(project.data.teamWork, project.data.teamProjectThum);
-          title = project.data.teamWorkEng;
+          mediaElement.src = TeamAssetUrl(project.data.teamName, project.data.teamThumbnail);
+          title = project.data.teamtitle;
           typeText = '팀 프로젝트';
           projectItemDiv.classList.add('team-type'); // 팀 프로젝트 타입 클래스 추가 (필요시 CSS에서 활용)
             projectItemDiv .onclick = function() {
-            location.href=`../view/postView.html?id=${project.data.id}`
+            location.href=`../view/teamView.html?id=${project.data.id}`
           }
         }
 
