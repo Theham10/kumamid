@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ko" id="no-fouc">
+    <link rel="stylesheet" href="css/all_header.css" />
+    <script src="js/all_headerText.js"></script>
+<head>
+<title>한국영상대학교 영상디자인과 졸업전시</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/intro_video.css">
+<script src="js/all_year.js"></script>
+</head>
+
+<body>
+<script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+</script>
+
+<div id="header-md"></div>
+
+
+<div style="background-color: white; padding-top: 3%;">
+    
+
+</div>
+
+
+
+
+<!-- footer 렌더링 -->
+<div id="footer-text" style="text-align: left; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
+  © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
+</div>
+<script>
+  const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
+  document.getElementById("footer-year").textContent = selectedYear;
+</script>
+
+<script>
+function goTo(page) {
+  const year = sessionStorage.getItem("selectedYear");
+    if (!year) {
+        alert("먼저 연도를 선택해주세요!");
+        return;
+    }
+    window.location.href = page;
+    }
+</script>
+
+
+</body>
+</html>
