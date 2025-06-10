@@ -98,6 +98,7 @@
 
 .sns-icons a {
   margin-right: 10px;
+    text-decoration-line: none;
 }
 
 .sns-icons a:last-child {
@@ -119,8 +120,7 @@
 /* 오시는 길 */
 .text-container {
     background-color: #000000;
-    font-size: 270%; /* PC일 때 기본 글꼴 크기 */
-    
+    font-size: 270%; /* PC일 때 기본 글꼴 크기 */   
 }
 
 @media (max-width: 600px) { /* (화면 너비가 768px 이하일 경우) */
@@ -135,6 +135,28 @@
     background-color: #000000;
     padding-left: 5%;
 }
+
+iframe {
+    width:95%;
+    height: 500px;
+}
+
+@media (max-width: 600px) { 
+    iframe {
+        height: 320px;
+        width:100%;
+    }
+}
+
+@media (max-width: 600px) { /* (화면 너비가 600px 이하일 경우) */
+
+    .location-container {
+        padding-top: 10%;
+        font-size: 150%; 
+        padding: 0%;
+    }
+}
+
 
 /* CONTACT US 푸터 */
  .container {

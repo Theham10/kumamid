@@ -3,7 +3,9 @@
 <html lang="ko" id="no-fouc">
     <link rel="stylesheet" href="css/all_header.css" />
     <link rel="stylesheet" href="css/thanksto.css" />
+    <link rel="stylesheet" href="css/about_scrollAni.css" />
     <script src="js/all_headerText.js"></script>
+     <script src="js/about_scrollAni.js"></script>
 <head>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 <meta charset="utf-8">
@@ -39,7 +41,7 @@ input.addEventListener("input", () => {
 </script>
 </head>
 
-<body>
+<div>
 <script>
     // 공통 header 삽입
     fetch("module/header.html")
@@ -68,19 +70,55 @@ input.addEventListener("input", () => {
         <div id="comment-list" class="comment-list">
             <!-- 자바스크립트로 여기에 댓글 div들이 append될 예정 -->
         
-        <div class="comment-item">
+            <div class="comment-item">
             <div class="comment-meta">
                 <span class="comment-time">1년 전</span>
                 <span class="comment-name">송수아</span>
             </div>
             <div class="comment-text">다들 고생하셨습니다 !!</div>
             </div>
+
+            <div class="comment-item">
+            <div class="comment-meta">
+                <span class="comment-time">1년 전</span>
+                <span class="comment-name">송수아</span>
+            </div>
+            <div class="comment-text">다들 고생하셨습니다 !!</div>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-meta">
+                    <span class="comment-time">1년 전</span>
+                    <span class="comment-name">송수아</span>
+                </div>
+                <div class="comment-text">다들 고생하셨습니다 !!</div>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-meta">
+                    <span class="comment-time">1년 전</span>
+                    <span class="comment-name">송수아</span>
+                </div>
+                <div class="comment-text">다들 고생하셨습니다 !!</div>
+                </div>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-meta">
+                    <span class="comment-time">1년 전</span>
+                    <span class="comment-name">송수아</span>
+                </div>
+                <div class="comment-text">다들 고생하셨습니다 !!</div>
+                </div>
+            </div>
+
         </div>
-        
+
         </div>
     </div>
 
     
+<div class="section fade-in">
   <div class="sns">
   <div class="sns-row">
     <div class="sns-icons">
@@ -101,16 +139,15 @@ input.addEventListener("input", () => {
 
 <!-- 오시는 길 표시 박스 -->
 <div class="text-container">
-        <div style="padding: 4%;">
-                    <div><span style="color: white; font-family: 'Tmon Monsori';">오시는 길</div>
-                    <hr class="fr-hr" style="border-bottom: 4px solid #ffffff; width: 60px; margin-top: 1%;"/>
-            </div>
-        </div>
+    <div style="padding: 4%;">
+                <div><span style="color: white; font-family: 'Tmon Monsori';">오시는 길</div>
+                <hr class="fr-hr" style="border-bottom: 4px solid #ffffff; width: 60px; margin-top: 1%;"/>
+    </div>
 </div>
 
 
 <div class="location-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.7808707880617!2d127.20831697509897!3d36.462851586644426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab60770993387%3A0x40f78f2307b1c072!2z7IS47KKF7Yq567OE7J6Q7LmY7IucIOyepeq1sOuptCDrjIDtlZnquLggMzAw!5e0!3m2!1sko!2skr!4v1749543347492!5m2!1sko!2skr" width="95%" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.7808707880617!2d127.20831697509897!3d36.462851586644426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab60770993387%3A0x40f78f2307b1c072!2z7IS47KKF7Yq567OE7J6Q7LmY7IucIOyepeq1sOuptCDrjIDtlZnquLggMzAw!5e0!3m2!1sko!2skr!4v1749543347492!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
     <div class="container" style="background-color: rgb(0, 0, 0);">
@@ -133,6 +170,7 @@ input.addEventListener("input", () => {
                 </div>
         </div>
     </div>
+</div>
 
 <!-- footer 렌더링
 <div id="footer-text" style="text-align: left; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
