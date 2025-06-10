@@ -91,10 +91,12 @@
 }
 
 .comment-item {
-  padding: 12px 0;
-  border-bottom: #1111111a;
-   border-bottom: 1px solid #e0e0e0;
-  padding: 12px 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex; /* 자식 요소들을 가로로 정렬 */
+    align-items: center; /* 모든 요소의 세로 중앙 정렬 */
+    justify-content: space-between; /* 양 끝 정렬: 왼쪽 섹션과 이름 */
+    gap: 10px; /* 요소들 사이의 기본 간격 (필요시 조절) */
 }
 
 .comment-meta {
@@ -106,9 +108,11 @@
 }
 
 .comment-text {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #2e2e2e;
+    flex-grow: 1; /* 왼쪽 섹션 내에서 남은 공간을 최대한 차지 */
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2e2e2e;
+    word-break: break-word; /* 긴 단어가 줄바꿈되도록 */
 }
 
 /* sns 배너 */
@@ -253,7 +257,6 @@ iframe {
     color: inherit;
     cursor: pointer;
     color: #ffffff;
-    
 }
 
 .comment-setting a.edit-link:hover,
@@ -265,19 +268,6 @@ iframe {
     color: rgb(186, 186, 186);
 }
 
-
-
-/* 정리필요 */
-/* comment-item: 댓글 아이템 전체를 Flexbox 컨테이너로 설정 */
-.comment-item {
-    padding: 12px 0;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex; /* 자식 요소들을 가로로 정렬 */
-    align-items: center; /* 모든 요소의 세로 중앙 정렬 */
-    justify-content: space-between; /* 양 끝 정렬: 왼쪽 섹션과 이름 */
-    gap: 10px; /* 요소들 사이의 기본 간격 (필요시 조절) */
-}
-
 /* comment-left-section: 시간, 댓글 내용, 수정/삭제를 담는 왼쪽 섹션 */
 .comment-left-section {
     display: flex; /* 내부 요소들을 가로 정렬 */
@@ -287,24 +277,12 @@ iframe {
     gap: 10px; /* 내부 요소들 (시간, 내용, 설정) 사이의 간격 */
 }
 
-/* comment-meta: 작성 시간 부분 */
 .comment-meta {
-    /* comment-left-section 안에서 시간이 줄어들지 않도록 */
     flex-shrink: 0;
     font-size: 13px;
     color: #7c7c7c;
     white-space: nowrap; /* 시간이 줄바꿈되지 않도록 */
 }
-
-/* comment-text: 댓글 내용 부분 */
-.comment-text {
-    flex-grow: 1; /* 왼쪽 섹션 내에서 남은 공간을 최대한 차지 */
-    font-size: 15px;
-    line-height: 1.6;
-    color: #2e2e2e;
-    word-break: break-word; /* 긴 단어가 줄바꿈되도록 */
-}
-
 
 /* comment-name: 송수아 이름 부분 */
 .comment-name {
@@ -314,4 +292,91 @@ iframe {
     font-weight: bold; /* 이름 굵게 (선택 사항) */
     white-space: nowrap; /* 이름이 줄바꿈되지 않도록 */
     margin-left: auto; /* 핵심: 남은 공간을 차지하여 오른쪽으로 밀어냄 */
+}
+
+/* 모달배치 */
+.modal.hidden {
+  display: none;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  z-index: 10000; /* ✅ 중요: 배경보다 위로 */
+  box-sizing: border-box;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-confirm-btn,
+#edit-confirm-btn {
+  background-color: #3a404c;
+  color: white;
+}
+
+#modal-cancel-btn,
+#edit-cancel-btn {
+  background: none;
+  color: #777;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-error {
+  color: red;
+  font-size: 0.85rem;
 }
