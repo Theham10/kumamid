@@ -1,0 +1,382 @@
+@font-face {
+    font-family: 'Tmon Monsori';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/fonts-archive/TmonMonsori/TmonMonsori.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/fonts-archive/TmonMonsori/TmonMonsori.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/fonts-archive/TmonMonsori/TmonMonsori.ttf') format('truetype');
+}
+
+.divider {
+  border-bottom: 1px solid #404040;
+  margin: 10px 0;
+}
+
+.comment-board {
+  max-width: 80%;
+  margin: 0px auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.comment-input-wrap textarea {
+  height: 36px;
+  border: 1px solid #ffffff1a;
+  border-radius: 30px;
+  resize: none;
+  padding: 10px;
+  padding-left: 2.5%;
+  font-size: 12px;
+  background-color: #4040401A;
+}
+
+.comment-input-wrap {
+    margin: auto;
+}
+
+#id-input {
+    width: 20%;
+}
+
+#pwd-input {
+    width: 20%;
+}
+
+#comment-input {
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+    #id-input {
+        width: 45%;
+    }
+
+    #pwd-input {
+        width: 45%;
+    }
+
+    #comment-input {
+        width: 92%;
+    }
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.comment-footer span {
+  font-size: 12px;
+  color: #4d4d4d;
+}
+
+.comment-footer button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 6px 1px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.comment-list {
+  margin-top: 30px;
+}
+
+.comment-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex; /* 자식 요소들을 가로로 정렬 */
+    align-items: center; /* 모든 요소의 세로 중앙 정렬 */
+    justify-content: space-between; /* 양 끝 정렬: 왼쪽 섹션과 이름 */
+    gap: 10px; /* 요소들 사이의 기본 간격 (필요시 조절) */
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #7c7c7c;
+  margin-bottom: 4px;
+}
+
+.comment-text {
+    flex-grow: 1; /* 왼쪽 섹션 내에서 남은 공간을 최대한 차지 */
+    font-size: 15px;
+    line-height: 1.6;
+    color: #2e2e2e;
+    word-break: break-word; /* 긴 단어가 줄바꿈되도록 */
+}
+
+/* sns 배너 */
+.sns {
+    padding-top: 3%;
+    background-color: #000000;
+}
+
+.sns-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.sns-icons a {
+  margin-right: 10px;
+    text-decoration-line: none;
+}
+
+.sns-icons a:last-child {
+  margin-right: 0;
+}
+
+.sns-icons img {
+  width: 15%;
+  object-fit: contain;
+}
+
+.sns-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+}
+
+/* 오시는 길 */
+.text-container {
+    background-color: #000000;
+    font-size: 270%; /* PC일 때 기본 글꼴 크기 */   
+}
+
+@media (max-width: 600px) { /* (화면 너비가 768px 이하일 경우) */
+    .text-container {
+        padding-top: 10%;
+        font-size: 150%; 
+    }
+}
+
+/* 지도 */
+.location-container {
+    background-color: #000000;
+    padding-left: 5%;
+}
+
+iframe {
+    width:95%;
+    height: 500px;
+}
+
+@media (max-width: 600px) { 
+    iframe {
+        height: 320px;
+        width:100%;
+    }
+}
+
+@media (max-width: 600px) { /* (화면 너비가 600px 이하일 경우) */
+
+    .location-container {
+        padding-top: 10%;
+        font-size: 150%; 
+        padding: 0%;
+    }
+}
+
+
+/* CONTACT US 푸터 */
+ .container {
+        display: flex;
+        justify-content: flex-start; /* 왼쪽으로 붙여서 시작 */
+        flex-wrap: nowrap;
+        font-size: 90%;
+        gap: 0; /* 여백을 없애려면 0으로 유지하거나 아예 삭제 */
+        /* 필요하다면 컨테이너의 최대 너비를 설정하여 박스들이 너무 늘어나지 않게 제어 */
+        /* max-width: 1000px; */ 
+    }
+
+ .box {
+        padding-left: 6%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+        padding-right: 0%;
+        text-align: left;
+        
+        /* flex: 1; 대신 각 박스의 너비를 명확하게 지정 */
+        flex-basis: 280px; /* 각 박스의 기본 너비를 300px로 설정 (예시) */
+        /* 또는 width: 300px; */
+        /* 박스 사이에 원하는 마진을 직접 추가 */
+        margin-right: 20px; /* 각 박스 오른쪽에 20px 마진 */
+    }
+
+
+    .box p {
+        margin: 0px 0;
+    }
+
+    /* --- 모바일 환경 CSS --- */
+    @media (max-width: 768px) { /* 화면 너비가 768px 이하일 때 적용 */
+        .container {
+            display: block; /* Flexbox 해제: 박스들이 세로로 쌓이게 됩니다. */
+            font-size: 85%;
+            padding: 5%;
+            /* gap은 display: block 일 때는 적용되지 않습니다. */
+        }
+
+        .box {
+            width: 100%; /* 너비 100% */
+            padding-left: 0%; /* 모바일에서 좌측 패딩 제거 (선택 사항) */
+            padding-right: 0%; /* 모바일에서 우측 패딩 제거 (선택 사항) */
+            margin-right: 0; /* 기존 margin-right 제거 */
+            margin-bottom: 20px; /* 세로로 쌓였을 때 아래쪽 마진 추가 */
+            flex-basis: auto; /* flex-basis 제거 또는 auto로 설정 */
+        }
+
+    }
+
+
+/* comment-setting (수정/삭제) */
+.comment-setting {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* 링크들 사이의 간격 */
+    font-size: 12px;
+    color: #7c7c7c;
+    white-space: nowrap;
+}
+
+.comment-setting {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.comment-setting a.edit-link:hover,
+.comment-setting a.delete-link:hover {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+}
+.comment-setting:hover {
+    color: rgb(186, 186, 186);
+}
+
+/* comment-left-section: 시간, 댓글 내용, 수정/삭제를 담는 왼쪽 섹션 */
+.comment-left-section {
+    display: flex; /* 내부 요소들을 가로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    flex-grow: 1; /* 남은 공간을 최대한 차지하도록 늘어남 (송수아에게 공간 주기) */
+    flex-wrap: wrap; /* 내용이 길어지면 줄바꿈 허용 */
+    gap: 10px; /* 내부 요소들 (시간, 내용, 설정) 사이의 간격 */
+}
+
+.comment-meta {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #7c7c7c;
+    white-space: nowrap; /* 시간이 줄바꿈되지 않도록 */
+}
+
+/* comment-name: 송수아 이름 부분 */
+.comment-name {
+    flex-shrink: 0; /* 공간이 부족해도 줄어들지 않도록 */
+    font-size: 13px; /* 이름 글꼴 크기 */
+    color: #7c7c7c; /* 이름 색상 */
+    font-weight: bold; /* 이름 굵게 (선택 사항) */
+    white-space: nowrap; /* 이름이 줄바꿈되지 않도록 */
+    margin-left: auto; /* 핵심: 남은 공간을 차지하여 오른쪽으로 밀어냄 */
+}
+
+/* 모달배치 */
+.modal.hidden {
+  display: none;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  z-index: 10000; /* ✅ 중요: 배경보다 위로 */
+  box-sizing: border-box;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-confirm-btn,
+#edit-confirm-btn {
+  background-color: #3a404c;
+  color: white;
+}
+
+#modal-cancel-btn,
+#edit-cancel-btn {
+  background: none;
+  color: #777;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-error {
+  color: red;
+  font-size: 0.85rem;
+}
