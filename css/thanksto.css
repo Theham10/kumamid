@@ -52,15 +52,15 @@
 
 @media (max-width: 700px) {
     #id-input {
-        width: 50%;
+        width: 45%;
     }
 
     #pwd-input {
-        width: 50%;
+        width: 45%;
     }
 
     #comment-input {
-        width: 100%;
+        width: 92%;
     }
 }
 
