@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/about_scrollAni.css" />
     <script src="js/all_headerText.js"></script>
      <script src="js/about_scrollAni.js"></script>
+     
 <head>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 <meta charset="utf-8">
@@ -59,6 +60,8 @@ input.addEventListener("input", () => {
         <div class="comment-board">
         <!-- 🔽 댓글 입력 영역 -->
         <div class="comment-input-wrap">
+            <textarea id="id-input" placeholder="이름" maxlength="10"></textarea>
+            <textarea id="pwd-input" placeholder="비밀번호" maxlength="10"></textarea>
             <textarea id="comment-input" placeholder="여러분의 소중한 응원을 입력해주세요." maxlength="300"></textarea>
             <div class="comment-footer">
             <span id="char-count">0/300</span>
@@ -69,53 +72,27 @@ input.addEventListener("input", () => {
         <!-- 🔽 댓글 리스트 출력 영역 -->
         <div id="comment-list" class="comment-list">
             <!-- 자바스크립트로 여기에 댓글 div들이 append될 예정 -->
-        
+
+
+            <!-- 테스트 메세지 -->
             <div class="comment-item">
-            <div class="comment-meta">
-                <span class="comment-time">1년 전</span>
+                <div class="comment-meta">
+                    <span class="comment-time">1년 전</span>
+                </div>
+                <div class="comment-text">다들 고생하셨습니다 !!</div>
+                <div class="comment-setting">
+                    <a class="edit-link">수정</a> <span>/</span> <a class="delete-link">삭제</a> 
+                </div>  
                 <span class="comment-name">송수아</span>
-            </div>
-            <div class="comment-text">다들 고생하셨습니다 !!</div>
-            </div>
-
-            <div class="comment-item">
-            <div class="comment-meta">
-                <span class="comment-time">1년 전</span>
-                <span class="comment-name">송수아</span>
-            </div>
-            <div class="comment-text">다들 고생하셨습니다 !!</div>
-            </div>
-
-            <div class="comment-item">
-                <div class="comment-meta">
-                    <span class="comment-time">1년 전</span>
-                    <span class="comment-name">송수아</span>
-                </div>
-                <div class="comment-text">다들 고생하셨습니다 !!</div>
-            </div>
-
-            <div class="comment-item">
-                <div class="comment-meta">
-                    <span class="comment-time">1년 전</span>
-                    <span class="comment-name">송수아</span>
-                </div>
-                <div class="comment-text">다들 고생하셨습니다 !!</div>
-                </div>
-            </div>
-
-            <div class="comment-item">
-                <div class="comment-meta">
-                    <span class="comment-time">1년 전</span>
-                    <span class="comment-name">송수아</span>
-                </div>
-                <div class="comment-text">다들 고생하셨습니다 !!</div>
-                </div>
             </div>
 
         </div>
+
 
         </div>
     </div>
+    </div>
+</div>
 
     
 <div class="section fade-in">
@@ -172,16 +149,6 @@ input.addEventListener("input", () => {
     </div>
 </div>
 
-<!-- footer 렌더링
-<div id="footer-text" style="text-align: left; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
-  © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
-</div>
-<script>
-  const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
-  document.getElementById("footer-year").textContent = selectedYear;
-</script>
- -->
-
 <script>
 function goTo(page) {
   const year = sessionStorage.getItem("selectedYear");
@@ -193,8 +160,9 @@ function goTo(page) {
     }
 </script>
 
-
+<script type="module" src="js/thanksTo_module.js"></script>
 </body>
+
 </html>
 <style>
 
