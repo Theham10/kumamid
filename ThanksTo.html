@@ -109,14 +109,32 @@ input.addEventListener("input", () => {
 </div>
 
 
-<div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.7808707880617!2d127.20831697509897!3d36.462851586644426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab60770993387%3A0x40f78f2307b1c072!2z7IS47KKF7Yq567OE7J6Q7LmY7IucIOyepeq1sOuptCDrjIDtlZnquLggMzAw!5e0!3m2!1sko!2skr!4v1749543347492!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="location-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.7808707880617!2d127.20831697509897!3d36.462851586644426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab60770993387%3A0x40f78f2307b1c072!2z7IS47KKF7Yq567OE7J6Q7LmY7IucIOyepeq1sOuptCDrjIDtlZnquLggMzAw!5e0!3m2!1sko!2skr!4v1749543347492!5m2!1sko!2skr" width="95%" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
+    <div class="container" style="background-color: rgb(0, 0, 0);">
+        <div class="box">
+                        <div><span style="font-family: 'Nanum Square'; color: rgb(71, 85, 119);"><strong>C O N T A C T &nbsp; U S</strong></span></div>
 
+        </div>
+        <div class="box">
+                <div><span class="fsize14"><span style="color: rgb(103, 103, 103);"><span style="font-family: 'Nanum Square';"><strong>오시는 길</strong></span></span></span></div>
+                <br>
+                <div><span style="font-family:'Lato', 'Nanum Gothic';"><span style="color: rgb(153, 153, 153);"><span class="fsize13">한국영상대학교<br></span></span></span></div>
+                <div><span style="font-family:'Lato', 'Nanum Gothic';"><span style="color: rgb(153, 153, 153);"><span class="fsize13">세종특별자치시 장군면 대학길 300</span></span></span></div>
+        </div>
+        <div class="box">
+            <div><span class="fsize14"><span style="color: rgb(103, 103, 103);"><span style="font-family: 'Nanum Square';"><strong>연락 문의</strong></span></span></span></div>
+                <div>
+                    <div><span style="font-family:'Lato', 'Nanum Gothic';"><span style="color: rgb(153, 153, 153);"><span class="fsize13"><br></span></span></span></div>
+                    <div><span style="font-family:'Lato', 'Nanum Gothic';"><span style="color: rgb(153, 153, 153);"><span class="fsize13">044-850-9000</span></span></span></div>
+                    <div><span style="font-family:'Lato', 'Nanum Gothic';"><span style="color: rgb(153, 153, 153);"><span class="fsize13">044-850-9390</span></span></span></div>
+                </div>
+        </div>
+    </div>
 
-
-<!-- footer 렌더링 -->
+<!-- footer 렌더링
 <div id="footer-text" style="text-align: left; margin: 1.1% 0 0 20px; font-size: 12px; position:relative; z-index:2; color: gray;">
   © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
 </div>
@@ -124,6 +142,7 @@ input.addEventListener("input", () => {
   const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
   document.getElementById("footer-year").textContent = selectedYear;
 </script>
+ -->
 
 <script>
 function goTo(page) {

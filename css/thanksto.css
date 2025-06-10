@@ -120,6 +120,7 @@
 .text-container {
     background-color: #000000;
     font-size: 270%; /* PC일 때 기본 글꼴 크기 */
+    
 }
 
 @media (max-width: 600px) { /* (화면 너비가 768px 이하일 경우) */
@@ -128,3 +129,60 @@
         font-size: 150%; 
     }
 }
+
+/* 지도 */
+.location-container {
+    background-color: #000000;
+    padding-left: 5%;
+}
+
+/* CONTACT US 푸터 */
+ .container {
+        display: flex;
+        justify-content: flex-start; /* 왼쪽으로 붙여서 시작 */
+        flex-wrap: nowrap;
+        font-size: 90%;
+        gap: 0; /* 여백을 없애려면 0으로 유지하거나 아예 삭제 */
+        /* 필요하다면 컨테이너의 최대 너비를 설정하여 박스들이 너무 늘어나지 않게 제어 */
+        /* max-width: 1000px; */ 
+    }
+
+ .box {
+        padding-left: 6%;
+        padding-top: 3%;
+        padding-bottom: 4%;
+        padding-right: 0%;
+        text-align: left;
+        
+        /* flex: 1; 대신 각 박스의 너비를 명확하게 지정 */
+        flex-basis: 280px; /* 각 박스의 기본 너비를 300px로 설정 (예시) */
+        /* 또는 width: 300px; */
+        /* 박스 사이에 원하는 마진을 직접 추가 */
+        margin-right: 20px; /* 각 박스 오른쪽에 20px 마진 */
+    }
+
+
+    .box p {
+        margin: 0px 0;
+    }
+
+    /* --- 모바일 환경 CSS --- */
+    @media (max-width: 768px) { /* 화면 너비가 768px 이하일 때 적용 */
+        .container {
+            display: block; /* Flexbox 해제: 박스들이 세로로 쌓이게 됩니다. */
+            font-size: 85%;
+            padding: 5%;
+            /* gap은 display: block 일 때는 적용되지 않습니다. */
+        }
+
+        .box {
+            width: 100%; /* 너비 100% */
+            padding-left: 0%; /* 모바일에서 좌측 패딩 제거 (선택 사항) */
+            padding-right: 0%; /* 모바일에서 우측 패딩 제거 (선택 사항) */
+            margin-right: 0; /* 기존 margin-right 제거 */
+            margin-bottom: 20px; /* 세로로 쌓였을 때 아래쪽 마진 추가 */
+            flex-basis: auto; /* flex-basis 제거 또는 auto로 설정 */
+        }
+
+    }
+
