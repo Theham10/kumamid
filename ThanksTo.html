@@ -2,12 +2,41 @@
 <!DOCTYPE html>
 <html lang="ko" id="no-fouc">
     <link rel="stylesheet" href="css/all_header.css" />
+    <link rel="stylesheet" href="css/thanksto.css" />
     <script src="js/all_headerText.js"></script>
 <head>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/intro_video.css">
 <script src="js/all_year.js"></script>
+<script>
+    /*임시 js*/
+function renderComment({ name, text, timestamp }) {
+  const list = document.getElementById("comment-list");
+
+  const item = document.createElement("div");
+  item.className = "comment-item";
+
+  const meta = document.createElement("div");
+  meta.className = "comment-meta";
+  meta.innerHTML = `<span class="comment-time">${getTimeAgo(timestamp)}</span><span class="comment-name">${name}</span>`;
+
+  const content = document.createElement("div");
+  content.className = "comment-text";
+  content.textContent = text;
+
+  item.appendChild(meta);
+  item.appendChild(content);
+  list.appendChild(item);
+}
+
+const input = document.getElementById("comment-input");
+const counter = document.getElementById("char-count");
+
+input.addEventListener("input", () => {
+  counter.textContent = `${input.value.length}/300`;
+});
+
+</script>
 </head>
 
 <body>
@@ -23,9 +52,65 @@
 <div id="header-md"></div>
 
 
-<div style="background-color: white; padding-top: 3%;">
-    
+    <!-- 게시판 입력 부문 -->
+    <div style="background-color: white;">
+        <div class="comment-board">
+        <!-- 🔽 댓글 입력 영역 -->
+        <div class="comment-input-wrap">
+            <textarea id="comment-input" placeholder="여러분의 소중한 응원을 입력해주세요." maxlength="300"></textarea>
+            <div class="comment-footer">
+            <span id="char-count">0/300</span>
+            <button id="comment-submit">등록 →</button>
+            </div>
+        </div>
 
+        <!-- 🔽 댓글 리스트 출력 영역 -->
+        <div id="comment-list" class="comment-list">
+            <!-- 자바스크립트로 여기에 댓글 div들이 append될 예정 -->
+        
+        <div class="comment-item">
+            <div class="comment-meta">
+                <span class="comment-time">1년 전</span>
+                <span class="comment-name">송수아</span>
+            </div>
+            <div class="comment-text">다들 고생하셨습니다 !!</div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    
+  <div class="sns">
+  <div class="sns-row">
+    <div class="sns-icons">
+      <a href="https://www.instagram.com/creative_ad_kuma/" target="_blank">
+        <img src="https://storage.googleapis.com/i.addblock.net/sample/sns_icon23_1.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@user-xo3kz2xw3d" target="_blank">
+        <img src="https://lh3.googleusercontent.com/zYx25_YV6f_i0hQ2-WRVDrQ8DwgLeAf-rRYuKy9X2-fuT9A79P0vWITd2WbRHxUrVGvjJHadqK9FJ4oayC-29_AmlVogOCGzqSw4vbivFm3ZOmiwZVqtKA=w60-h60-n" alt="YouTube">
+      </a>
+      <a href="https://www.facebook.com/kuma.ads/" target="_blank">
+        <img src="https://storage.googleapis.com/i.addblock.net/sample/sns_icon23_3.png" alt="Facebook">
+      </a>
+    </div>
+
+    <p class="sns-title">한국영상대학교 광고영상디자인과</p>
+  </div>
+</div>
+
+<!-- 오시는 길 표시 박스 -->
+<div class="text-container">
+        <div style="padding: 4%;">
+                    <div><span style="color: white; font-family: 'Tmon Monsori';">오시는 길</div>
+                    <hr class="fr-hr" style="border-bottom: 4px solid #ffffff; width: 60px; margin-top: 1%;"/>
+            </div>
+        </div>
+</div>
+
+
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.7808707880617!2d127.20831697509897!3d36.462851586644426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ab60770993387%3A0x40f78f2307b1c072!2z7IS47KKF7Yq567OE7J6Q7LmY7IucIOyepeq1sOuptCDrjIDtlZnquLggMzAw!5e0!3m2!1sko!2skr!4v1749543347492!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 
@@ -54,3 +139,6 @@ function goTo(page) {
 
 </body>
 </html>
+<style>
+
+</style>
