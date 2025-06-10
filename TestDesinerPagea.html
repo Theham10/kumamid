@@ -23,7 +23,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
-  const year = sessionStorage.getItem("selectedYear") || "2023";
+  const year = localStorage.getItem("selectedYear") || "2023";
 
   fetch(`data/${year}.json`)
     .then(res => res.json())

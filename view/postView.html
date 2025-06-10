@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>프로젝트 상세</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/postView.css">
-  <link rel="stylesheet" href="./css/all_header.css">
+  <link rel="stylesheet" href="/css/postView.css">
+  <link rel="stylesheet" href="/css/all_header.css">
 </head>
 <body>
   <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -52,12 +52,12 @@
     © 2023. DESIGNTHEHAM Co. all rights reserved.
   </div>
 </footer>
-<script type="module" src="./js/post.js"></script>
+<script type="module" src="/js/post.js"></script>
 <script>
 function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
+  const year = localStorage.getItem("selectedYear");
     if (!year) {
-        alert("먼저 연도를 선택해주세요!");
+        alert(" 선택해주세요!");
         return;
     }
     window.location.href = page;

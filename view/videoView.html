@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>프로젝트 상세</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/videoView.css">
-  <link rel="stylesheet" href="./css/all_header.css">
+  <link rel="stylesheet" href="/css/videoView.css">
+  <link rel="stylesheet" href="/css/all_header.css">
   <style>
     .project-section-image {
       display: flex;
@@ -70,14 +70,14 @@
 </footer>
 <script>
 function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
+  const year = localStorage.getItem("selectedYear");
     if (!year) {
-        alert("먼저 연도를 선택해주세요!");
+        alert(" 선택해주세요!");
         return;
     }
     window.location.href = page;
     }
 </script>
-<script type="module" src="./js/viedo.js"></script>
+<script type="module" src="/js/viedo.js"></script>
 </body>
 </html>

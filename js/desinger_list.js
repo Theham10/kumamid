@@ -17,7 +17,7 @@ const year = localStorage.getItem("selectedYear") || "2023";
     data.디자이너.forEach(designer => {
     const div = document.createElement('div');
     div.innerHTML = `
-      <a href="./디자이너상세정보.html?id=${encodeURIComponent(designer.name)}" class="grid-item" data-id="${designer.name}">
+      <a href="/view/디자이너상세정보.html?id=${encodeURIComponent(designer.name)}" class="grid-item" data-id="${designer.name}">
         <div class="designer-img-wrap">
           <img src="${getImgUrl(designer.name)}" alt="${designer.name}_프로필" class="img-responsive">
         </div>

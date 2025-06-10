@@ -1,13 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="ko" id="no-fouc">
-    <link rel="stylesheet" href="css/all_header.css" />
-    <script src="js/all_headerText.js"></script>
+    <link rel="stylesheet" href="/css/all_header.css" />
+    <script src="/js/all_headerText.js"></script>
 <head>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/intro_video.css">
-<script src="js/all_year.js"></script>
+<link rel="stylesheet" href="/css/intro_video.css">
+<script src="/js/all_year.js"></script>
 </head>
 <style>
   .menu-overlay {
@@ -41,7 +41,7 @@
 <body>
 <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -53,7 +53,7 @@
 <!-- www.youtube.com/embed/ZdQcr8xURNk 다운하자 그냥 -->
 <div class="video-container">
     <video autoplay muted loop playsinline>
-      <source src="video/intro.mp4" type="video/mp4">
+      <source src="/video/intro.mp4" type="video/mp4">
       브라우저가 비디오 태그를 지원하지 않습니다.
     </video>
 </div>
@@ -74,14 +74,6 @@
 </script>
 
 <script>
-function goTo(page) {
-  const year = localStorage.getItem("selectedYear");
-    if (!year) {
-        alert("먼저 연도를 선택해주세요!");
-        return;
-    }
-    window.location.href = page;
-    }
 </script>
 
 

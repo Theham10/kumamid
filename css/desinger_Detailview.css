@@ -1,394 +1,389 @@
 body {
-  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 0;
+    font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .detail-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-project {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 1140px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 2rem;;
-}
-
-.detail-project-img:hover,
-.detail-project-vidio:hover,
-.detail-project-tproject:hover {
-  border: 3px solid #fff;
-  border-radius: 15px;
-}
-
-.detail-project-img>div,
-.detail-project-vidio>div,
-.detail-project-tproject>div {
-  padding: 1rem 1rem;
-}
-
-.detail-project-img,
-.detail-project-video{
-  width: 555px;
-}
-.detail-project-tproject img{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-
-}
-
-
-.detail-project img {
-  width: 545px;
-  height: 555px;
-  border-radius: 15px;
-  object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 중앙 정렬을 위해 추가 */
+    padding: 60px 16px; /* 모바일 대응 padding */
 }
 
 .designer-header {
-  width: 1140px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  text-align: left;
+    width: 1140px;
+    max-width: 100%; /* 반응형을 위해 추가 */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: left;
 }
 
 .designer-school-info {
-  color: #999;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
 .designer-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 2rem;
 }
 
 .designer-profile-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 4rem;
-  flex-wrap: nowrap;
-  max-width: 1000px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+    max-width: 1000px;
+    width: 100%; /* 부모 너비에 맞춤 */
+    padding: 0 1rem; /* 좌우 패딩 */
+    box-sizing: border-box; /* 패딩 포함 너비 계산 */
 }
 
 .profile-img-container {
-  width: 300px;
-}
-
-a.project-link:hover {
-  border: 2px solid #fff !important;
-  border-radius: 12px;
-  box-sizing: border-box;
+    width: 300px;
+    flex-shrink: 0; /* 줄어들지 않도록 */
 }
 
 .profile-img {
-  width: 300px;
-  border-radius: 12px;
-  object-fit: cover;
+    width: 100%; /* 컨테이너에 맞춤 */
+    border-radius: 12px;
+    object-fit: cover;
 }
 
-
 .profile-text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-self: flex-end;
-  height: 100%;
-  max-width: 600px;
-  min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: flex-end;
+    height: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    flex-grow: 1; /* 남은 공간 차지 */
 }
 
 .profile-name {
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 0.75rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
 }
 
 .profile-role {
-  font-size: 1.5rem;
-  color: #ccc;
+    font-size: 1.5rem;
+    color: #ccc;
 }
 
 .profile-email {
-  font-size: 1.2rem;
-  color: #aaa;
+    font-size: 1.2rem;
+    color: #aaa;
 }
 
 .divider {
-  margin: 2rem 0;
-  border-color: #fafafa;
-  border: 1px solid;
-  border: 0;
-  border-top: 1px solid #e1e1e1;
-  height: 1px;
-  width: 100%;
+    margin: 2rem 0;
+    border-color: #fafafa;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+    height: 1px;
+    width: 100%;
+    max-width: 1140px; /* .detail-project와 너비 맞춤 */
 }
 
 .designer-quote {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-top: 5rem;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 5rem;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5rem;
+    max-width: 1140px; /* 너비 제한 */
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
-.designer-img-box {
-  margin-bottom: 40px;
+/* ========================================= */
+/* Project 섹션 - 통합 그리드 레이아웃 */
+/* ========================================= */
+h1.project-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1140px;
 }
 
-.designer-name {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin: 0 0 1rem 0;
-  color: #ffffff;
+.detail-project {
+    display: grid; /* ⭐ 그리드 레이아웃으로 변경 */
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* ⭐ 최소 450px 너비로 2열 이상 유지, 유동적으로 열 개수 조정 */
+    gap: 2rem; /* ⭐ 모든 project-item 사이의 간격 */
+    width: 1140px;
+    max-width: 100%; /* 반응형을 위해 추가 */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
 }
 
-.designer-text-box {
-  max-width: 700px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: left;
-  bottom: 0px;
+/* 이제 .detail-project-img, .detail-project-vidio, .detail-project-tproject 는 HTML에서 제거되거나
+   다른 용도로 사용될 경우에만 정의되어야 합니다.
+   여기서는 이들을 더 이상 개별 컨테이너로 사용하지 않는다고 가정합니다. */
+/* .detail-project-img, .detail-project-vidio, .detail-project-tproject { display: none; } 또는 제거 */
+
+.project-item {
+    display: flex;
+    flex-direction: column; /* 이미지 위에 설명이 오도록 */
+    align-items: center; /* 가로 중앙 정렬 */
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden; /* 둥근 모서리 밖으로 넘어가는 내용 잘라냄 */
+    border: 1px solid #333; /* 선택적 테두리 */
+    background-color: #1a1a1a; /* 선택적 배경색 */
+    height: 100%; /* 그리드 아이템 내에서 높이 꽉 채우기 */
+}
+.team-type{
+  width: 1080px;
+}
+.project-item:hover {
+    border-color: #fff;
 }
 
-.designer-text-box>div {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 4rem;
-  flex-wrap: wrap;
+.project-item img {
+    width: 100%;
+    height: auto; /* 비율 유지 */
+    max-height: 500px; /* 너무 커지지 않도록 최대 높이 설정 */
+    border-radius: 15px 15px 0 0; /* 상단 모서리 둥글게 */
+    object-fit: cover;
+    display: block;
 }
 
-.designer-info-wrapper {
-  background-color: #111;
-  padding: 25px 30px;
-  border-radius: 12px;
-  line-height: 1.8;
-  font-size: 1.15rem;
-  max-width: 700px;
-  width: 100%;
-  text-align: left;
-  margin: 0;
-}
-
-.designer-info-wrapper a {
-  color: #66b2ff;
-  text-decoration: underline;
-  transition: color 0.3s ease;
-}
-
-.designer-info-wrapper a:hover {
-  color: #ffcc00;
-}
-
-.bottom-align-text {
-  margin-top: 2rem;
-  align-items: flex-start;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  max-width: 300px;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .designer-name {
-    font-size: 2rem;
-  }
-
-  .designer-info-wrapper {
-    font-size: 1rem;
-    padding: 20px;
-  }
-
-  .detail-container {
-    padding: 60px 16px;
-  }
-
-  .designer-text-box>div {
+.project-item > div { /* 설명 div */
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    flex-grow: 1; /* 남은 공간을 차지하여 내용이 길어져도 레이아웃 유지 */
+    display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  .bottom-align-text {
-    margin-top: 1rem;
-    text-align: center;
-    align-items: center;
-  }
+    justify-content: center; /* 텍스트 내용 수직 중앙 정렬 */
 }
 
-@media (max-width: 768px) {
-  .profile-text-box {
-    align-items: center;
-    text-align: center;
-    justify-content: flex-end;
-  }
+/* 특정 유형의 이미지/비디오에 대한 추가 스타일 (필요시) */
+.project-item.video-type iframe { /* 비디오 아이템 내 iframe */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    display: block;
 }
 
+/* ========================================= */
+/* 댓글 섹션 (기존 CSS 유지) */
+/* ========================================= */
 .comment-section {
-  max-width: 960px;
-  margin: 4rem auto;
-  padding: 0 1rem;
-  color: white;
+    max-width: 960px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    color: white;
 }
 
 #commentInput {
-  width: 100%;
-  height: 120px;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #111;
-  color: white;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #111;
+    color: white;
 }
 
 .comment-section button {
-  display: block;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: 0;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  /* float: right; */
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 #commentList {
-  list-style: none;
-  padding: 0;
-  margin-top: 2rem;
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
 }
 
 #commentList li {
-  background: #111;
-  border: 1px solid #333;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+    background: #111;
+    border: 1px solid #333;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
 #commentList li::before {
-  content: "👤";
-  font-size: 1.5rem;
+    content: "👤";
+    font-size: 1.5rem;
 }
 
 .comment-box {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background-color: #111;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #111;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-bottom: 1rem;
 }
 
 .comment-avatar {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 .comment-content {
-  flex: 1;
+    flex: 1;
 }
 
 .comment-content textarea {
-  width: 100%;
-  height: 100px;
-  padding: 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #222;
-  color: white;
-  resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    resize: none;
 }
 
 .comment-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
 }
 
 .comment-options label {
-  font-size: 0.9rem;
-  color: #aaa;
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
 .comment-options button {
-  padding: 0.4rem 1.5rem;
-  font-size: 0.95rem;
-  background-color: #111;
-  color: #fff;
-  border: 1px solid #666;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.95rem;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .comment-options button:hover {
-  background-color: #333;
-  color: #fff;
+    background-color: #333;
+    color: #fff;
 }
 
 .comment-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  background-color: #111;
-  border: 1px solid #333;
-  padding: 1rem;
-  border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .comment-body {
-  flex: 1;
+    flex: 1;
 }
 
 .comment-header {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
 }
 
 .comment-author {
-  font-weight: bold;
-  color: #fff;
+    font-weight: bold;
+    color: #fff;
 }
 
 .comment-time {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .comment-text {
-  font-size: 1rem;
-  color: #ddd;
-  line-height: 1.6;
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ========================================= */
+/* 반응형 디자인 */
+/* ========================================= */
+@media (max-width: 768px) {
+    .designer-name {
+        font-size: 2rem;
+    }
+
+    .designer-info-wrapper {
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    .detail-container {
+        padding: 60px 16px;
+    }
+
+    .designer-text-box > div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-align-text {
+        margin-top: 1rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .profile-text-box {
+        align-items: center;
+        text-align: center;
+        justify-content: flex-end;
+        min-height: unset; /* 모바일에서 최소 높이 제한 해제 */
+    }
+
+    .designer-profile-row {
+        flex-direction: column; /* 프로필 이미지와 텍스트 세로 정렬 */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .detail-project {
+        grid-template-columns: 1fr; /* ⭐ 모바일에서는 단일 열 */
+        padding: 1rem;
+    }
+
+    .project-item {
+        width: 100%; /* 모바일에서는 너비 100% */
+        max-width: unset;
+    }
 }

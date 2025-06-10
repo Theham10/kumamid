@@ -4,7 +4,7 @@ fetch("../module/header.html")
     document.getElementById("header-md").innerHTML = data;
 
     requestAnimationFrame(() => {
-      const year = sessionStorage.getItem("selectedYear");
+      const year = localStorage.getItem("selectedYear");
       if (year) {
         const count = parseInt(year) - 1999 + 1;
         const displayText = `제 ${count}회 ${year} 졸업전`;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const params = new URLSearchParams(window.location.search);
   const videoId = params.get('id');
-  const year = sessionStorage.getItem("selectedYear") || "2023";
+  const year = localStorage.getItem("selectedYear") || "2023";
 
   fetch(`/data/${year}.json`)
     .then(res => res.json())

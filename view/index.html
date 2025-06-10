@@ -71,7 +71,7 @@
   </style>
   <script>
   // year list 모듈 삽입
-  fetch("module/yearlist.html")
+  fetch("/module/yearlist.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("yearlist-md").innerHTML = data;

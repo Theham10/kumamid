@@ -1,7 +1,7 @@
 function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
+  const year = localStorage.getItem("selectedYear");
   if (!year) {
-    alert("먼저 연도를 선택해주세요!");
+    alert("요!");
     return;
   }
   window.location.href = page;

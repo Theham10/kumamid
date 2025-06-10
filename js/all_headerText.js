@@ -1,10 +1,10 @@
-fetch("../module/header.html")
+fetch("/module/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
 
     requestAnimationFrame(() => {
-      const year = sessionStorage.getItem("selectedYear");
+      const year = localStorage.getItem("selectedYear");
       if (year) {
         const count = parseInt(year) - 1999 + 1;
         const displayText = `제 ${count}회 ${year} 졸업전`;
