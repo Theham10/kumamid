@@ -69,12 +69,12 @@
   © <span id="footer-year"></span>. DESIGNTHEHAM Co. all rights reserved.
 </div>
 <script>
-  const selectedYear = localStorage.getItem("selectedYear") || new Date().getFullYear();
+  const params = new URLSearchParams(window.location.search); // ← 이 줄 추가
+  const selectedYear = params.get("year");
   document.getElementById("footer-year").textContent = selectedYear;
 </script>
+<script src="/js/all_year.js"></script>
 
-<script>
-</script>
 
 
 </body>

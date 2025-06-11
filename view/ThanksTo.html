@@ -1,16 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="ko" id="no-fouc">
-    <link rel="stylesheet" href="css/all_header.css" />
-    <link rel="stylesheet" href="css/thanksto.css" />
-    <link rel="stylesheet" href="css/about_scrollAni.css" />
-    <script src="js/all_headerText.js"></script>
-     <script src="js/about_scrollAni.js"></script>
+    <link rel="stylesheet" href="/css/all_header.css" />
+    <link rel="stylesheet" href="/css/thanksto.css" />
+    <link rel="stylesheet" href="/css/about_scrollAni.css" />
+    <script src="/js/all_headerText.js"></script>
+     <script src="/js/about_scrollAni.js"></script>
      
 <head>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 <meta charset="utf-8">
-<script src="js/all_year.js"></script>
+<script src="/js/all_year.js"></script>
 <script>
     /*임시 js*/
 function renderComment({ name, text, timestamp }) {
@@ -45,7 +45,7 @@ input.addEventListener("input", () => {
 <div>
 <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -64,7 +64,7 @@ input.addEventListener("input", () => {
             <textarea id="pwd-input" placeholder="비밀번호" maxlength="10"></textarea>
             <textarea id="comment-input" placeholder="여러분의 소중한 응원을 입력해주세요." maxlength="300"></textarea>
             <div class="comment-footer">
-            <span id="char-count">0/300</span>
+            <span id="char-count"></span>
             <button id="comment-submit">등록 →</button>
             </div>
         </div>
@@ -192,7 +192,9 @@ function goTo(page) {
 </div>
 
 
-<script type="module" src="js/thanksTo.js"></script>
+<script type="module" src="/js/thanksTo.js"></script>
+<script src="/js/all_year.js"></script>
+
 </body>
 
 </html>
