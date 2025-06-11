@@ -5,10 +5,10 @@
   <title>팀 프로젝트 상세</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- post랑 디자인 통일해서 해야하나? all_view.css? -->
-  <link rel="stylesheet" href="../css/postView.css">
+  <link rel="stylesheet" href="/css/postView.css">
 
-  <link rel="stylesheet" href="../css/all_header.css">
-  <link rel="stylesheet" href="../css/teamView.css">
+  <link rel="stylesheet" href="/css/all_header.css">
+  <link rel="stylesheet" href="/css/teamView.css">
 
     <style>
 
@@ -18,7 +18,7 @@
 <body>
   <script>
     // ✅ 공통 header 삽입
-    fetch("../module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -113,6 +113,8 @@
     </div>
   </footer>
 
-  <script type="module" src="../js/team.js"></script>
+  <script type="module" src="/js/team.js"></script>
+<script src="/js/all_year.js"></script>
+
 </body>
 </html>

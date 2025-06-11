@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html lang="ko" id="no-fouc">
 <head>
-    <link rel="stylesheet" href="css/all_header.css" />
-    <link rel="stylesheet" href="css/about_footer.css" />
-    <link rel="stylesheet" href="css/about_btm_text.css" />
-    <link rel="stylesheet" href="css/about_imgslider.css" />
-    <link rel="stylesheet" href="css/about_scrollAni.css" />
-    <script src="js/about_imgslider.js"></script>
-    <script src="js/about_scrollAni.js"></script>
-    <script src="js/all_headerText.js"></script>
+    <link rel="stylesheet" href="/css/all_header.css" />
+    <link rel="stylesheet" href="/css/about_footer.css" />
+    <link rel="stylesheet" href="/css/about_btm_text.css" />
+    <link rel="stylesheet" href="/css/about_imgslider.css" />
+    <link rel="stylesheet" href="/css/about_scrollAni.css" />
+    <script src="/js/about_imgslider.js"></script>
+    <script src="/js/about_scrollAni.js"></script>
+    <script src="/js/all_headerText.js"></script>
 <title>한국영상대학교 영상디자인과 졸업전시</title>
 
 <meta charset="utf-8">
@@ -21,7 +21,7 @@
 
 <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -34,13 +34,13 @@
 <div class="slide-container">
   <div class="slide-left">
     <div class="slide-track" id="slideTrack">
-      <div class="slide"><img src="img/about/대표이미지01.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/대표이미지02.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/모션3.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/모션6.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/미래2.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/촬영7.jpg" alt=""></div>
-      <div class="slide"><img src="img/about/촬영8.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/대표이미지01.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/대표이미지02.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/모션3.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/모션6.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/미래2.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/촬영7.jpg" alt=""></div>
+      <div class="slide"><img src="/img/about/촬영8.jpg" alt=""></div>
     </div>
     <div class="slide-dots" id="slideDots">
       <div class="dot active" data-index="0"></div>
@@ -61,7 +61,7 @@
 </div>
 
 <div style="display: flex; justify-content: center; align-items: center; height: 80px;">
-    <img src="img/icon/about_arrow.png" width="15px" height="20px">
+    <img src="/img/icon/about_arrow.png" width="15px" height="20px">
 </div>
 
 
@@ -150,3 +150,4 @@
         </div>
     </div>
 </div>
+<script src="/js/all_year.js"></script>

@@ -1,8 +1,12 @@
 function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
+  const params = new URLSearchParams(window.location.search); // ← 이 줄 추가
+  const year = params.get("year");
   if (!year) {
-    alert("먼저 연도를 선택해주세요!");
+    alert("요!");
     return;
   }
-  window.location.href = page;
+  console.log(year)
+  window.location.href = page+`?year=${year}`;
 }
+
+window.goTo = goTo;

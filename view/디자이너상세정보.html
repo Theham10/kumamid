@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
-  <link rel="stylesheet" href="./css/desinger_Detailview.css">
-  <link rel="stylesheet" href="./css/all_header.css" />
+  <link rel="stylesheet" href="/css/desinger_Detailview.css">
+  <link rel="stylesheet" href="/css/all_header.css" />
 </head>
 
 <body>
   <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -27,9 +27,7 @@
       <h2 class="designer-title">Designer</h2>
       <div class="designer-profile-row">
         <div class="profile-img-container">
-
           <img id="profileImg" src="" alt="" class="profile-img">
-
         </div>
         <div class="profile-text-box">
           <div id="designerName" class="profile-name"></div>
@@ -108,17 +106,9 @@
     </div>
   </div>
 
-<script type="module" src="./js/desinger_Detail.js"></script>
-<script>
-function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
-    if (!year) {
-        alert("먼저 연도를 선택해주세요!");
-        return;
-    }
-    window.location.href = page;
-    }
-</script>
+<script type="module" src="/js/desinger_Detail.js"></script>
+<script src="/js/all_year.js"></script>
+
 </body>
 
 </html>

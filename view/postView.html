@@ -4,20 +4,13 @@
   <meta charset="UTF-8">
   <title>프로젝트 상세</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/videoView.css">
-  <link rel="stylesheet" href="./css/all_header.css">
-  <style>
-    .project-section-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/postView.css">
+  <link rel="stylesheet" href="/css/all_header.css">
 </head>
 <body>
   <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -31,32 +24,23 @@
   <div class="project-info-section">
     <h1 class="project-title"></h1>
     <p class="project-client"></p>
-    <hr>
     <p class="project-description"></p>
-    <hr>
   </div>
 
   <div class="project-section-image">
     <div class="blur-background"></div>
+    <img src="" alt="RocknRoll Poster">
   </div>
 
   <div class="project-section-description">
     <p class="project-section-text">
     </p>
   </div>
-  <div class="project-StillCut">
-    <h1>Still Cut</h1>
-    <div class="project-section-stillcut">
-    </div>
-  </div>
-  <div class="project-storyBoard">
-
-    <div class="project-section-storyboard">
-  </div>
 <footer class="project-footer">
   <div class="footer-divider"></div>
   <div class="project-footer-author">
-
+    <img class="footer-author-img" src="" alt="">
+    <p class="footer-author-name"></p>
   </div>
   <div class="footer-divider"></div>
   <div class="footer-icons">
@@ -68,16 +52,8 @@
     © 2023. DESIGNTHEHAM Co. all rights reserved.
   </div>
 </footer>
-<script>
-function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
-    if (!year) {
-        alert("먼저 연도를 선택해주세요!");
-        return;
-    }
-    window.location.href = page;
-    }
-</script>
-<script type="module" src="./js/viedo.js"></script>
+<script type="module" src="/js/post.js"></script>
+<script src="/js/all_year.js"></script>
+
 </body>
 </html>

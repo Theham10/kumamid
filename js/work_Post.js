@@ -1,7 +1,7 @@
 import { getImgUrl, getUserAssetUrl , getUserAssetPostUrl } from './all_getuserImg.js';
 window.getImgUrl = getImgUrl;
-
-const year = localStorage.getItem("selectedYear") || "2023";
+const params = new URLSearchParams(window.location.search);
+const year = params.get("year");
 const postGrid = document.getElementById("post");
 const videoGrid = document.getElementById("video");
 const teamGrid = document.getElementById("team");
@@ -71,7 +71,7 @@ fetch(`/data/${year}.json`)
       try {
         const validUrl = await loadFirstValidImageAsync(urls);
         return { index, html: `
-          <a href="./postView.html?id=${encodeURIComponent(post.id)}" class="grid-item">
+          <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}" class="grid-item">
             <div class="designer-img-wrap">
               <img src="${validUrl}" alt="${post.postName}_포스터" class="img-responsive">
             </div>
@@ -110,7 +110,7 @@ fetch(`/data/${year}.json`)
         const validUrl = await loadFirstValidImageAsync(urls);
       // 4. HTML 조각 반환 (원본 순서 유지를 위해 index 포함)
         return { index, html: `
-          <a href="./videoView.html?id=${encodeURIComponent(video.id)}" class="grid-item">
+          <a href="./videoView.html?year=${year}&id=${encodeURIComponent(video.id)}" class="grid-item">
             <div class="designer-img-wrap">
               <img src="${validUrl}" alt="${designer.postName}_비디오썸네일" class="img-responsive">
             </div>
@@ -144,7 +144,7 @@ fetch(`/data/${year}.json`)
 
       const teamDiv = document.createElement('div');
       teamDiv.innerHTML = `
-       <a href="./view/teamView.html?id=${encodeURIComponent(team.id)}" class="grid-item">
+       <a href="./view/teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
           <div class="designer-img-wrap">
             <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
           </div>

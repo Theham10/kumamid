@@ -71,7 +71,7 @@
   </style>
   <script>
   // year list 모듈 삽입
-  fetch("module/yearlist.html")
+  fetch("/module/yearlist.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("yearlist-md").innerHTML = data;
@@ -122,7 +122,7 @@
 
     function selectYear(year) {
         localStorage.setItem("selectedYear", year);
-        window.location.href = "intro.html";
+        window.location.href = `intro.html?year=${year}`;
     }
   </script>
     <style>
@@ -140,4 +140,6 @@
         }
     </style>
 </body>
+<script src="/js/all_year.js"></script>
+
 </html>

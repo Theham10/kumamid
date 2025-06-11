@@ -1,15 +1,15 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="../js/all_headerText.js"></script>
+  <script src="/js/all_headerText.js"></script>
   <title>한국영상대학교 영상디자인과 졸업전시</title>
-  <link rel="stylesheet" href="./css/designer.css" />
-  <link rel="stylesheet" href="./css/all_header.css" />
+  <link rel="stylesheet" href="/css/designer.css" />
+  <link rel="stylesheet" href="/css/all_header.css" />
 </head>
 <body>
   <script>
     // 공통 header 삽입
-    fetch("module/header.html")
+    fetch("/module/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-md").innerHTML = data;
@@ -21,15 +21,17 @@
     <div id="designerGrid" class="grid-container"></div>
   </div>
 </body>
-<script type="module" src="./js/desinger_list.js"></script>
+<script type="module" src="/js/desinger_list.js"></script>
 <script>
 function goTo(page) {
-  const year = sessionStorage.getItem("selectedYear");
+  const year = localStorage.getItem("selectedYear");
     if (!year) {
-        alert("먼저 연도를 선택해주세요!");
+        alert(" 선택해주세요!");
         return;
     }
     window.location.href = page;
     }
 </script>
+<script src="/js/all_year.js"></script>
+
 </html>

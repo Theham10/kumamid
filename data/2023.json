@@ -485,28 +485,6 @@
       "teamProjectThum": "02.jpg"
     }
   ],
-  "졸작": [
-    {
-      "title": "빛의 여정",
-      "image": "img/2025/projects/light_journey.jpg",
-      "description": "빛을 매개로 한 공간 인터랙션 프로젝트입니다. 다양한 시각 효과를 통해 사용자 몰입감을 극대화했습니다."
-    },
-    {
-      "title": "미래의 도시",
-      "image": "img/2025/projects/future_city.jpg",
-      "description": "도시의 미래를 상상한 영상디자인 졸업작품입니다. 모션그래픽과 실사 영상이 결합된 형태입니다."
-    },
-    {
-      "title": "기억 조각",
-      "image": "img/2025/projects/memory_fragment.jpg",
-      "description": "잊혀진 기억을 찾아 떠나는 여정을 시각화한 감성적인 영상 프로젝트입니다."
-    },
-    {
-      "title": "시간의 틈",
-      "image": "img/2025/projects/time_gap.jpg",
-      "description": "시간 속에 숨겨진 감정들을 표현한 실험적 졸업작품입니다. 사운드디자인과의 조화를 중심으로 구성했습니다."
-    }
-  ],
   "포스트": [
     {
       "id": "1",
@@ -545,7 +523,7 @@
       "client": "경찰청",
       "clientDescription": "대한민국의 국가경찰기관입니다.",
       "subDescription": "스마트한 시대가 되면서 인터넷은 빠른 발전을 했습니다.<br/>그러한 발전에 맞춰 새로 나타난 범죄인 '사이버 렉카'의 위험성을 표현하였습니다.<br/>자극적인 썸네일을 렉카들이 달려들어 양방향에서 끌고 가는 무거운 연출을 나타내어 사이버 렉카 영상 예방을 나타냈습니다.",
-      "posterFile": "PosterSorce/김은서.png",
+      "posterFile": "PosterSorce/김은서 .png",
       "posterThumb": "PosterSorce/김은서1x1.png"
     },
     {
@@ -755,7 +733,7 @@
       "client": "LEADNCO",
       "clientDescription": "캘리포니아산 규조토를 이용하여 발매트, 칫솔꽂이, 받침대 등의 생활용품을 만드는 회사.",
       "subDescription": "바다에서 놀다 보면 발바닥의 물기 때문에 불편한 상황이 발생합니다.<br/>이런 상황에서 바닥이 거대한 규조토 발매트로 이루어져 있다면<br/>규조토의 특징과 필요성을 어필할 수 있다고 생각하여 표현해 보았습니다.",
-      "posterFile": "PosterSorce/이승호.png",
+      "posterFile": "PosterSorce/이승호.jpg",
       "posterThumb": "PosterSorce/이승호1x1.jpg"
     },
     {
@@ -775,7 +753,7 @@
       "client": "Naver VIBE",
       "clientDescription": "네이버 VIBE는 네이버가 출시한 음악 플랫폼. 음악과 대화를 공유 하면서 함께 즐기는 파티룸 기능.",
       "subDescription": "VIBE(바이브) 앱에 있는 음악을 같이 들으면서 공유할 수 있는 '파티룸' 기능을 헤드셋이 돌아가면 노래를 공유한다는 비유를 이용하여<br/>같은 취향을 서로 공유할 수 있다는 점을 주제로 잡아 기획하게 되었습니다.",
-      "posterFile": "PosterSorce/이윤지.mp4",
+      "posterFile": "PosterSorce/이윤지1x1.png",
       "posterThumb": "PosterSorce/이윤지1x1.png"
     },
     {
@@ -1147,7 +1125,7 @@
     },
     {
       "id": "1009",
-      "videoThumb" : "01.png",
+      "videoThumb" : "01.jpeg",
       "designerName": ["송정호"],
       "vimeoId":"835143357",
       "postName": "Can I Buy U A Drink?",
@@ -1207,7 +1185,7 @@
     },
     {
       "id": "1011",
-      "videoThumb" : "01.png",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "835036414",
       "designerName": ["안장현"],
       "postName": "We Want MTV",
@@ -1324,7 +1302,7 @@
     },
     {
       "id": "1017",
-      "videoThumb" : "01.png",
+      "videoThumb" : "01.jpg",
       "vimeoId": "835047655",
       "designerName": ["이기석"],
       "postName": "이제 영화는 집에서",
@@ -1400,7 +1378,7 @@
     },
     {
       "id": "1020",
-      "videoThumb" : "02.jpg",
+      "videoThumb" : "02.png",
       "vimeoId": "null",
       "designerName": ["김민주","이윤정"],
       "postName": "멸종위기종",
