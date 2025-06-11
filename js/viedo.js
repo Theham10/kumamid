@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const params = new URLSearchParams(window.location.search);
   const videoId = params.get('id');
-  const year = localStorage.getItem("selectedYear") || "2023";
+  const year = params.get("year");
 
   fetch(`/data/${year}.json`)
     .then(res => res.json())

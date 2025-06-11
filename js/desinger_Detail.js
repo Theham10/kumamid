@@ -20,7 +20,7 @@ fetch("/module/header.html")
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const designerId = params.get('id');
-  const year = localStorage.getItem("selectedYear") || "2023";
+  const year = params.get("year");
 
   // 팀 프로젝트 URL 생성 함수 (변경 없음)
   const TeamAssetUrl = (projectname, thumnail) => {
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
           typeText = '포스터';
           projectItemDiv.classList.add('poster-type'); // 포스터 타입 클래스 추가 (필요시 CSS에서 활용)
           projectItemDiv .onclick = function() {
-            location.href=`../view/postView.html?id=${project.data.id}`
+            location.href=`../view/postView.html?year=${year}&id=${project.data.id}`
           }
         }else if (project.type === 'video') {
           // 비디오 썸네일 이미지 생성
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
           typeText = '비디오';
           projectItemDiv.classList.add('video-type'); // 비디오 타입 클래스 추가 (필요시 CSS에서 활용)
             projectItemDiv .onclick = function() {
-            location.href=`../view/videoView.html?id=${project.data.id}`
+            location.href=`../view/videoView.html?year=${year}&id=${project.data.id}`
           }
         } else if (project.type === 'team') {
           mediaElement = document.createElement("img");
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
           typeText = '팀 프로젝트';
           projectItemDiv.classList.add('team-type'); // 팀 프로젝트 타입 클래스 추가 (필요시 CSS에서 활용)
             projectItemDiv .onclick = function() {
-            location.href=`../view/teamView.html?id=${project.data.id}`
+            location.href=`../view/year=${year}&teamView.html?id=${project.data.id}`
           }
         }
 
