@@ -1,47 +1,49 @@
 <file name=1 path=/Users/b-hyoung/Desktop/bobs_project/A_jVisionMedia/졸작.html><!-- 연도별 졸업작품 페이지 -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/all_headerText.js"></script>
     <link rel="stylesheet" href="/css/work_solo.css">
     <link rel="stylesheet" href="/css/all_header.css">
-    <script src="/js/all_headerText.js"></script>
 
 
     <title>한국영상대학교 영상디자인과 졸업전시</title>
-</head>
-<body>
+  </head>
 
-  <div id="header-md"></div>
+  <body>
 
-  <!-- ✅ 탭 메뉴 영역 추가 -->
-  <div class="tab-menu">
-    <button class="tab-button active" data-tab="post">Post</button>
-    <button class="tab-button" data-tab="video">Video</button>
-    <button class="tab-button" data-tab="team">Team</button>
-  </div>
+    <div id="header-md"></div>
 
-  <!-- ✅ 탭 콘텐츠 영역 -->
-  <div id="tab-content">
-    <div id="post" class="tab-panel active"></div>
-    <div id="video" class="tab-panel"></div>
-    <div id="team" class="tab-panel"></div>
-  </div>
+    <!-- ✅ 탭 메뉴 영역 추가 -->
+    <div class="tab-menu">
+      <button class="tab-button active" data-tab="post">Post</button>
+      <button class="tab-button" data-tab="video">Video</button>
+      <button class="tab-button" data-tab="team">Team</button>
+    </div>
 
-  <script type="module" src="/js/work_Post.js"></script>
- <script src="/js/all_year.js"></script>
-<script>
-  fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
+    <!-- ✅ 탭 콘텐츠 영역 -->
+    <div id="tab-content">
+      <div id="post" class="tab-panel active"></div>
+      <div id="video" class="tab-panel"></div>
+      <div id="team" class="tab-panel"></div>
+    </div>
 
-    // 이후 year 파라미터 처리 등
-  });
-</script>
+    <script type="module" src="/js/work_Post.js"></script>
+    <script src="/js/all_year.js"></script>
+    <script>
+      fetch("/module/header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-md").innerHTML = data;
 
-</body>
+          // 이후 year 파라미터 처리 등
+        });
+    </script>
+    <script src="/js/all_headerText.js"></script>
 
-</html>
+  </body>
+
+  </html>
