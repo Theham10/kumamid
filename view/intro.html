@@ -67,15 +67,7 @@
   document.getElementById("footer-year").textContent = selectedYear;
 </script>
 <script src="/js/all_year.js"></script>
+<script type="module" src="/module/header.html"></script>
 
-
-<script>
-    // 공통 header 삽입
-    fetch("/module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-      });
-</script>
 </body>
 </html>

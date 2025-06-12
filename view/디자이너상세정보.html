@@ -101,14 +101,8 @@
 
 <script type="module" src="/js/desinger_Detail.js"></script>
 <script src="/js/all_year.js"></script>
-  <script>
-    // 공통 header 삽입
-    fetch("/module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-      });
-</script>
+<script type="module" src="/module/header.html"></script>
+
 </body>
 
 </html>
