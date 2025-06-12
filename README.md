@@ -1,5 +1,5 @@
 ## 🔗 페이지 URL 
-project test url: https://relaxed-selkie-4fd565.netlify.app/  
+project test url: https://jvision-test.netlify.app/  
 
 ## 🖥 프로젝트 소개 
 전주 비전대 방영디 교수님의 웹 외주  
