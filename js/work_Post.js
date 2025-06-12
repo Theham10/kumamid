@@ -62,36 +62,34 @@ function loadFirstValidImageAsync(urls) {
 fetch(`/data/${year}.json`)
   .then(res => res.json())
   .then(data => {
-    // ✅ POST 탭
-    const postPromises = data.포스트.map(async (post, index) => {
+    // ✅ POST 탭 (placeholder로 먼저 렌더링 후, 실제 이미지로 교체)
+    const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z/D/PwAHggJ/P2+tHwAAAABJRU5ErkJggg==";
+
+    data.포스트.forEach((post, index) => {
       const designer = data.디자이너.find(d => d.name === post.designerName);
-      if (!designer) return null;
+      if (!designer) return;
 
+      const postId = `post-thumb-${index}`;
       const urls = [getUserAssetPostUrl(designer.name, post.posterThumb)];
-      try {
-        const validUrl = await loadFirstValidImageAsync(urls);
-        return { index, html: `
-          <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}" class="grid-item">
-            <div class="designer-img-wrap">
-              <img src="${validUrl}" alt="${post.postName}_포스터" class="img-responsive">
-            </div>
-            <h3 class="head_title"><span>${designer.name}</span></h3>
-            <h3><span>${post.postName}</span></h3>
-          </a>
-        `};
-      } catch {
-        return null;
-      }
-    });
 
-    Promise.all(postPromises).then(results => {
-      results
-        .filter(Boolean)
-        .sort((a, b) => a.index - b.index)
-        .forEach(({ html }) => {
-          const div = document.createElement('div');
-          div.innerHTML = html;
-          postGrid.appendChild(div);
+      // 1. 우선 placeholder로 DOM 추가
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}" class="grid-item">
+          <div class="designer-img-wrap">
+            <img id="${postId}" src="${placeholder}" alt="${post.postName}_포스터" class="img-responsive">
+          </div>
+          <h3 class="head_title"><span>${designer.name}</span></h3>
+          <h3><span>${post.postName}</span></h3>
+        </a>
+      `;
+      postGrid.appendChild(div);
+
+      // 2. 이미지 유효성 검사 후 교체
+      loadFirstValidImageAsync(urls)
+        .then(validUrl => {
+          const imgEl = document.getElementById(postId);
+          if (imgEl) imgEl.src = validUrl;
         });
     });
 
