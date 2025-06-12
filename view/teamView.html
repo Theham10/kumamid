@@ -16,14 +16,7 @@
 
 </head>
 <body>
-  <script>
-    // ✅ 공통 header 삽입
-    fetch("/module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-      });
-  </script>
+
 
   <div id="header-md"></div>
 
@@ -115,6 +108,13 @@
 
   <script type="module" src="/js/team.js"></script>
 <script src="/js/all_year.js"></script>
-
+  <script>
+    // ✅ 공통 header 삽입
+    fetch("/module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+  </script>
 </body>
 </html>

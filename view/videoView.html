@@ -15,14 +15,7 @@
   </style>
 </head>
 <body>
-  <script>
-    // 공통 header 삽입
-    fetch("module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-      });
-  </script>
+
   <div id="header-md"></div>
   <div class="project-visual-section">
     <img class="project-main-img" src="" alt="프로젝트 대표 이미지">
@@ -70,6 +63,13 @@
 </footer>
 <script type="module" src="/js/viedo.js"></script>
 <script src="/js/all_year.js"></script>
-
+  <script>
+    // 공통 header 삽입
+    fetch("module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+      });
+  </script>
 </body>
 </html>
