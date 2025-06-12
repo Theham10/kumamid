@@ -32,7 +32,16 @@
 
   <script type="module" src="/js/work_Post.js"></script>
  <script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
+<script>
+  fetch("/module/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header-md").innerHTML = data;
+
+    // 이후 year 파라미터 처리 등
+  });
+</script>
+
 </body>
 
 </html>
