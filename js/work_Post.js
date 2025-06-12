@@ -137,7 +137,7 @@ fetch(`/data/${year}.json`)
 
       const teamDiv = document.createElement('div');
       teamDiv.innerHTML = `
-       <a href="./view/teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
+       <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
           <div class="designer-img-wrap">
             <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
           </div>
