@@ -20,11 +20,6 @@ document.querySelectorAll(".tab-button").forEach(button => {
 });
 
 // header
-fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
-  });
 
 // 이미지 URL 중 유효한 첫 번째를 찾는 함수 (콜백 버전)
 function loadFirstValidImage(urls, onSuccess, onError) {

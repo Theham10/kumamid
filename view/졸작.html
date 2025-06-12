@@ -33,16 +33,18 @@
 
     <script type="module" src="/js/work_Post.js"></script>
     <script src="/js/all_year.js"></script>
-    <script>
-      fetch("/module/header.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("header-md").innerHTML = data;
+ <script>
+  fetch("/module/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-md").innerHTML = data;
 
-          // 이후 year 파라미터 처리 등
-        });
-    </script>
-    <script src="/js/all_headerText.js"></script>
+      // ✅ header 삽입 후에 headerText.js 실행
+      const script = document.createElement("script");
+      script.src = "/js/all_headerText.js";
+      document.body.appendChild(script);
+    });
+</script>
 
   </body>
 
