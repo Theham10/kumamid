@@ -101,7 +101,20 @@
 
 <script type="module" src="/js/desinger_Detail.js"></script>
 <script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
+ <script>
+  fetch("/module/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-md").innerHTML = data;
+
+      // ✅ header 삽입 후에 headerText.js 실행
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "/js/all_headerText.js";
+        document.body.appendChild(script);
+      }, 50); // wait a bit before injecting the logic script
+    });
+</script>
 
 </body>
 
