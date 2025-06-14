@@ -43,35 +43,52 @@
     </div>
   </div>
 
-  <div class="comment-section">
+  <!-- 디자이너 아래 채팅 남기게 가능하도록하기. 파베로 받아 모듈화 -->
+ <div class="comment-section">
     <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
     <div class="comment-box">
       <div class="comment-avatar">👤</div>
       <div class="comment-content">
+        <textarea id="nameInput" placeholder="이름"></textarea>
         <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
         <div class="comment-options">
+          <!-- 
           <label><input type="checkbox" /> 비밀글</label>
-          <button onclick="addComment()">등록</button>
+          -->
+          
+          <button id="commentSubmitBtn">등록</button>
         </div>
       </div>
     </div>
-    <div class="comment-item">
-      <div class="comment-avatar">👤</div>
-      <div class="comment-body">
-        <div class="comment-header">
-          <span class="comment-author">설</span>
-          <span class="comment-time">1년 전</span>
-        </div>
-        <div class="comment-text">
-          영상들에서 너의 재치가 느껴진다 재밌게 잘 봤오 이거 만드느라 얼마나 고생했을까하는 생각도 들어 수고했다! BTS 봉준호 손흥민 곽희진 가자아~!~!
-        </div>
-      </div>
+     <div class="comment-list"></div>
+</div>
+
+    
+    <script type="module">
+  import { loadComments, addComment } from "/desiger_msg_md.js";
+
+  const params = new URLSearchParams(location.search);
+  const year = params.get("year");
+  const id = params.get("id");
+
+  // 댓글 로드
+  loadComments(year, id);
+
+  // 버튼 연결
+  const btn = document.querySelector("#commentSubmitBtn");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      addComment(year, id);
+    });
+  }
+</script>
+
     </div>
   </div>
 
 
-
 <script type="module" src="/js/desinger_Detail.js"></script>
+<script type="module" src="/js/desinger_msg_md.js"></script>
 <script src="/js/all_year.js"></script>
  <script>
   fetch("/module/header.html")

@@ -1,5 +1,6 @@
 import { getImgUrl, getUserAssetPostUrl, getUserAssetUrl } from './all_getuserImg.js';
-  
+import { loadComments, addComment } from './desinger_msg_md.js';
+
   const params = new URLSearchParams(window.location.search);
   const designerId = params.get('id');
   const year = params.get("year");
@@ -189,6 +190,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function renderComments() {
         // 댓글 렌더링 로직 (현재 코드에서는 구현되지 않음)
+        loadComments(year, designerId);
+        document.getElementById("commentSubmitBtn")?.addEventListener("click", () => addComment(year, designerId));
       }
 
       renderComments();
