@@ -1,10 +1,19 @@
 
 .project-section-image img {
-  width: 100%;
+  width: 50%;
+  height: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
+  
 }
+
+.project-section-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
 
 .project-section-description {
   text-align: center;
@@ -240,6 +249,9 @@ object-fit: cover;
     gap: 1rem;
     font-size: 1rem;
   }
+  .project-footer-author{
+    flex-direction: column !important;
+}
 }
 
 /* 이미지 아래 텍스트 */

@@ -122,7 +122,7 @@
 
     function selectYear(year) {
         localStorage.setItem("selectedYear", year);
-        window.location.href = `intro.html?year=${year}`;
+        window.location.href = `view/intro.html?year=${year}`;
     }
   </script>
     <style>
@@ -141,5 +141,6 @@
     </style>
 </body>
 <script src="/js/all_year.js"></script>
+<script type="module" src="/module/header.html"></script>
 
 </html>

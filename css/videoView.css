@@ -338,7 +338,9 @@ hr{
     font-size: 1rem;
   }
 }
-
+  .project-footer-author{
+    flex-direction: column !important;
+}
 .slideshow-wrapper {
   position: relative;
   width: 100%;
