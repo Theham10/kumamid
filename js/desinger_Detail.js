@@ -1,5 +1,6 @@
 import { getImgUrl, getUserAssetPostUrl, getUserAssetUrl } from './all_getuserImg.js';
-  
+import { loadComments } from './desinger_msg_md.js';  
+
   const params = new URLSearchParams(window.location.search);
   const designerId = params.get('id');
   const year = params.get("year");
