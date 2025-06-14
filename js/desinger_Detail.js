@@ -1,5 +1,8 @@
 import { getImgUrl, getUserAssetPostUrl, getUserAssetUrl } from './all_getuserImg.js';
-import { loadComments, addComment } from './desinger_msg_md.js';
+  
+  const params = new URLSearchParams(window.location.search);
+  const designerId = params.get('id');
+  const year = params.get("year");
 
 // 헤더 로드 (DOMContentLoaded 밖에서 처리)
 fetch("/module/header.html")
@@ -7,7 +10,6 @@ fetch("/module/header.html")
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
     requestAnimationFrame(() => {
-      const year = localStorage.getItem("selectedYear");
       if (year) {
         const count = parseInt(year) - 1999 + 1;
         const displayText = `제 ${count}회 ${year} 졸업전`;
@@ -19,9 +21,7 @@ fetch("/module/header.html")
   .catch(error => console.error("Error loading header:", error));
 
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const designerId = params.get('id');
-  const year = params.get("year");
+
 
   // 팀 프로젝트 URL 생성 함수 (변경 없음)
   const TeamAssetUrl = (projectname, thumnail) => {
