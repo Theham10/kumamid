@@ -1,5 +1,5 @@
 // 🔽 header 렌더링
-fetch("../module/header.html")
+fetch("/module/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
@@ -147,8 +147,6 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
   }
 }
 
-
-
     setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
     setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider", team["m-inner-text"]);
 
@@ -158,11 +156,13 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
     team.teamMembers.forEach(name => {
         const div = document.createElement("div");
         div.classList.add("member-box");
-
         const img = document.createElement("img");
         img.src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(name)}.jpg?alt=media`;
         img.alt = name;
         img.classList.add("member-img");
+        img.onclick = () => {
+          window.location.href=`/view/디자이너상세정보.html?year=${year}&id=${name}`
+        }
 
         const span = document.createElement("span");
         span.textContent = name;

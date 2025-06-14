@@ -155,11 +155,17 @@ h1.project-title {
 
 .project-item img {
     width: 100%;
-    height: auto; /* 비율 유지 */
-    max-height: 500px; /* 너무 커지지 않도록 최대 높이 설정 */
-    border-radius: 15px 15px 0 0; /* 상단 모서리 둥글게 */
+    height: auto;
+    max-height: 500px;
+    border-radius: 15px 15px 0 0;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-item:hover img {
+    transform: scale(2);
+    filter: brightness(1.1);
 }
 
 .project-item > div { /* 설명 div */
