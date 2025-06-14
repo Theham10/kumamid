@@ -9,7 +9,11 @@ if(!year){
    
 }
 
-  fetch("/module/header.html")
+const name = "김민수";
+const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.appspot.com/o/${year}%2FUsers%2F${encodeURIComponent(name)}.jpg?alt=media`;
+console.log(url);
+
+fetch("/module/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-md").innerHTML = data;

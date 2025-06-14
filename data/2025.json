@@ -34,10 +34,10 @@
       "teamProjectThum": "03.jpg"
     },
     {
-      "name": "김민수",
+      "name": "Minsoo",
       "profileComment": "",
       "profileEmail": "dakplus4@naver.com",
-      "profileDream": "",
+      "profileDream": "KIM MIN SU",
       "videoFile": "04.png",
       "vidioName": "CASCADE",
       "teamWork": "The Seed",
@@ -494,6 +494,45 @@
       "teamWork": "",
       "teamWorkEng": "",
       "teamProjectThum": ""
+    }
+  ],
+  "포스트": [
+    {
+      "id": "1",
+      "designerName": "Minsoo",
+      "postName": "Hear. Watch. Type.",
+      "client": "Personal Work",
+      "clientDescription": "민수씨 포스터 설명주세요",
+      "subDescription": "PDF참고 하겟습니다",
+      "posterFile": "PosterSorce/pp.png",
+      "posterThumb": "PosterSorce/pp.png"
+    }
+  ],
+  "비디오" : [
+ {
+      "id": "1001",
+      "videoThumb" : "v01.jpg",
+      "vimeoId" : "https://youtu.be/qyIXjIbQ5iI",
+      "designerName": [
+        "Minsoo"
+      ],
+      "thumbnail" : "v01.jpg",
+      "postName": "CASCADE",
+      "client": "Personal Work​",
+      "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
+      "videoDescription":"짧은 추격 속 혼란과 갈등을 마주한 인물이 방황과 미래의 불확실성을 극복하고 변화를 선택하는 내면적 성장을 그린 단편 애니메이션."
+    }
+  ],
+  "팀": [
+    {
+      "id" : "100",
+      "teamName": "AIdea",
+      "client":"서울 관광 재단",
+      "teamtitle": "Another Seoul",
+      "teamSubTitle": "익숙함 너머, 서울의 숨겨진 진정한 아름다움을 마주하다.",
+      "teamMembers": ["조수현" ,"Minsoo", "이예지", "지혜현"],
+      "video": "https://vimeo.com/835133108"
+      
     }
   ]
 }
