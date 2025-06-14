@@ -99,7 +99,7 @@ fetch(`/data/${year}.json`)
       // 2. 여러 VideoSorce 폴더 중 유효한 이미지 URL을 병렬로 탐색
       try {
       // 3. 첫 번째로 유효한 이미지 URL을 찾는
-        const urls = getUserAssetUrl(designer.name, "VideoSorce", designer.videoFile);
+        const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
         const validUrl = await loadFirstValidImageAsync(urls);
       // 4. HTML 조각 반환 (원본 순서 유지를 위해 index 포함)
         return { index, html: `
@@ -151,5 +151,3 @@ fetch(`/data/${year}.json`)
 {/* <p class="eng_sub">${team.teamNameEng}</p>
         <p class="kor_sub">팀원: ${team.teamMembers.join(", ")}</p>
   */}
-
-  
