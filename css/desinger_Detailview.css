@@ -212,6 +212,15 @@ h1.project-title {
     color: white;
 }
 
+#nameInput {
+    width: 100%;
+    height: 5%;
+    border: none;
+    border-radius: 8px;
+    background-color: #111;
+    color: white;
+}
+
 .comment-section button {
     display: block;
     margin-top: 1rem;
