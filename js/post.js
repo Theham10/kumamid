@@ -1,3 +1,6 @@
+  const params = new URLSearchParams(window.location.search);
+  const postId = params.get('id');
+  const year = params.get("year")
 
 fetch("/module/header.html")
   .then(res => res.text())
@@ -5,7 +8,6 @@ fetch("/module/header.html")
     document.getElementById("header-md").innerHTML = data;
 
     requestAnimationFrame(() => {
-      const year = localStorage.getItem("selectedYear");
       if (year) {
         const count = parseInt(year) - 1999 + 1;
         const displayText = `제 ${count}회 ${year} 졸업전`;
@@ -17,10 +19,6 @@ fetch("/module/header.html")
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const postId = params.get('id');
-  const year = localStorage.getItem("selectedYear") || "2023";
-
   fetch(`/data/${year}.json`)
     .then(res => res.json())
     .then(data => {
@@ -43,6 +41,9 @@ document.querySelector('.project-main-img').src =
     ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
     : "default.png";
 
+document.querySelector('.project-footer-author').onclick = () => {
+  window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
+}
 document.querySelector('.project-section-image img').src =
   postData.posterFile
     ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`

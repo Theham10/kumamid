@@ -1,10 +1,15 @@
+
+
+  const params = new URLSearchParams(window.location.search);
+  const videoId = params.get('id');
+  const year = params.get("year");
+
 fetch("../module/header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header-md").innerHTML = data;
 
     requestAnimationFrame(() => {
-      const year = localStorage.getItem("selectedYear");
       if (year) {
         const count = parseInt(year) - 1999 + 1;
         const displayText = `제 ${count}회 ${year} 졸업전`;
@@ -35,9 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tryNext(0);
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const videoId = params.get('id');
-  const year = params.get("year");
 
   fetch(`/data/${year}.json`)
     .then(res => res.json())
@@ -274,27 +276,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 } // storyboard if 문 닫힘
         // 푸터 정보
-        const footer = document.querySelector('.project-footer-author');
+        // 푸터 정보: 여러 디자이너 처리
+        const footerContainer = document.querySelector('.project-footer-author');
+        footerContainer.innerHTML = ''; // Clear previous contents
 
-        videoData.designerName.forEach((name, index) => {
+        videoData.designerName.forEach(name => {
           const designer = data.디자이너.find(d => d.name === name);
+          if (!designer) return;
 
-          const designName = document.createElement('div');
+          const footer = document.createElement('div');
+          footer.className = 'footer-entry';
+
           const img = document.createElement('img');
-
           img.className = 'footer-author-img';
-          designName.className = 'footer-author-name';
+          img.src =
+            designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
+              : "fallback.jpg";
 
-          if (designer) {
+          const nameDiv = document.createElement('div');
+          nameDiv.className = 'footer-author-name';
+          nameDiv.textContent = designer.name;
 
-            designName.textContent = designer?.name || "Unknown";
-            img.src =
-              designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
-                : "fallback.jpg";
-          }
           footer.appendChild(img);
-          footer.appendChild(designName);
-        })
+          footer.appendChild(nameDiv);
+
+          footer.onclick = () => {
+            window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
+            // Optional redirect:
+            // window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`;
+          };
+
+          footerContainer.appendChild(footer);
+        });
     });
 
 });
