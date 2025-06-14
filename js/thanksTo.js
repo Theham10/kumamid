@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import {
   getFirestore,
@@ -14,6 +13,7 @@ import {
   orderBy
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
 
+// Firebase 설정 및 초기화 (=Firestore Database)
 const firebaseConfig = {
   apiKey: "AIzaSyBWer4zVpTNwXuzrcC1LiXxAHTTK7kcc6I",
   authDomain: "jvisiondesign-web.firebaseapp.com",

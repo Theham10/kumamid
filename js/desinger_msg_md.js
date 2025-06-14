@@ -1,8 +1,7 @@
-// js/commentModule.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
-// Firebase 설정 및 초기화 (Realtime Database 포함)
+// Firebase 설정 및 초기화 (=Realtime Database)
 const firebaseConfig = {
   apiKey: "AIzaSyBWer4zVpTNwXuzrcC1LiXxAHTTK7kcc6I",
   authDomain: "jvisiondesign-web.firebaseapp.com",
