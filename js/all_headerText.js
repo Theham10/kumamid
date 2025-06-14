@@ -13,7 +13,7 @@ fetch("/module/header.html")
         if (el) el.textContent = displayText;
       }else{
         alert("년도를 선택해주세요");
-        window.location.href = "/view/index.html";
+        window.location.href = "/index.html";
       }
     });
   });
