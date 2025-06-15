@@ -89,7 +89,9 @@ body {
   font-size: 14px;
   text-align: center;
 }
-
+.footer-copyright{
+  margin-bottom: 50px;
+}
 @media (max-width: 900px) {
   .project-visual-full {
     aspect-ratio: 16 / 9;

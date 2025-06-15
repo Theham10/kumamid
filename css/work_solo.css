@@ -84,3 +84,11 @@ body {
   gap: 40px;
   padding: 40px 60px;
 }
+@media (max-width: 600px) {
+  #project-list,
+  .tab-panel.active {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px; /* 모바일에선 padding 줄이는 것도 권장 */
+    gap: 20px;
+  }
+}
