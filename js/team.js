@@ -151,16 +151,24 @@ if (videoUrl && iframe) {
     </div>
   `;
 
-  const divider = document.querySelectorAll('.footer-divider')[1];
-  if (divider) {
-    divider.insertAdjacentElement("afterend", container);
+}
 
-    // 예외처리 (삽입 후에 이미지에 onerror 연결)
-    const imgEl = container.querySelector(".members-img");
+if (team.membersImg) {
+  const folder = encodeURIComponent(team.teamfolder || team.teamName);
+  const baseUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
+  const fallbackUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.client)}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
+
+  const imgEl = document.querySelector(".members-img");
+  if (imgEl) {
+    imgEl.src = baseUrl;
     imgEl.onerror = () => {
       imgEl.src = fallbackUrl;
     };
   }
+} else {
+  // 이미지 없으면 섹션 숨기기
+  const section = document.querySelector(".members-img-wrap")?.closest(".content-box");
+  if (section) section.style.display = "none";
 }
 
 
