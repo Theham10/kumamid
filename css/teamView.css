@@ -1,5 +1,15 @@
 /* 슬라이더 이미지 */
-
+.project-main-img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.project-main-img.loaded {
+  opacity: 1;
+}
 .ppm-carousel {
   position: relative;
   display: flex;
