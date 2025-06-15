@@ -1,6 +1,6 @@
-  const params = new URLSearchParams(window.location.search);
-  const postId = params.get('id');
-  const year = params.get("year")
+const params = new URLSearchParams(window.location.search);
+const postId = params.get('id');
+const year = params.get("year")
 
 fetch("/module/header.html")
   .then(res => res.text())
@@ -31,28 +31,37 @@ document.addEventListener("DOMContentLoaded", () => {
       const designer = data.디자이너.find(d => d.name === postData.designerName);
       // 타이틀 및 설명 채우기
       document.title = postData.postName;
-      document.querySelector('.project-client').innerHTML  = `클라이언트 : ${postData.client}`;
-      document.querySelector('.project-description').innerHTML  = postData.clientDescription;
-      document.querySelector('.project-section-text').innerHTML  = postData.subDescription;
+      document.querySelector('.project-client').innerHTML = `클라이언트 : ${postData.client}`;
+      if(year == '2023'){
+        document.querySelector('.project-description').innerHTML = postData.clientDescription;
+      }else if(year == '2025'){
+        if (postData.clientDescription) {
+        document.querySelector('.project-client').innerHTML = `
+          <hr style='margin-bottom:30px'>
+          ${postData.clientDescription}
+          <hr style='margin-top:30px'>`;
+      }
+      }
+      document.querySelector('.project-section-text').innerHTML = postData.subDescription;
 
       // 이미지 동적 처리 (필요 시 JSON에 추가해도 좋음)
-document.querySelector('.project-main-img').src =
-  postData.posterThumb
-    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
-    : "default.png";
+      document.querySelector('.project-main-img').src =
+        postData.posterThumb
+          ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
+          : "default.png";
 
-document.querySelector('.project-footer-author').onclick = () => {
-  window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
-}
-document.querySelector('.project-section-image img').src =
-  postData.posterFile
-    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`
-    : "default2.png";
+      document.querySelector('.project-footer-author').onclick = () => {
+        window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
+      }
+      document.querySelector('.project-section-image img').src =
+        postData.posterFile
+          ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`
+          : "default2.png";
 
       // 푸터 정보
       document.querySelector('.footer-author-name').textContent = designer?.name || "Unknown";
       document.querySelector('.footer-author-img').src =
         designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
-        : "fallback.jpg";
+          : "fallback.jpg";
     });
 });

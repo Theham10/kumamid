@@ -8,11 +8,10 @@
   
 }
 
-.project-section-image:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
+h2{
+  color: white !important;
+  font-size: 30px;
 }
-
 
 
 .project-section-description {

@@ -529,8 +529,8 @@
       "designerName": "김수언",
       "postName": "내 머릿속 테트리스, NOTION으로 클리어",
       "client": "Notion",
-      "clientDescription": "엉킨 일정, 밀린 할 일, 갑작스러운 아이디어.<br>매일 쌓여가는 정보와 생각의 조각들 속에서<br>머리속은 마치 계속하여 내려오는 테트리스<br>블록처럼 복잡합니다. 그런 테트리스같은 머릿속을<br>'Clear'해주는 도구로서 Notion을 제안합니다. Notion은 모든 조각을 딱 맞게 정리해주는 스마트한 도구입니다.",
-      "subDescription": "살려주세요",
+      "clientDescription": "<h2>Concept</h2><br/>엉킨 일정, 밀린 할 일, 갑작스러운 아이디어.<br>매일 쌓여가는 정보와 생각의 조각들 속에서<br>머리속은 마치 계속하여 내려오는 테트리스<br>블록처럼 복잡합니다. 그런 테트리스같은 머릿속을<br>'Clear'해주는 도구로서 Notion을 제안합니다. Notion은 모든 조각을 딱 맞게 정리해주는 스마트한 도구입니다.",
+      "subDescription": "<h2>Visual Expression </h2><br>테트리스 블록을 Notion이 지닌 다양한 기능 (Task, Calendar 등)으로 형상화하여 시각적 으로 혼란을 표현했습니다.<br/>마지막에 내려오는 보라색 1자 블록은, Notion이 모든 것을 '한번 에 클리어' 해주는 존재임을 상징적으로 드러 냅니다.",
       "posterFile": "PosterSorce/01.jpg",
       "posterThumb": "PosterSorce/01.jpg"
     }
