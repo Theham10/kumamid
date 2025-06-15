@@ -536,21 +536,8 @@
     }
   ],
   "비디오" : [
- {
-      "id": "1001",
-      "videoThumb" : "01.jpg",
-      "vimeoId" : "https://www.youtube.com/embed/qyIXjIbQ5iI",
-      "designerName": [
-        "김민수"
-      ],
-      "thumbnail" : "01.jpg",
-      "postName": "CASCADE",
-      "client": "Personal Work​",
-      "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
-      "videoDescription":"짧은 추격 속 혼란과 갈등을 마주한 인물이 방황과 미래의 불확실성을 극복하고 변화를 선택하는 내면적 성장을 그린 단편 애니메이션."
-    },
      {
-      "id": "1002",
+      "id": "1001",
       "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/0RGsl0dnI1c",
       "designerName": [
@@ -561,7 +548,86 @@
       "client": "Red bull​",
       "clientDescription": "F1, 본능의 질주",
       "videoDescription":"F1 머신의 리버리를 예술적 감각으로 해석한 퍼포먼스 영상.<br>속도와 정밀함이 공존하는 레드불 F1의 아이덴티티를 시각적으로 재구성했습니다."
+    }, 
+     {
+      "id": "1002",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/qyIXjIbQ5iI",
+      "designerName": [
+        "김민수"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "CASCADE",
+      "client": "Personal Work​",
+      "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
+      "videoDescription":"짧은 추격 속 혼란과 갈등을 마주한 인물이 방황과 미래의 불확실성을 극복하고 변화를 선택하는 내면적 성장을 그린 단편 애니메이션."
+    }, 
+    {
+      "id": "1003",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/mPGOgOzoB0E",
+      "designerName": [
+        "김수연"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "종의 기원",
+      "client": "은행나무​",
+      "clientDescription": "악惡의 점화",
+      "videoDescription":"소설 '종의 기원' 중, 주인공 '유진'이 잠에서 깨어나 모친의 시신을 발견하기까지의 내용을 시각화한 북트레일러."
+    },
+    {
+      "id": "1004",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/DTYO8HyiMo0",
+      "designerName": [
+        "류민서"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "오늘은 내가",
+      "client": "쌍쌍바",
+      "clientDescription": "오늘도 내일도 승리는 나의 것 !",
+      "videoDescription":"서부를 배경으로 두 인물이 유쾌하고 긴장감 있게 쌍쌍바 대결을 하는 광고 모션그래픽입니다."
+    },
+     {
+      "id": "1005",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/DTYO8HyiMo0",
+      "designerName": [
+        "박재민"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "Smile ID",
+      "client": "Apple",
+      "clientDescription": "뇌경색 초기진단 케이스스터디필름",
+      "videoDescription":"Face ID를 활용해 사용자의 안면 비대칭을 감지하여 뇌졸중 초기 증상을 조기에 탐지하는 기능입니다.<br>일상 속 '스마일'을 통해 생명을 지키는 스마트 헬스케어 솔루션입니다."
+    },
+     {
+      "id": "1006",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/cQuSU0zy70I",
+      "designerName": [
+        "박현웅"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "빛으로 그리는 그림",
+      "client": "SONY",
+      "clientDescription": "카메라는 그림을 그리는 붓이다",
+      "videoDescription":"카메라는 단지 기록을 남기는 도구가 아닌 빛으로 그림을 그려내는 붓이다 라는 컨셉을 가지고 소니카메라가 지닌 가치를 강조하는 브랜드 필름입니다."
+    }, 
+    {
+      "id": "1007",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/mc8GF9BJ95c",
+      "designerName": [
+        "신현우"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "조선시대 햇반",
+      "client": "CJ제일제당",
+      "clientDescription": "단 몇 분 만에 완성된 간편함 - 햇반",
+      "videoDescription":"만약 햇반이 조선시대에 있었더라면? 이라는 상상에서 출발해,<br>타임슬립한 현대인과 사또가 햇반을 매개로 마주하는 광고 영상입니다."
     }
+    
   ], 
   "팀": [
     {
