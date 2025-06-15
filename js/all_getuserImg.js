@@ -18,7 +18,7 @@ export const getUserAssetUrl = (name, type, filename) => {
   candidateFolders = allFolders.filter(folder => folder.toLowerCase().startsWith("videosorce"))
   // 필터링된 폴더들로 URL 생성
   const urls = candidateFolders.map(folder => {
-    const fullPath = `2023/UsersWorkData/${name}/${folder}/${filename}`;
+    const fullPath = `${year}/UsersWorkData/${name}/${folder}/${filename}`;
     return `${base}${encodeURIComponent(fullPath)}?alt=media`;
   });
 
@@ -27,7 +27,7 @@ export const getUserAssetUrl = (name, type, filename) => {
 
 export const getUserAssetPostUrl = (name, relativePath) => {
   const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
-  const fullPath = `2023/UsersWorkData/${name}/${relativePath}`;
+  const fullPath = `${year}/UsersWorkData/${name}/${relativePath}`;
   return `${base}${encodeURIComponent(fullPath)}?alt=media`;
 };
 

@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 팀 프로젝트 URL 생성 함수 (변경 없음)
   const TeamAssetUrl = (projectname, thumnail) => {
     const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
-    const fullPath = `2023/TeamWorkData/${projectname}/${thumnail}`;
+    const fullPath = `${year}/TeamWorkData/${projectname}/${thumnail}`;
     return `${base}${encodeURIComponent(fullPath)}?alt=media`;
   };
 
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const encodedName = encodeURIComponent(name);
     const encodedFile = encodeURIComponent(file);
 
-    const urls = folders.map(folder => `${base}2023%2FUsersWorkData%2F${encodedName}%2F${folder}%2F${encodedFile}?alt=media`);
+    const urls = folders.map(folder => `${base}${year}%2FUsersWorkData%2F${encodedName}%2F${folder}%2F${encodedFile}?alt=media`);
 
     const tryNext = (index) => {
       if (index >= urls.length) {
