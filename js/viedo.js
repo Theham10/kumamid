@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
     const encodedName = encodeURIComponent(name);
     const encodedFile = encodeURIComponent(file);
-    const urls = folders.map(folder => `${base}2023%2FUsersWorkData%2F${encodedName}%2F${folder}%2F${encodedFile}?alt=media`);
-
+    const urls = folders.map(folder => `${base}${year}%2FUsersWorkData%2F${encodedName}%2F${folder}%2F${encodedFile}?alt=media`);
+    console.log(urls)
     const tryNext = (index) => {
       if (index >= urls.length) {
         imgEl.src = fallback;
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Vimeo 비디오 삽입
       if (videoData.vimeoId) {
         const iframe = document.createElement("iframe");
-        iframe.src = `https://player.vimeo.com/video/${videoData.vimeoId}`;
+        iframe.src = `${videoData.vimeoId}`;
         iframe.style.aspectRatio = "16 / 9";
         iframe.style.width = "1440px";
         iframe.style.maxWidth = "100%";

@@ -947,7 +947,7 @@
       "client": "LocknLock",
       "clientDescription": "밀폐용기의 대명사.<br/>사람 중심 생활 혁신 브랜드 ‘LocknLock’입니다.",
       "videoDescription": "RocknRoll! 머리까지 울리는 시끄러운 락 밴드의 소리까지 완전 밀폐해버리는 강력한 밀폐용기의 특성을 재미있게 살려 표현했습니다.<br/>콜라주 기법을 활용하여 물체의 시끄러운 특성을 극대화했습니다. 언어유희를 사용하여 메인 카피에 재미와 의미를 더했습니다.",
-      "vimeoId": "835141712",
+      "vimeoId" : "https://player.vimeo.com/video/835141712",
       "stillCuts": [
         {
           "img": "04.jpg",
@@ -990,7 +990,7 @@
     {
       "id": "1002",
       "videoThumb" : "01.jpg",
-      "vimeoId" : "835091131",
+      "vimeoId" : "https://player.vimeo.com/video/835091131",
       "designerName": [
         "김은서"
       ],
@@ -1010,7 +1010,7 @@
     {
       "id": "1003",
       "videoThumb" : "01.jpg",
-      "vimeoId" : "835024918",
+      "vimeoId" : "https://player.vimeo.com/video/835024918",
       "designerName": [
         "김참슬"
       ],
@@ -1046,7 +1046,7 @@
     {
       "id": "1004",
       "designerName": ["김태영","이승호"],
-      "vimeoId" : "835037692",
+      "vimeoId" : "https://player.vimeo.com/video/835037692",
       "videoThumb" : "05.jpg",
       "postName": "쫀득초코칩",
       "client": "청우식품",
@@ -1064,7 +1064,7 @@
     {
       "id": "1005",
       "videoThumb" : "02.jpg",
-      "vimeoId":"835127646",
+      "vimeoId":"https://player.vimeo.com/video/835127646",
       "designerName": ["김혜령","김사랑"],
       "postName": "Apple Music : Sing",
       "thumbnail" : "01.jpg",
@@ -1081,7 +1081,7 @@
     {
       "id": "1006",
       "videoThumb" : "02.jpg",
-      "vimeoId":"835022153",
+      "vimeoId":"https://player.vimeo.com/video/835022153",
       "thumbnail" :"01.jpg" ,
       "designerName": ["김효진","예주은"],
       "postName": "Repair Happiness",
@@ -1098,7 +1098,7 @@
     {
       "id": "1007",
       "videoThumb" : "01.jpg",
-      "vimeoId":"835134642",
+      "vimeoId":"https://player.vimeo.com/video/835134642",
       "thumbnail" :"01.jpg" ,
 
       "designerName": ["노동균"],
@@ -1117,7 +1117,7 @@
       "id": "1008",
       "videoThumb" : "01.jpg",
       "designerName": ["서지원"],
-      "vimeoId":"835065638",
+      "vimeoId":"https://player.vimeo.com/video/835065638",
       "thumbnail" :"01.jpg" ,
 
       "postName": "Show Me Your Toss​",
@@ -1138,7 +1138,7 @@
 
       "thumbnail" :"01.jpeg" ,
 
-      "vimeoId":"835143357",
+      "vimeoId":"https://player.vimeo.com/video/835143357",
       "postName": "Can I Buy U A Drink?",
       "client": "Guinness",
       "clientDescription": "<h3>간단한 작품 설명</h3><br/>Guiness Extra Stout는 일반 스타우트보다 훨씬 강한 Extra 로 선호 소비자층이 뚜렷하다.<br/>“맛으로 서로를 알아보다” <br/>컨셉으로 기네스 엑스트라 스타우트의 쓰고 깊은 오묘한 맛을 “고독의 맛 사랑의 맛” 헤드카피로 표현했다.",
@@ -1156,7 +1156,7 @@
       "designerName": ["안성현"],
       "thumbnail" :"01.png" ,
 
-      "vimeoId": "835124496",
+      "vimeoId": "https://player.vimeo.com/video/835124496",
       "postName": "Back Draft",
       "client": "Trilogy Entertainment Group",
       "clientDescription": "",
@@ -1199,7 +1199,7 @@
     {
       "id": "1011",
       "videoThumb" : "01.jpg",
-      "vimeoId" : "835036414",
+      "vimeoId" : "https://player.vimeo.com/video/835036414",
       "designerName": ["안장현"],
       "thumbnail" :"01.jpg" ,
       "postName": "We Want MTV",
@@ -1216,7 +1216,7 @@
     {
       "id": "1012",
       "videoThumb" : "02.jpg",
-      "vimeoId":"835136714",
+      "vimeoId":"https://player.vimeo.com/video/835136714",
       "designerName": ["여수지"],
       "thumbnail" :"01.jpg" ,
       "postName": "끊이지 않는 촉촉함!",
@@ -1235,7 +1235,7 @@
       "videoThumb" : "02.jpg",
       "designerName": ["오수경"],
       "thumbnail" :"01.jpg" ,
-      "vimeoId": "835103477",
+      "vimeoId": "https://player.vimeo.com/video/835103477",
       "postName": "Queen’s Gambit",
       "client": "NETFLEX",
       "clientDescription": "넷플릭스 오리지널 드라마로 주인공 베스 하먼이 약물과 술에 중독된 채 체스 세계 우승에 집착하는 내용입니다.",
@@ -1272,7 +1272,7 @@
       "videoThumb" : "02.jpg",
       "thumbnail" :"01.jpg" ,
       "designerName": ["왕영은"],
-      "vimeoId":"835063438",
+      "vimeoId":"https://player.vimeo.com/video/835063438",
       "postName": "ALICE IN WONDERLAND",   
       "client": "디즈니",
       "clientDescription": "디즈니 애니메이션 영화에서 원작에서 나온 실사 영화입니다.<br/>이상한 나라의 앨리스라는 영화 오프닝 타이틀 시퀀스를 기존 버전이 아닌 새롭게 공포라는 장르로 선정하여 제작해보았습니다.<br/>영화에 나오는 오브젝트들과 공포감을 주기 위해 배경음과 톤앤매너를 강조해 제작하였습니다.",
@@ -1287,7 +1287,7 @@
     {
       "id": "1015",
       "videoThumb" : "01.jpg",
-      "vimeoId":"null",
+      "vimeoId":"nuhttps://player.vimeo.com/video/ll",
       "designerName": ["위혜림"],
       "thumbnail" :"01.jpg" ,
       "postName": "Cosmerna",
@@ -1306,7 +1306,7 @@
       "videoThumb" : "03.jpg",
       "designerName": ["이건희"],
       "thumbnail" :"01.jpg" ,
-      "vimeoId": "829933090",
+      "vimeoId": "https://player.vimeo.com/video/829933090",
       "postName": "DNA-TG",
       "client": "DNA-TG[가상 영화]",
       "clientDescription": "DNA-TG는 가상의 영화로 타이틀 시퀀스를 만들기 위해 구성한 아포칼립스 세계관의 영화제목입니다.",
@@ -1322,7 +1322,7 @@
     {
       "id": "1017",
       "videoThumb" : "01.jpg",
-      "vimeoId": "835047655",
+      "vimeoId": "https://player.vimeo.com/video/835047655",
       "thumbnail" :"01.jpg" ,
       "designerName": ["이기석"],
       "postName": "이제 영화는 집에서",
@@ -1339,7 +1339,7 @@
     {
       "id": "1018",
       "videoThumb" : "07.jpg",
-      "vimeoId": "835044300",
+      "vimeoId": "https://player.vimeo.com/video/835044300",
       "thumbnail" :"01.jpg" ,
       "designerName": ["이민혁"],
       "postName": "마침내, 피었다.",
@@ -1356,7 +1356,7 @@
     {
       "id": "1019",
       "videoThumb" : "02.jpg",
-      "vimeoId": "835023713",
+      "vimeoId": "https://player.vimeo.com/video/835023713",
       "thumbnail" :"01.jpg" ,
       "designerName": ["이성준"],
       "postName": "자각몽",
@@ -1401,7 +1401,7 @@
     {
       "id": "1020",
       "videoThumb" : "02.png",
-      "vimeoId": "null",
+      "vimeoId": "nhttps://player.vimeo.com/video/ull",
       "thumbnail" : "01.png",
       "designerName": ["김민주","이윤정"],
       "postName": "멸종위기종",
@@ -1419,7 +1419,7 @@
       "id": "1021",
       "videoThumb" : "02.jpg",
       "thumbnail" :"01.jpg" ,
-      "vimeoId": "835107511",
+      "vimeoId": "https://player.vimeo.com/video/835107511",
       "designerName": ["이윤지","이채은"],
       "postName": "온전한 나에게 집중할 시간",
       "client": " NONFICTION(논픽션)",
@@ -1435,7 +1435,7 @@
     {
       "id": "1022",
       "videoThumb" : "07.png",
-      "vimeoId": "835108844",
+      "vimeoId": "https://player.vimeo.com/video/835108844",
       "designerName": ["이지혁"],
       "thumbnail" :"01.png" ,
       "postName": "GALATEA",
@@ -1480,7 +1480,7 @@
     {
       "id": "1023",
       "videoThumb" : "05.jpg",
-      "vimeoId": "835324880",
+      "vimeoId": "https://player.vimeo.com/video/835324880",
       "thumbnail" :"06.jpg" ,
       "designerName": ["이채원"],
       "postName": "부족한 나를 2% 더 채우다",
@@ -1497,7 +1497,7 @@
     {
       "id": "1024",
       "videoThumb" : "04.jpg",
-      "vimeoId": "835118715",
+      "vimeoId": "https://player.vimeo.com/video/835118715",
       "thumbnail" :"01.jpg" ,
       "designerName": ["이혜린"],
       "postName": "나는 내일, 어제의 너와 만난다",
@@ -1514,7 +1514,7 @@
     {
       "id": "1025",
       "videoThumb" : "03.jpg",
-      "vimeoId": "835085292",
+      "vimeoId": "https://player.vimeo.com/video/835085292",
       "thumbnail" :"01.jpg" ,
       "designerName": ["이희창"],
       "postName": "Noise Uncancled",
@@ -1531,7 +1531,7 @@
     {
       "id": "1026",
       "videoThumb" : "122.jpg",
-      "vimeoId": "835085322",
+      "vimeoId": "https://player.vimeo.com/video/835085322",
       "thumbnail" :"122.jpg" ,
       "designerName": ["이희창"],
       "postName": "The Real Gift Card",
@@ -1552,7 +1552,7 @@
     {
       "id": "1027",
       "videoThumb" : "04.jpg",
-      "vimeoId": "835928316",
+      "vimeoId": "https://player.vimeo.com/video/835928316",
       "thumbnail" :"01.jpg" ,
       "designerName": ["정우경"],
       "postName": "조말론 블라썸",
@@ -1577,7 +1577,7 @@
     {
       "id": "1028",
       "videoThumb" : "02.jpg",
-      "vimeoId": "835129648",
+      "vimeoId": "https://player.vimeo.com/video/835129648",
       "thumbnail" :"01.jpg" ,
       "designerName": ["정진모"],
       "postName": "스프레이 피죤 시그니처:정전기 방지",
@@ -1594,7 +1594,7 @@
     {
       "id": "1029",
       "videoThumb" : "02.jpg",
-      "vimeoId": "835262126",
+      "vimeoId": "https://player.vimeo.com/video/835262126",
       "thumbnail" :"01.jpg" ,
       "designerName": ["조민국"],
       "postName": "SAFE-BLUE COKE Project",
@@ -1611,7 +1611,7 @@
     {
       "id": "1030",
       "videoThumb" : "01.png",
-      "vimeoId": "825416770",
+      "vimeoId": "https://player.vimeo.com/video/825416770",
       "thumbnail" :"01.png" ,
       "designerName": ["최명진"],
       "postName": "AP1019D",
@@ -1628,7 +1628,7 @@
     {
       "id": "1031",
       "videoThumb" : "03.jpg",
-      "vimeoId": "835138123",
+      "vimeoId": "https://player.vimeo.com/video/835138123",
       "thumbnail" :"01.jpg" ,
       "designerName": ["최하현"],     
       "postName": "악의 마음을 읽는 자들",
@@ -1657,7 +1657,7 @@
     {
       "id": "1032",
       "videoThumb" : "02.jpg",
-      "vimeoId": "비공개",
+      "vimeoId": "비https://player.vimeo.com/video/공개",
       "designerName": ["오승은","최효민"],
       "thumbnail" :"01.jpg" ,
       "postName": "Happy Pills",
@@ -1690,7 +1690,7 @@
     {
       "id": "1033",
       "videoThumb" : "07.jpg",
-      "vimeoId": "835120852",
+      "vimeoId": "https://player.vimeo.com/video/835120852",
       "thumbnail" :"01.jpg" ,
       "designerName": ["장소정","한유정"],
       "postName": "God Is A Woman",
@@ -1713,7 +1713,7 @@
     {
       "id": "1034",
       "videoThumb" : "01.jpg",
-      "vimeoId": "835131109",
+      "vimeoId": "https://player.vimeo.com/video/835131109",
       "thumbnail" :"01.jpg" ,
       "designerName": ["유영훈","홍은택"],
       "postName": "Fascinate",
@@ -1758,7 +1758,7 @@
     {
       "id": "1035",
       "videoThumb" : "02.jpg",
-      "vimeoId": "835066484",
+      "vimeoId": "https://player.vimeo.com/video/835066484",
       "thumbnail" :"01.jpg" ,
       "designerName": ["홍채은"],
       "postName": "미식도사 테이블링",

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // 이미지 동적 처리 (필요 시 JSON에 추가해도 좋음)
 document.querySelector('.project-main-img').src =
   postData.posterThumb
-    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
+    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
     : "default.png";
 
 document.querySelector('.project-footer-author').onclick = () => {
@@ -46,13 +46,13 @@ document.querySelector('.project-footer-author').onclick = () => {
 }
 document.querySelector('.project-section-image img').src =
   postData.posterFile
-    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`
+    ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`
     : "default2.png";
 
       // 푸터 정보
       document.querySelector('.footer-author-name').textContent = designer?.name || "Unknown";
       document.querySelector('.footer-author-img').src =
-        designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
+        designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
         : "fallback.jpg";
     });
 });
