@@ -72,18 +72,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🔽 PPM 슬라이드
     if (team.teamPPMNote && team.teamPPMNote.length > 0) {
-  const ppmList = team.teamPPMNote;
-  let currentIndex = 0;
+      const ppmList = team.teamPPMNote;
+      let currentIndex = 0;
 
-  const ppmImg = document.querySelector('.ppm-image');
-  const prevBtn = document.querySelector('.ppm-btn.prev');
-  const nextBtn = document.querySelector('.ppm-btn.next');
+      const ppmImg = document.querySelector('.ppm-image');
+      const prevBtn = document.querySelector('.ppm-btn.prev');
+      const nextBtn = document.querySelector('.ppm-btn.next');
 
-  const updateImage = () => {
-    const file = ppmList[currentIndex];
-    const src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(file)}?alt=media`;
-    ppmImg.src = src;
-  };
+      const updateImage = () => {
+      const file = ppmList[currentIndex];
+      const folder1 = encodeURIComponent(team.teamfolder || team.teamName); // 기본 폴더
+      const folder2 = encodeURIComponent(team.client); // 예외 fallback 폴더
+      const encodedFile = encodeURIComponent(file);
+
+      const url1 = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder1}%2F${encodedFile}?alt=media`;
+      const url2 = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder2}%2F${encodedFile}?alt=media`;
+
+      ppmImg.onerror = () => {
+        ppmImg.onerror = null; // 재귀 방지
+        ppmImg.src = url2;
+      };
+      ppmImg.src = url1;
+    };
+
 
   updateImage();
 
@@ -103,23 +114,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   if (team.membersImg) {
-  const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
+  const folder = encodeURIComponent(team.teamfolder || team.teamName);
+  const baseUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
+  const fallbackUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.client)}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
 
   const container = document.createElement("div");
   container.className = "content-box";
   container.innerHTML = `
-  
     <h1>Members Image</h1>
     <div class="members-img-wrap">
-      <img class="members-img" src="${imgUrl}" alt="팀 구성원 이미지">
+      <img class="members-img" src="${baseUrl}" alt="팀 구성원 이미지">
     </div>
   `;
 
-  const divider = document.querySelectorAll('.footer-divider')[1]; // ← 두 번째 선
+  const divider = document.querySelectorAll('.footer-divider')[1];
   if (divider) {
     divider.insertAdjacentElement("afterend", container);
+
+    // 예외처리 (삽입 후에 이미지에 onerror 연결)
+    const imgEl = container.querySelector(".members-img");
+    imgEl.onerror = () => {
+      imgEl.src = fallbackUrl;
+    };
   }
 }
+
 
     // 자동슬라이더 이미지 
 function setupAutoSlider(imageList, teamName, containerId, textList = []) {
@@ -152,23 +171,34 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
 
   // ✅ 이미지 로드 후에 텍스트 보여주기 (onload 동기화)
   const updateImg = () => {
-    const filename = imageList[index];
-    const url = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(teamName)}%2F${encodeURIComponent(filename)}?alt=media`;
+  const filename = imageList[index];
+  const folder1 = encodeURIComponent(team.teamfolder || teamName); // 기본 폴더
+  const folder2 = encodeURIComponent(team.client); // 예외 fallback 폴더
+  const encodedFile = encodeURIComponent(filename);
 
-    imgEl.onload = () => {
-      const currentText = textList[index];
-      if (textEl) {
-        if (currentText && currentText.trim() !== "") {
-          textEl.innerHTML = currentText;
-          textEl.style.display = "block";
-        } else {
-          textEl.style.display = "none";
-        }
+  const url1 = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder1}%2F${encodedFile}?alt=media`;
+  const url2 = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder2}%2F${encodedFile}?alt=media`;
+
+  imgEl.onload = () => {
+    const currentText = textList[index];
+    if (textEl) {
+      if (currentText && currentText.trim() !== "") {
+        textEl.innerHTML = currentText;
+        textEl.style.display = "block";
+      } else {
+        textEl.style.display = "none";
       }
-    };
-
-    imgEl.src = url;
+    }
   };
+
+  imgEl.onerror = () => {
+    imgEl.onerror = null; // 재귀 방지
+    imgEl.src = url2;
+  };
+
+  imgEl.src = url1;
+};
+
 
   updateImg();
 
