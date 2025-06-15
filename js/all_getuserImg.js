@@ -9,7 +9,6 @@ export const  getImgUrl = (name) => {
 export const getUserAssetUrl = (name, type, filename) => {
   const base = "https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/";
 
-  console.log("fileName = " + filename);
   const allFolders = [
     "VideoSorce", "VideoSorce01", "VideoSorce02"
   ];

@@ -93,3 +93,10 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+.footer-copyright{
+  margin-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+}
