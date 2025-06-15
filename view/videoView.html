@@ -38,7 +38,7 @@
     </p>
   </div>
   <div class="project-StillCut">
-    <h1>Still Cut</h1>
+    <h1>Still Cut</h1>    
     <div class="project-section-stillcut">
     </div>
   </div>
@@ -58,7 +58,7 @@
 </footer>
 <script type="module" src="/js/viedo.js"></script>
 <script src="/js/all_year.js"></script>
- <script>
+<script>
   fetch("/module/header.html")
     .then(res => res.text())
     .then(data => {
@@ -69,8 +69,23 @@
         const script = document.createElement("script");
         script.src = "/js/all_headerText.js";
         document.body.appendChild(script);
-      }, 50); // wait a bit before injecting the logic script
+      }, 50);
     });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const stillCutContainer = document.querySelector(".project-section-stillcut");
+
+      if (
+        stillCutContainer &&
+        stillCutContainer.querySelectorAll("img[data-img]").length === 0
+      ) {
+        const h1 = document.querySelector(".project-StillCut > h1");
+        if (h1) h1.remove();
+      }
+    }, 500); // 이미지 렌더링 후 실행 (필요시 delay 조정)
+  });
 </script>
+
 </body>
 </html>

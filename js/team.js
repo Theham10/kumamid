@@ -58,16 +58,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //비디오
-    const vimeoUrl = team.video;
-    if (vimeoUrl && vimeoUrl.includes("vimeo.com")) {
-      const videoId = vimeoUrl.split("/").pop(); // 예: 835133108
-      const embedUrl = `https://player.vimeo.com/video/${videoId}`;
-      const iframe = document.querySelector('.project-video');
-      if (iframe) iframe.src = embedUrl;
-    } else {
-      const videoSection = document.querySelector('.project-video')?.closest('.content-box');
-      if (videoSection) videoSection.style.display = 'none';
+   // 비디오
+const videoUrl = team.video;
+const iframe = document.querySelector('.project-video');
+
+if (videoUrl && iframe) {
+  let embedUrl = "";
+
+  if (videoUrl.includes("vimeo.com")) {
+    const videoId = videoUrl.split("/").pop();
+    embedUrl = `https://player.vimeo.com/video/${videoId}`;
+  } else if (videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")) {
+    // 유튜브 전체 주소나 축약주소 모두 처리
+    if (videoUrl.includes("embed")) {
+      embedUrl = videoUrl; // 이미 embed 형식이면 그대로
+    } else if (videoUrl.includes("watch?v=")) {
+      const videoId = new URL(videoUrl).searchParams.get("v");
+      embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    } else if (videoUrl.includes("youtu.be/")) {
+      const videoId = videoUrl.split("youtu.be/")[1];
+      embedUrl = `https://www.youtube.com/embed/${videoId}`;
     }
+  }
+
+  if (embedUrl) {
+    iframe.src = embedUrl;
+  } else {
+    const section = iframe.closest('.content-box');
+    if (section) section.style.display = 'none';
+  }
+} else {
+  const section = iframe?.closest('.content-box');
+  if (section) section.style.display = 'none';
+}
+
 
 
     // 🔽 PPM 슬라이드
