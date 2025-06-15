@@ -171,3 +171,20 @@
 .footer-copyright {
   margin-bottom: 50px;
 }
+
+
+.project-description {
+  font-size: 115%;
+  max-width: 80%;   /* 또는 50% 도 괜찮음 */
+  margin: 40px auto;  /* ✅ 가운데 정렬 + 위아래 여백 */
+  text-align: center; /* ✅ 텍스트도 가운데 정렬 */
+  line-height: 1.6;   /* ✅ 가독성 개선 */
+}
+
+.members-img {
+   max-width: 90%;   /* 또는 50% 도 괜찮음 */
+  margin: 40px auto;  /* ✅ 가운데 정렬 + 위아래 여백 */
+  text-align: center; /* ✅ 텍스트도 가운데 정렬 */
+  line-height: 1.6;   /* ✅ 가독성 개선 */
+}
+
