@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const img = document.createElement('img');
           img.className = 'footer-author-img';
           img.src =
-            designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/2023%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
+            designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
               : "fallback.jpg";
 
           const nameDiv = document.createElement('div');
