@@ -1020,16 +1020,42 @@
     }
     
   ], 
-  "팀": [
+   "팀": [
     {
       "id" : "100",
-      "teamName": "파타고니아",
-      "client":"patagonia",
-      "teamtitle": "파타고니아",
-      "teamSubTitle": "익숙함 너머, 서울의 숨겨진 진정한 아름다움을 마주하다.",
-      "teamMembers": ["조수현" ,"김민수", "이예지", "지혜현"],
-      "video": "https://vimeo.com/835133108"
-      
+      "teamName": "라이나생명",
+      "client":"라이나생명",
+      "teamtitle": "Team WOW",
+      "teamSubTitle": "'FUNNYcycling starts at 'SANG SANG ZONE' in KT&G!'",
+      "teamMembers": ["윤지희","박현웅", "김민영", "조영빈", "이다현", "지호진"],
+      "teamThumbnail": "01.jpg",
+      "video": "",
+      "mainImage" : "01.jpg", 
+      "membersImg" : "02.jpg"
+    },
+     {
+      "id" : "100",
+      "teamName": "라이나생명",
+      "client":"라이나생명",
+      "teamtitle": "Team WOW",
+      "teamSubTitle": "'FUNNYcycling starts at 'SANG SANG ZONE' in KT&G!'",
+      "teamMembers": ["윤지희","박현웅", "김민영", "조영빈", "이다현", "지호진"],
+      "teamThumbnail": "01.jpg",
+      "video": "",
+      "mainImage" : "01.jpg", 
+      "membersImg" : "02.jpg"
+    }, 
+     {
+      "id" : "100",
+      "teamName": "라이나생명",
+      "client":"라이나생명",
+      "teamtitle": "Team WOW",
+      "teamSubTitle": "'FUNNYcycling starts at 'SANG SANG ZONE' in KT&G!'",
+      "teamMembers": ["윤지희","박현웅", "김민영", "조영빈", "이다현", "지호진"],
+      "teamThumbnail": "01.jpg",
+      "video": "",
+      "mainImage" : "01.jpg", 
+      "membersImg" : "02.jpg"
     }
   ]
 }
