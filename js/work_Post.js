@@ -41,7 +41,7 @@ function loadFirstValidImageAsync(urls) {
   return new Promise((resolve, reject) => {
     const tryNext = (index) => {
       if (index >= urls.length) {
-        reject();
+        reject(new Error("유효한 이미지 URL을 찾지 못했습니다")); // 🔥 명시적으로 에러 던짐
         return;
       }
       const img = new Image();
