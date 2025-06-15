@@ -548,6 +548,19 @@
       "client": "Personal Work​",
       "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
       "videoDescription":"짧은 추격 속 혼란과 갈등을 마주한 인물이 방황과 미래의 불확실성을 극복하고 변화를 선택하는 내면적 성장을 그린 단편 애니메이션."
+    },
+     {
+      "id": "1002",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/0RGsl0dnI1c",
+      "designerName": [
+        "고준혁"
+      ],
+      "thumbnail" : "01.jpg",
+      "postName": "Red bull oracle racing",
+      "client": "Red bull​",
+      "clientDescription": "F1, 본능의 질주",
+      "videoDescription":"F1 머신의 리버리를 예술적 감각으로 해석한 퍼포먼스 영상.<br>속도와 정밀함이 공존하는 레드불 F1의 아이덴티티를 시각적으로 재구성했습니다."
     }
   ], 
   "팀": [
