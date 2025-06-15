@@ -499,13 +499,31 @@
   "포스트": [
     {
       "id": "1",
-      "designerName": "Minsoo",
-      "postName": "Hear. Watch. Type.",
-      "client": "Personal Work",
-      "clientDescription": "민수씨 포스터 설명주세요",
-      "subDescription": "PDF참고 하겟습니다",
-      "posterFile": "PosterSorce/pp.png",
-      "posterThumb": "PosterSorce/pp.png"
+      "designerName": "강성주",
+      "postName": "핵심만 전달",
+      "client": "Google",
+      "clientDescription": "넘치는 정보와 시대 속에서 오히려 혼란을 겪게 됩니다.<br>이에, 구글의 Search Labs AI는 이러한 복잡한 정보들을 요약하고 정리하여 핵심만을 제공합니다.<br>혼란을 지나 명확성에 도달하는 과정을 직관적으로 보여주는 포스터입니다.",
+      "subDescription": "검색창 뒤에 복잡하게 엉킨 실타래는 정보의 혼란을 상징합니다. 실은 검색창을 통과하여 정돈되어 네 갈래의 선으로 갈라집니다. 이는 복잡한 정보를 구조화해 핵심만을 전달하는 AI의 기능을 시각적으로 은유합니다.",
+      "posterFile": "PosterSorce/01.jpg",
+      "posterThumb": "PosterSorce/01.jpg"
+    }, {
+      "id": "2",
+      "designerName": "고준혁",
+      "postName": "음료가 아니다. 회복이다.",
+      "client": "Red bull",
+      "clientDescription": "레드불은 음료가 아니라 회복이다라는 메세지를 중심으로,<br>레드불을 일상 속 피로회복제처럼 표현했습니다.<br>구급상자와 약 키트에 레드줄을 과장되게 담아냄으로써,<br>에너지 음료의 확력 기능을 의약적 시선으로 위트 있게 풀어낸 강렬한 시각적 콘텝트입니다.",
+      "subDescription": "의료키트 안에 각종 약품, 붕대, 주사기와 함께 레드불을 배치해<br>의약품 속 음료라는 아이러니를 강조하고,<br>유쾌한 위트를 더했습니다.<br>정돈된 구성과 선명한 조명 연출을 통해 레드불의 존재감을 부각시켰고,<br>하단의 문구는 메세지를 군더더기 없이 직관적으로 전달해 시각적 완성도를 높였습니다.",
+      "posterFile": "PosterSorce/01.jpg",
+      "posterThumb": "PosterSorce/01.jpg"
+    },  {
+      "id": "3",
+      "designerName": "김성원",
+      "postName": "지우개",
+      "client": "Red bull",
+      "clientDescription": "레드불은 음료가 아니라 회복이다라는 메세지를 중심으로,<br>레드불을 일상 속 피로회복제처럼 표현했습니다.<br>구급상자와 약 키트에 레드줄을 과장되게 담아냄으로써,<br>에너지 음료의 확력 기능을 의약적 시선으로 위트 있게 풀어낸 강렬한 시각적 콘텝트입니다.",
+      "subDescription": "의료키트 안에 각종 약품, 붕대, 주사기와 함께 레드불을 배치해<br>의약품 속 음료라는 아이러니를 강조하고,<br>유쾌한 위트를 더했습니다.<br>정돈된 구성과 선명한 조명 연출을 통해 레드불의 존재감을 부각시켰고,<br>하단의 문구는 메세지를 군더더기 없이 직관적으로 전달해 시각적 완성도를 높였습니다.",
+      "posterFile": "PosterSorce/01.jpg",
+      "posterThumb": "PosterSorce/01.jpg"
     }
   ],
   "비디오" : [
@@ -522,7 +540,7 @@
       "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
       "videoDescription":"짧은 추격 속 혼란과 갈등을 마주한 인물이 방황과 미래의 불확실성을 극복하고 변화를 선택하는 내면적 성장을 그린 단편 애니메이션."
     }
-  ],
+  ], 
   "팀": [
     {
       "id" : "100",
