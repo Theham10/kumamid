@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(postData.subDescription){
           document.querySelector('.project-section-text').innerHTML = `<h2>Visual Expression </h2><br>${postData.subDescription}`;
         }
-        
       }
       
 
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         postData.posterThumb
           ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
           : "default.png";
-
       document.querySelector('.project-footer-author').onclick = () => {
         window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
       }
