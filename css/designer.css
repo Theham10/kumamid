@@ -31,14 +31,43 @@ h1 {
 .grid-item:hover {
   transform: scale(1.05);
 }
-
-.grid-item img {
+/* ✅ 오직 여기서만 사이즈와 자르기 처리 */
+.designer-img-wrap {
   width: 100%;
   height: 255px;
+  overflow: hidden;
   border-radius: 10px;
+  background-color: #111;
+}
+
+.designer-img-wrap img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
   filter: grayscale(100%);
   transition: filter 0.5s;
 }
+.designer-img-wrap img:hover {
+  filter: grayscale(0%);
+}
+
+/* ✅ 나머지는 최소화 */
+.grid-item img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+
+
+.designer-img-wrap img:hover {
+  filter: grayscale(0%);
+}
+
+
+
+
 
 .grid-item img:hover {
   filter: grayscale(0%);
