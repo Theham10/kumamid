@@ -538,12 +538,12 @@
   "비디오" : [
  {
       "id": "1001",
-      "videoThumb" : "v01.jpg",
-      "vimeoId" : "https://youtu.be/qyIXjIbQ5iI",
+      "videoThumb" : "01.jpg",
+      "vimeoId" : "https://www.youtube.com/embed/qyIXjIbQ5iI",
       "designerName": [
-        "Minsoo"
+        "김민수"
       ],
-      "thumbnail" : "v01.jpg",
+      "thumbnail" : "01.jpg",
       "postName": "CASCADE",
       "client": "Personal Work​",
       "clientDescription": "누군가만을 쫓던 사냥꾼은 이제 자신의 길을 쫓는다.",
