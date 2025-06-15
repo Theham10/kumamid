@@ -49,47 +49,82 @@ document.addEventListener("DOMContentLoaded", () => {
     const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.mainImage)}?alt=media`;
     document.querySelector('.project-main-img').src = imgUrl;
 
-      const vimeoUrl = team.video;
+    //비디오
+    const vimeoUrl = team.video;
     if (vimeoUrl && vimeoUrl.includes("vimeo.com")) {
-    const videoId = vimeoUrl.split("/").pop(); // 835133108
-    const embedUrl = `https://player.vimeo.com/video/${videoId}`;
-    const iframe = document.querySelector('.project-video');
-    if (iframe) iframe.src = embedUrl;
+      const videoId = vimeoUrl.split("/").pop(); // 예: 835133108
+      const embedUrl = `https://player.vimeo.com/video/${videoId}`;
+      const iframe = document.querySelector('.project-video');
+      if (iframe) iframe.src = embedUrl;
+    } else {
+      const videoSection = document.querySelector('.project-video')?.closest('.content-box');
+      if (videoSection) videoSection.style.display = 'none';
     }
+
 
     // 🔽 PPM 슬라이드
-    const ppmList = team.teamPPMNote || [];
-    let currentIndex = 0;
+    if (team.teamPPMNote && team.teamPPMNote.length > 0) {
+  const ppmList = team.teamPPMNote;
+  let currentIndex = 0;
 
-    if (ppmList.length > 0) {
-    const ppmImg = document.querySelector('.ppm-image');
-    const prevBtn = document.querySelector('.ppm-btn.prev');
-    const nextBtn = document.querySelector('.ppm-btn.next');
+  const ppmImg = document.querySelector('.ppm-image');
+  const prevBtn = document.querySelector('.ppm-btn.prev');
+  const nextBtn = document.querySelector('.ppm-btn.next');
 
-    const updateImage = () => {
-        const file = ppmList[currentIndex];
-        const src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(file)}?alt=media`;
-        ppmImg.src = src;
-    };
+  const updateImage = () => {
+    const file = ppmList[currentIndex];
+    const src = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(file)}?alt=media`;
+    ppmImg.src = src;
+  };
 
-    // 처음 이미지 설정
+  updateImage();
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + ppmList.length) % ppmList.length;
     updateImage();
+  });
 
-    // 버튼 기능
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + ppmList.length) % ppmList.length;
-        updateImage();
-    });
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % ppmList.length;
+    updateImage();
+  });
+} else {
+  const section = document.querySelector('.ppm-carousel')?.closest('.content-box');
+  if (section) section.style.display = 'none';
+}
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % ppmList.length;
-        updateImage();
-    });
-    }
+
+  if (team.membersImg) {
+  const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.membersImg)}?alt=media`;
+
+  const container = document.createElement("div");
+  container.className = "content-box";
+  container.innerHTML = `
+  
+    <h1>Members Image</h1>
+    <div class="members-img-wrap">
+      <img class="members-img" src="${imgUrl}" alt="팀 구성원 이미지">
+    </div>
+  `;
+
+  const divider = document.querySelectorAll('.footer-divider')[1]; // ← 두 번째 선
+  if (divider) {
+    divider.insertAdjacentElement("afterend", container);
+  }
+}
 
     // 자동슬라이더 이미지 
 function setupAutoSlider(imageList, teamName, containerId, textList = []) {
   const container = document.getElementById(containerId);
+  const titleEl = container?.previousElementSibling; // 바로 위 <h1> 요소 가져오기
+
+  
+  if (!container || !Array.isArray(imageList) || imageList.length === 0) {
+    if (container) container.style.display = "none";
+    if (titleEl?.tagName === "H1") titleEl.style.display = "none"; // 🔥 제목 숨김
+    return;
+  }
+  
   if (!container || !Array.isArray(imageList) || imageList.length === 0) {
     if (container) container.style.display = "none";
     return;
@@ -147,8 +182,22 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
   }
 }
 
-    setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
-    setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider", team["m-inner-text"]);
+    if (team.storyBord && team.storyBord.length > 0) {
+  setupAutoSlider(team.storyBord, team.teamName, "storyBord-slider");
+    } else {
+      // 이미지 없으면 통째로 숨김
+      const section = document.querySelector('#storyBord-slider')?.closest('.content-box');
+      if (section) section.style.display = 'none';
+    }
+
+    if (team.memoRise && team.memoRise.length > 0) {
+      setupAutoSlider(team.memoRise, team.teamName, "memoRise-slider", team["m-inner-text"]);
+    } else {
+      const section = document.querySelector('#memoRise-slider')?.closest('.content-box');
+      if (section) section.style.display = 'none';
+    }
+
+
 
     //디저이너 데이터 렌더링 
     const memberWrap = document.getElementById("team-members-wrap");
