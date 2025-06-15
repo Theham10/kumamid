@@ -75,7 +75,7 @@ fetch(`/data/${year}.json`)
             <img id="${postId}" src="${placeholder}" alt="${post.postName}_포스터" class="img-responsive">
           </div>
           <h3 class="head_title"><span>${designer.name}</span></h3>
-          <h3><span>${post.postName}</span></h3>
+          <h3><span style='font-size:17px'>${post.postName}</span></h3>
         </a>
       `;
       postGrid.appendChild(div);
