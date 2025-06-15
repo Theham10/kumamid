@@ -45,9 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
         <br><br>${team.teamDescription03 || ""}
         `;*/
 
-      // 이미지 설정
-    const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.mainImage)}?alt=media`;
-    document.querySelector('.project-main-img').src = imgUrl;
+    // 이미지 설정
+    const folder = encodeURIComponent(team.teamfolder || team.teamName);  // teamfolder 기준 사용
+    const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.mainImage)}?alt=media`;
+    const subimgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.client)}%2F${encodeURIComponent(team.mainImage)}?alt=media`;
+
+    const imgEl = document.querySelector('.project-main-img');
+    const preloadImg = new Image();
+    preloadImg.onload = () => imgEl.src = imgUrl;
+    preloadImg.onerror = () => imgEl.src = subimgUrl;
+    preloadImg.src = imgUrl;
+
 
     //비디오
     const vimeoUrl = team.video;

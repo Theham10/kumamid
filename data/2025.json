@@ -1023,11 +1023,12 @@
    "팀": [
     {
       "id" : "100",
-      "teamName": "라이나생명",
+      "teamName": "Spotlight on YOU",
       "client":"라이나생명",
-      "teamtitle": "Team WOW",
-      "teamSubTitle": "'FUNNYcycling starts at 'SANG SANG ZONE' in KT&G!'",
-      "teamMembers": ["윤지희","박현웅", "김민영", "조영빈", "이다현", "지호진"],
+      "teamfolder": "라이나생명", 
+      "teamtitle": "한 순간의 선택이 인생을 바꾸듯, 작은 준비가 승부를 가른다",
+      "teamSubTitle": "당구 경기 속 작은 실수와 준비의 차이를 통해, 보험의 가치와 삶의 중요한 순간에 대한 메시지를 전합니다.<br>초크를 바르는 행위는 인생을 대비하는 태도이자, 라이나생명의 브랜드 철학인 ‘Spotlight on YOU’를 상징합니다",
+      "teamMembers": ["지호진", "김민영", "박현웅", "이다현", "윤지희", "조영빈"],
       "teamThumbnail": "01.jpg",
       "video": "",
       "mainImage" : "01.jpg", 

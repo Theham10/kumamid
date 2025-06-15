@@ -75,7 +75,7 @@ fetch(`/data/${year}.json`)
             <img id="${postId}" src="${placeholder}" alt="${post.postName}_포스터" class="img-responsive">
           </div>
           <h3 class="head_title"><span>${designer.name}</span></h3>
-          <h3><span style='font-size:17px'>${post.postName}</span></h3>
+          <h3><span style='font-size:16px'>${post.postName}</span></h3>
         </a>
       `;
       postGrid.appendChild(div);
@@ -108,7 +108,7 @@ fetch(`/data/${year}.json`)
               <img src="${validUrl}" alt="${designer.postName}_비디오썸네일" class="img-responsive">
             </div>
             <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName}</span></h3>
-            <h3><span>${video.postName}</span></h3>
+            <h3><span style='font-size:16px'>${video.postName}</span></h3>
           </a>
         `};
       } catch {
@@ -129,23 +129,25 @@ fetch(`/data/${year}.json`)
     });
 
     
-    // ✅ TEAM 탭 (신 구조 - data.팀 사용)
-    // ✅ TEAM 탭
+    // 파이어베이스에서 팀이름이나 클라이언트 이름으로 된 폴더를 찾는다. 
     data.팀.forEach(team => {
-      const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${encodeURIComponent(team.teamName)}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
-      const description = team.teamDescription || "";
+  const folder = encodeURIComponent(team.teamfolder || team.teamName); // 🔁 teamfolder 우선 사용
+  const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+  const description = team.teamDescription || "";
 
-      const teamDiv = document.createElement('div');
-      teamDiv.innerHTML = `
-       <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
-          <div class="designer-img-wrap">
-            <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
-          </div>
-          <h2 class="head_title"><span>${team.teamName}</span></h2>
-        </a>
-      `;
-      teamGrid.appendChild(teamDiv);
-    });
+  const teamDiv = document.createElement('div');
+  teamDiv.innerHTML = `
+   <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
+    <div class="designer-img-wrap">
+      <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
+    </div>
+    <h3 class="head_title"><span>${team.teamName}</span></h3>
+    <h3><span style="font-size: 16px;">${team.videoName || ""}</span></h3>
+  </a>
+  `;
+  teamGrid.appendChild(teamDiv);
+});
+
   });
 
 {/* <p class="eng_sub">${team.teamNameEng}</p>
