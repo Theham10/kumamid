@@ -145,9 +145,6 @@ h1.project-title {
     background-color: #1a1a1a; /* 선택적 배경색 */
     height: 100%; /* 그리드 아이템 내에서 높이 꽉 채우기 */
 }
-.team-type{
-  width: 1080px;
-}
 .project-item:hover {
     border-color: #fff;
 }
@@ -159,13 +156,17 @@ h1.project-title {
     border-radius: 15px 15px 0 0;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.8s ease-in-out, filter 0.4s ease;
 }
 
 .project-item:hover img {
+    animation: panZoom 2s ease-in-out forwards;
     filter: brightness(1.1);
 }
 
+.team-type{
+  width: 1080px;
+}
 .project-item > div { /* 설명 div */
     width: 100%;
     padding: 1rem;
@@ -397,4 +398,12 @@ h1.project-title {
         width: 100%; /* 모바일에서는 너비 100% */
         max-width: unset;
     }
+}
+@keyframes panZoom {
+  0% {
+    transform: scale(1.5) translateX(70px);
+  }
+  100% {
+    transform: scale(1.5) translateX(-70px);
+  }
 }
