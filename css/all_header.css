@@ -10,9 +10,8 @@ body {
 }
 
 .header {
-    background: #000; /* 배경색 검정 */
+    background: black; /* 배경색 검정 */
     color: #fff; /* 글자색 하양 */
-    border-bottom: 1px solid #333;
 }
 
 .inner {
@@ -37,14 +36,16 @@ body {
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav ul li a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
     font-size: 1rem;
+    font-weight: 100 !important;
     transition: color 0.2s;
+     color: #ddd;
 }
 
 .nav ul li a:hover {
