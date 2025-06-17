@@ -168,10 +168,15 @@
 }
 
 /* footer 여백 */
-.footer-copyright {
-  margin-bottom: 50px;
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
 }
-
 
 .project-description {
   font-size: 115%;

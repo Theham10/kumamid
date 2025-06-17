@@ -75,13 +75,25 @@ body {
 }
 
 .profile-role {
-    font-size: 1.5rem;
-    color: #ccc;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    width: max-content;
+    margin-bottom: 5px;
 }
 
 .profile-email {
-    font-size: 1.2rem;
-    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #aad4ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    width: max-content;
 }
 
 .divider {
@@ -145,22 +157,28 @@ h1.project-title {
     background-color: #1a1a1a; /* 선택적 배경색 */
     height: 100%; /* 그리드 아이템 내에서 높이 꽉 채우기 */
 }
-.project-item:hover {
+.project-item > div{
+    background-color: #111;
+    z-index: 1;
+}
+.project-item:hover:not(.no-image) {
     border-color: #fff;
 }
 
 .project-item img {
     width: 100%;
-    height: 500px;
+    height: 100%;
     max-height: 500px;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
     display: block;
     transition: transform 0.8s ease-in-out, filter 0.4s ease;
+    z-index: 1;
+    position: relative;
 }
 
-.project-item:hover img {
-    animation: panZoom 2s ease-in-out forwards;
+.project-item:hover:not(.no-image) img {
+    animation: panZoom 1s ease-in-out forwards;
     filter: brightness(1.1);
 }
 
@@ -177,6 +195,8 @@ h1.project-title {
     display: flex;
     flex-direction: column;
     justify-content: center; /* 텍스트 내용 수직 중앙 정렬 */
+    position: relative;
+    z-index: 2;
 }
 
 /* 특정 유형의 이미지/비디오에 대한 추가 스타일 (필요시) */
@@ -401,9 +421,52 @@ h1.project-title {
 }
 @keyframes panZoom {
   0% {
-    transform: scale(1.5) translateX(70px);
+    transform: scale(1.7) translateX(70px);
   }
   100% {
-    transform: scale(1.5) translateX(-70px);
+    transform: scale(1.7) translateX(-70px);
   }
+}
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
+}
+
+/* Disable hover effects for project items without valid images */
+
+.project-item.no-image {
+    position: relative;
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+.project-item.no-image::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+    animation: shimmer 1.8s infinite;
+    opacity: 0.3;
+}
+
+.project-item.no-image::after {
+    content: "준비중...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #aaa;
+    font-family: 'Pretendard', sans-serif;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }

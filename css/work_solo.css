@@ -1,5 +1,13 @@
 /* work_solo.css */
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   background-color: black;
   color: white;
@@ -16,6 +24,13 @@ body {
   padding: 40px 200px;
   justify-items: center;
   align-items: start;
+}
+
+#tab-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .grid-item {
@@ -92,7 +107,7 @@ body {
 .tab-panel {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #project-list,
   .tab-panel.active {
     grid-template-columns: repeat(2, 1fr);
@@ -123,8 +138,49 @@ body {
   }
 }
 .footer-copyright{
-  margin-bottom: 50px;
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
   text-align: center;
   color: #aaa;
   font-size: 0.85rem;
+}
+
+.grid-item.no-image {
+  position: relative;
+}
+
+.grid-item.no-image .designer-img-wrap {
+  position: relative;
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+/* shimmer effect */
+.grid-item.no-image .designer-img-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+  animation: shimmer 1.8s infinite;
+  opacity: 0.3;
+}
+
+/* text overlay */
+.grid-item.no-image .designer-img-wrap::after {
+  content: "준비중...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #aaa;
+  font-family: 'Pretendard', sans-serif;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }

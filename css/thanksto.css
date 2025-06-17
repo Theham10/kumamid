@@ -119,6 +119,8 @@
 .sns {
     padding-top: 3%;
     background-color: #000000;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .sns-row {
@@ -379,4 +381,14 @@ iframe {
 .modal-error {
   color: red;
   font-size: 0.85rem;
+}
+
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
 }
