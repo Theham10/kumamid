@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const tryNext = (index) => {
       if (index >= urls.length) {
         imgEl.src = fallback;
+        if (imgEl.parentElement) {
+          imgEl.parentElement.classList.add("no-image");
+        }
         return;
       }
       const img = new Image();
@@ -135,7 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (project.type === 'poster') {
           mediaElement = document.createElement("img");
-          mediaElement.src = getUserAssetPostUrl(project.designerName, project.data.posterFile);
+          mediaElement.onerror = () => {
+            mediaElement.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
+            projectItemDiv.classList.add("no-image");
+          };
+          mediaElement.src = getUserAssetPostUrl(project.designerName, project.data.posterThumb);
           mediaElement.alt = `${project.designerName}_포스터`;
           title = project.data.postName;
           typeText = '포스터';
@@ -150,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mediaElement,
             project.designerName,
             project.data.videoThumb,
-            "img/default.png"
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII="
           );
           title = project.data.postName || '제목 없음';
           typeText = '비디오';
@@ -160,13 +167,26 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         } else if (project.type === 'team') {
           mediaElement = document.createElement("img");
-          mediaElement.src = TeamAssetUrl(project.data.teamName, project.data.teamThumbnail);
+          const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
+          const imageUrl = TeamAssetUrl(encodeURIComponent(project.data.teamfolder), encodeURIComponent(project.data.teamThumbnail));
+          console.log(imageUrl)
+          const testImg = new Image();
+          testImg.onload = () => {
+            mediaElement.src = imageUrl;
+          };
+          testImg.onerror = () => {
+            mediaElement.src = fallbackImg;
+            projectItemDiv.classList.add("no-image");
+          };
+          testImg.src = imageUrl;
+          
+
           title = project.data.teamtitle;
           typeText = '팀 프로젝트';
-          projectItemDiv.classList.add('team-type'); // 팀 프로젝트 타입 클래스 추가 (필요시 CSS에서 활용)
-            projectItemDiv .onclick = function() {
-            location.href=`../view/year=${year}&teamView.html?id=${project.data.id}`
-          }
+          projectItemDiv.classList.add('team-type');
+          projectItemDiv.onclick = function() {
+            location.href = `../view/teamView.html?year=${year}&id=${project.data.id}`;
+          };
         }
 
         if (mediaElement) {
