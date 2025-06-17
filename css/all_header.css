@@ -7,12 +7,12 @@
 
 body {
     font-family: sans-serif;
-    margin-top: 10px;
 }
 
 .header {
     background: black; /* 배경색 검정 */
     color: #fff; /* 글자색 하양 */
+    padding-top: 10px;
 }
 
 .inner {
