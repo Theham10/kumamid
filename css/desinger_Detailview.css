@@ -75,13 +75,25 @@ body {
 }
 
 .profile-role {
-    font-size: 1.5rem;
-    color: #ccc;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ddd;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    width: max-content;
+    margin-bottom: 5px;
 }
 
 .profile-email {
-    font-size: 1.2rem;
-    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #aad4ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    width: max-content;
 }
 
 .divider {
@@ -160,7 +172,7 @@ h1.project-title {
 }
 
 .project-item:hover img {
-    animation: panZoom 2s ease-in-out forwards;
+    animation: panZoom 1s ease-in-out forwards;
     filter: brightness(1.1);
 }
 
@@ -406,4 +418,13 @@ h1.project-title {
   100% {
     transform: scale(1.5) translateX(-70px);
   }
+}
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
 }

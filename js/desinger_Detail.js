@@ -186,7 +186,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const hope = designer.profileDream || "";
       console.log("comment:", comment);
       document.querySelector(".designer-quote").innerHTML = `<strong>${comment}</strong>`;
-      document.querySelector(".profile-info").innerHTML = `${hope}<br>${email}`;
+      document.querySelector(".profile-info").innerHTML = `
+        <div class="profile-role">${hope}</div>
+        <div class="profile-email">${email}</div>
+      `;
 
       function renderComments() {
         // 댓글 렌더링 로직 (현재 코드에서는 구현되지 않음)
