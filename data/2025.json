@@ -1033,12 +1033,12 @@
     },
     {
       "id": "1009",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/m0ZX3PesUvo",
       "designerName": [
         "강성주"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1046,12 +1046,12 @@
     },
     {
       "id": "1010",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/dTPqcdnrUwQ",
       "designerName": [
         "공슬비"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1072,12 +1072,12 @@
     },
     {
       "id": "1012",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/0Eg9IBUSS2g",
       "designerName": [
         "김수언"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1085,12 +1085,12 @@
     },
     {
       "id": "1014",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/0Eg9IBUSS2g",
       "designerName": [
         "김영민"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1098,12 +1098,12 @@
     }, 
     {
       "id": "1015",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/vpT0dbl7nu8",
       "designerName": [
         "김우림"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1111,38 +1111,25 @@
     }, 
     {
       "id": "1016",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "김채원"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
       "videoDescription":""
     },
     {
-      "id": "1017",
-      "videoThumb" : "",
-      "vimeoId" : "https://www.youtube.com/embed/NOU4Fae3L0M",
-      "designerName": [
-        "류민서"
-      ],
-      "thumbnail" : "",
-      "postName": "",
-      "client": "",
-      "clientDescription": "",
-      "videoDescription":""
-    }, 
-    {
       "id": "1018",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/lYX1h2t-rjw",
       "designerName": [
         "문유빈"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1150,12 +1137,12 @@
     }, 
     {
       "id": "1019",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "박광혁"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1163,12 +1150,12 @@
     }, 
     {
       "id": "1020",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "박나영"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1176,12 +1163,12 @@
     },
     {
       "id": "1021",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/DTYO8HyiMo0",
       "designerName": [
         "박재민"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1189,12 +1176,12 @@
     },
     {
       "id": "1022",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/Gz5Md4vglKQ",
       "designerName": [
         "박준성"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1202,12 +1189,12 @@
     }, 
     {
       "id": "1023",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/PINVdRy6RHM",
       "designerName": [
         "박준희"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1215,12 +1202,12 @@
     }, 
     {
       "id": "1024",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/NTjB4ZGbCPk",
       "designerName": [
         "박진선"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1228,12 +1215,12 @@
     }, 
     {
       "id": "1025",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/ytSEUNAbbF4",
       "designerName": [
         "박진주"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1241,12 +1228,12 @@
     }, 
     {
       "id": "1026",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/0fDe2iPeHWc",
       "designerName": [
         "박창오"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1254,12 +1241,12 @@
     }, 
     {
       "id": "1027",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/cQuSU0zy70I",
       "designerName": [
         "박현웅"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1267,12 +1254,12 @@
     }, 
     {
       "id": "1028",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "송예준"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1280,12 +1267,12 @@
     }, 
     {
       "id": "1029",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/g2k_gp0Ej5c",
       "designerName": [
         "송준영"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1293,12 +1280,12 @@
     },
     {
       "id": "1030",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/mc8GF9BJ95c",
       "designerName": [
         "신현우"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1306,12 +1293,12 @@
     },
     {
       "id": "1031",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/fOfbtGkUVVk",
       "designerName": [
         "유예원"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1319,12 +1306,12 @@
     }, 
     {
       "id": "1032",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/5SHb7lV5Txk",
       "designerName": [
         "이다현"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1332,12 +1319,12 @@
     },
      {
       "id": "1033",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/aYeG2CrGuE0",
       "designerName": [
         "이민수"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1345,12 +1332,12 @@
     },
     {
       "id": "1034",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/TQlW0KoCCuA",
       "designerName": [
         "이수민"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1358,12 +1345,12 @@
     },
     {
       "id": "1035",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "이예지"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1371,12 +1358,12 @@
     },
     {
       "id": "1036",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/Xs8iu86tiW0",
       "designerName": [
         "이웅희"
       ],
-      "thumbnail" : "",
+      "thumbnail" : ".jpg",
       "postName": "Z세대, 줍새대로",
       "client": "",
       "clientDescription": "",
@@ -1384,12 +1371,12 @@
     },
     {
       "id": "1037",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/x0O1On-BcSM",
       "designerName": [
         "이웅희"
       ],
-      "thumbnail" : "",
+      "thumbnail" : ".jpg",
       "postName": "Jelly Loot",
       "client": "",
       "clientDescription": "",
@@ -1397,12 +1384,12 @@
     },
     {
       "id": "1038",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/9zWCFG2fSmc",
       "designerName": [
         "이원정"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1410,12 +1397,12 @@
     }, 
     {
       "id": "1040",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/9mIPjRjJD3s",
       "designerName": [
         "이은광"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1423,12 +1410,12 @@
     }, 
     {
       "id": "1041",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/WYMHu7szvOI",
       "designerName": [
         "장재혁"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1436,12 +1423,12 @@
     }, 
     {
       "id": "1042",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/rmuSOIgJMYs",
       "designerName": [
         "조수현"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1449,12 +1436,12 @@
     }, 
     {
       "id": "1043",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/YwvGSGDf1KM",
       "designerName": [
         "조영빈"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1462,12 +1449,12 @@
     },
     {
       "id": "1044",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "",
       "designerName": [
         "지혜현"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1475,12 +1462,12 @@
     }, 
     {
       "id": "1045",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/NYqk48B5gd8",
       "designerName": [
         "지호진"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1488,12 +1475,12 @@
     },
     {
       "id": "1046",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/aK7zkCZ5G7M",
       "designerName": [
         "최근호"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1501,12 +1488,12 @@
     }, 
     {
       "id": "1047",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/iNsP47psPW8",
       "designerName": [
         "최민주"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1514,12 +1501,12 @@
     },
     {
       "id": "1048",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/KE66gwGMWY8",
       "designerName": [
         "한다빈"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
@@ -1527,12 +1514,12 @@
     },
     {
       "id": "1049",
-      "videoThumb" : "",
+      "videoThumb" : "01.jpg",
       "vimeoId" : "https://www.youtube.com/embed/4jQm7I8d1IE",
       "designerName": [
         "한영"
       ],
-      "thumbnail" : "",
+      "thumbnail" : "01.jpg",
       "postName": "",
       "client": "",
       "clientDescription": "",
