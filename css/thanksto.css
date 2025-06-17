@@ -382,3 +382,13 @@ iframe {
   color: red;
   font-size: 0.85rem;
 }
+
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
+}

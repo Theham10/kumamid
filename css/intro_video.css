@@ -25,5 +25,13 @@ video {
   object-fit: cover; /* ✅ 비율 유지하며 꽉 채움 (잘리는 건 자동 처리) */
   background-color: #000;
   opacity: 0.3;
-
+}
+.footer-copyright{
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  background-color: black;
 }

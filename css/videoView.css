@@ -100,7 +100,12 @@ body {
   text-align: center;
 }
 .footer-copyright{
-  margin-bottom: 50px;
+  margin-top: auto;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.85rem;
 }
 @media (max-width: 900px) {
   .project-visual-full {
