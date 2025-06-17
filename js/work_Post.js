@@ -58,7 +58,7 @@ fetch(`/data/${year}.json`)
   .then(res => res.json())
   .then(data => {
     // ✅ POST 탭 (placeholder로 먼저 렌더링 후, 실제 이미지로 교체)
-    const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z/D/PwAHggJ/P2+tHwAAAABJRU5ErkJggg==";
+    const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
 
     data.포스트.forEach((post, index) => {
       const designer = data.디자이너.find(d => d.name === post.designerName);
@@ -102,7 +102,7 @@ fetch(`/data/${year}.json`)
             const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
             validUrl = await loadFirstValidImageAsync(urls);
           } catch {
-            validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z/D/PwAHggJ/P2+tHwAAAABJRU5ErkJggg=="; // transparent placeholder
+            validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII="; // solid black placeholder
           }
           return {
             index,
@@ -136,22 +136,26 @@ fetch(`/data/${year}.json`)
     
     // 파이어베이스에서 팀이름이나 클라이언트 이름으로 된 폴더를 찾는다. 
     data.팀.forEach(team => {
-  const folder = encodeURIComponent(team.teamfolder || team.teamName); // 🔁 teamfolder 우선 사용
-  const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
-  const description = team.teamDescription || "";
+      const folder = encodeURIComponent(team.teamfolder || team.teamName); // 🔁 teamfolder 우선 사용
+      const imgUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
+      const description = team.teamDescription || "";
 
-  const teamDiv = document.createElement('div');
-  teamDiv.innerHTML = `
-   <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
-    <div class="designer-img-wrap">
-      <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
-    </div>
-    <h3 class="head_title"><span>${team.teamName}</span></h3>
-    <h3><span style="font-size: 16px;">${team.videoName || ""}</span></h3>
-  </a>
-  `;
-  teamGrid.appendChild(teamDiv);
-});
+      // Add fallback for image load error (solid black base64)
+      const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
+
+      const teamDiv = document.createElement('div');
+      teamDiv.innerHTML = `
+        <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item">
+          <div class="designer-img-wrap">
+            <img src="${imgUrl}" alt="${team.teamName}_썸네일" class="img-responsive"
+              onerror="this.onerror=null;this.src='${fallbackImg}';">
+          </div>
+          <h3 class="head_title"><span>${team.teamName}</span></h3>
+          <h3><span style="font-size: 16px;">${team.videoName || ""}</span></h3>
+        </a>
+      `;
+      teamGrid.appendChild(teamDiv);
+    });
 
   });
 
