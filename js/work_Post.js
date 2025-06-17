@@ -97,24 +97,26 @@ fetch(`/data/${year}.json`)
       if (!designer) return null;
 
       // 2. 여러 VideoSorce 폴더 중 유효한 이미지 URL을 병렬로 탐색
+      let validUrl;
       try {
-      // 3. 첫 번째로 유효한 이미지 URL을 찾는
         const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
-        const validUrl = await loadFirstValidImageAsync(urls);
-      // 4. HTML 조각 반환 (원본 순서 유지를 위해 index 포함)
-        return { index, html: `
+        validUrl = await loadFirstValidImageAsync(urls);
+      } catch {
+        validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z/D/PwAHggJ/P2+tHwAAAABJRU5ErkJggg=="; // transparent placeholder
+      }
+
+      return {
+        index,
+        html: `
           <a href="./videoView.html?year=${year}&id=${encodeURIComponent(video.id)}" class="grid-item">
             <div class="designer-img-wrap">
-              <img src="${validUrl}" alt="${designer.postName}_비디오썸네일" class="img-responsive">
+              <img src="${validUrl}" alt="${designer.postName || "video"}_비디오썸네일" class="img-responsive">
             </div>
             <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName}</span></h3>
             <h3><span style='font-size:16px'>${video.postName}</span></h3>
           </a>
-        `};
-      } catch {
-        // 5. 유효한 이미지가 없으면 null 반환
-        return null;
-      }
+        `
+      };
     });
     // 6. 모든 비디오 썸네일 로딩이 끝나면, 순서대로 DOM에 추가
     Promise.all(videoPromises).then(results => {
