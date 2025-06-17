@@ -1,4 +1,4 @@
-<!-- 연도별 졸업작품 페이지 -->
+<file name=0 path=/Users/b-hyoung/Desktop/bobs_project/A_jVisionMedia/view/졸작.html><!-- 연도별 졸업작품 페이지 -->
   <!DOCTYPE html>
   <html lang="en">
 
@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="/css/work_solo.css">
     <link rel="stylesheet" href="/css/all_header.css">
 
+    <style>
+      .tab-button {
+        position: relative;
+        overflow: hidden;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+      }
+
+      .tab-button span {
+        display: inline-block;
+        background: linear-gradient(to right, #ffc107 50%, #959595 50%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: background-position 1s cubic-bezier(0.65, 0, 0.35, 1),
+        transform 0.8s ease;
+      }
+
+      .tab-button.active span {
+        background-position: 0 0;
+        transform: scale(1.05);
+        font-weight: bold;
+      }
+    </style>
 
     <title>한국영상대학교 영상디자인과 졸업전시</title>
   </head>
@@ -21,9 +47,9 @@
 
       <!-- ✅ 탭 메뉴 영역 추가 -->
       <div class="tab-menu">
-        <button class="tab-button active" data-tab="post">포스터</button>
-        <button class="tab-button" data-tab="video">비디오</button>
-        <button class="tab-button" data-tab="team">팀</button>
+        <button class="tab-button active" data-tab="post"><span>포스터</span></button>
+        <button class="tab-button" data-tab="video"><span>비디오</span></button>
+        <button class="tab-button" data-tab="team"><span>팀</span></button>
       </div>
     </div>
 

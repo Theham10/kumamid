@@ -12,7 +12,10 @@ body {
 .header {
     background: black; /* 배경색 검정 */
     color: #fff; /* 글자색 하양 */
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+      border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .inner {
@@ -43,7 +46,7 @@ body {
 .nav ul li a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 100 !important;
     transition: color 0.2s;
      color: #ddd;
