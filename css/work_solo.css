@@ -95,9 +95,31 @@ body {
 @media (max-width: 600px) {
   #project-list,
   .tab-panel.active {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     padding: 16px;
-    gap: 0;
+    gap: 12px;
+  }
+
+  .work-header {
+    padding: 0 16px;
+    text-align: left;
+  }
+
+  .page-title {
+    font-size: 36px;
+    margin: 20px 0 12px;
+    text-align: left;
+  }
+
+  .tab-menu {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+    margin-top: 0;
   }
 }
 .footer-copyright{
