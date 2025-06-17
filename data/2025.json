@@ -1363,7 +1363,7 @@
       "designerName": [
         "이웅희"
       ],
-      "thumbnail" : ".jpg",
+      "thumbnail" : "01.jpg",
       "postName": "Z세대, 줍새대로",
       "client": "",
       "clientDescription": "",
@@ -1371,12 +1371,12 @@
     },
     {
       "id": "1037",
-      "videoThumb" : "01.jpg",
+      "videoThumb" : "02.jpg",
       "vimeoId" : "https://www.youtube.com/embed/x0O1On-BcSM",
       "designerName": [
         "이웅희"
       ],
-      "thumbnail" : ".jpg",
+      "thumbnail" : "02.jpg",
       "postName": "Jelly Loot",
       "client": "",
       "clientDescription": "",
