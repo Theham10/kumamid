@@ -60,6 +60,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .head_title {
@@ -148,11 +149,13 @@ body {
 
 .grid-item.no-image {
   position: relative;
+  background-color: #000
+
 }
 
 .grid-item.no-image .designer-img-wrap {
   position: relative;
-  background-color: #1e1e1e;
+  background-color: #000 !important;
   overflow: hidden;
 }
 
@@ -161,9 +164,9 @@ body {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, #1e1e1e 0%, #2a2a2a 50%, #1e1e1e 100%);
+  background: linear-gradient(90deg, #111 0%, #222 50%, #111 100%);
   animation: shimmer 1.8s infinite;
-  opacity: 0.3;
+  opacity: 0.15;
 }
 
 /* text overlay */
@@ -178,9 +181,33 @@ body {
   color: #aaa;
   font-family: 'Pretendard', sans-serif;
   pointer-events: none;
+  opacity: 0;
+  animation: fadeInText 0.6s ease-in-out forwards;
 }
 
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
