@@ -89,44 +89,49 @@ fetch(`/data/${year}.json`)
     });
 
     // ✅ VIDEO 탭
-    // 비디오 데이터 각각에 대해 Promise를 생성하여 유효한 썸네일 이미지를 병렬로 탐색
-    const videoPromises = data.비디오.map(async (video, index) => {
+    // 비디오 데이터 각각에 대해 Promise를 생성하여 유효한 썸네일 이미지를 병렬로 탐색 (모든 49개 출력 보장)
+    const videoPromises = [];
+    data.비디오.forEach((video, index) => {
       // 1. 디자이너 정보 찾기 (designerName이 배열일 경우 첫번째 값 사용)
       const designerName = Array.isArray(video.designerName) ? video.designerName[0] : video.designerName;
       const designer = data.디자이너.find(d => d.name === designerName);
-      if (!designer) return null;
-
-      // 2. 여러 VideoSorce 폴더 중 유효한 이미지 URL을 병렬로 탐색
-      try {
-      // 3. 첫 번째로 유효한 이미지 URL을 찾는
-        const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
-        const validUrl = await loadFirstValidImageAsync(urls);
-      // 4. HTML 조각 반환 (원본 순서 유지를 위해 index 포함)
-        return { index, html: `
-          <a href="./videoView.html?year=${year}&id=${encodeURIComponent(video.id)}" class="grid-item">
-            <div class="designer-img-wrap">
-              <img src="${validUrl}" alt="${designer.postName}_비디오썸네일" class="img-responsive">
-            </div>
-            <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName}</span></h3>
-            <h3><span style='font-size:16px'>${video.postName}</span></h3>
-          </a>
-        `};
-      } catch {
-        // 5. 유효한 이미지가 없으면 null 반환
-        return null;
-      }
+      videoPromises.push(
+        (async () => {
+          let validUrl;
+          try {
+            const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
+            validUrl = await loadFirstValidImageAsync(urls);
+          } catch {
+            validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4z/D/PwAHggJ/P2+tHwAAAABJRU5ErkJggg=="; // transparent placeholder
+          }
+          return {
+            index,
+            html: `
+              <a href="./videoView.html?year=${year}&id=${encodeURIComponent(video.id)}" class="grid-item">
+                <div class="designer-img-wrap">
+                  <img src="${validUrl}" alt="${designer.postName || "video"}_비디오썸네일" class="img-responsive">
+                </div>
+                <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName || "No Name"}</span></h3>
+                <h3><span style='font-size:16px'>${video.postName || "No Title"}</span></h3>
+              </a>
+            `
+          };
+        })()
+      );
     });
-    // 6. 모든 비디오 썸네일 로딩이 끝나면, 순서대로 DOM에 추가
-    Promise.all(videoPromises).then(results => {
-      results
-        .filter(Boolean)
-        .sort((a, b) => a.index - b.index) // 원본 순서 유지
-        .forEach(({ html }) => {
-          const div = document.createElement('div');
-          div.innerHTML = html;
-          videoGrid.appendChild(div);
-        });
-    });
+    // 모든 비디오 썸네일 로딩이 끝나면, 순서대로 DOM에 추가 (실패해도 49개 모두 렌더링)
+    (async () => {
+      const results = await Promise.allSettled(videoPromises);
+      const htmlList = results
+        .filter(r => r.status === 'fulfilled' && r.value)
+        .sort((a, b) => a.value.index - b.value.index)
+        .map(r => r.value.html);
+      htmlList.forEach(html => {
+        const div = document.createElement('div');
+        div.innerHTML = html;
+        videoGrid.appendChild(div);
+      });
+    })();
 
     
     // 파이어베이스에서 팀이름이나 클라이언트 이름으로 된 폴더를 찾는다. 
