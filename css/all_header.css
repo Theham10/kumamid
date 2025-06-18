@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 .header {
@@ -14,14 +14,13 @@ body {
     color: #fff; /* 글자색 하양 */
     padding-top: 20px;
     padding-bottom: 20px;
-      border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .inner {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
-    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,11 +29,21 @@ body {
 .logo {
     font-size: 1.2rem; /* PC 폰트사이즈 */
     font-weight: bold;
+    padding-left: 15%;
+
 }
 
 .logo a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
+    font-size: 13px;
+}
+.logo span{
+    font-size: 17px;
+    letter-spacing: 0.1px;
+}
+.nav{
+    padding-right: 16%;
 }
 
 .nav ul {
@@ -46,14 +55,14 @@ body {
 .nav ul li a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
-    font-size: 1.2rem;
-    font-weight: 100 !important;
+    font-size: 1.1rem;
+    font-weight: 300 !important;
     transition: color 0.2s;
-     color: #ddd;
+    color: #ddd;
 }
 
 .nav ul li a:hover {
-    color: #ddd;
+    color: #fabc11;
 }
 
 .menu-icon {

@@ -12,7 +12,13 @@
   border-bottom: 1px solid #404040;
   margin: 10px 0;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Pretendard', sans-serif;
+}
 .comment-board {
   max-width: 80%;
   margin: 0px auto;
