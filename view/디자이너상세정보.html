@@ -1,26 +1,23 @@
-<!DOCTYPE html>
 <html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>디자이너 상세 보기</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="/css/desinger_Detailview.css">
-  <link rel="stylesheet" href="/css/all_header.css" />
+  <link rel="stylesheet" href="/css/all_header.css">
 </head>
 
 <body>
-
   <div id="header-md"></div>
+
   <div class="detail-container">
     <div class="designer-header">
-      <div class="designer-school-info">
-        한국영상대학교 영상디자인과<br>제24회 2023 졸업전
-      </div>
       <h2 class="designer-title">Designer</h2>
       <div class="designer-profile-row">
         <div class="profile-img-container">
-          <img id="profileImg" src="" alt="" class="profile-img">
+          <img id="profileImg" src="" alt="프로필 이미지" class="profile-img">
         </div>
         <div class="profile-text-box">
           <div id="designerName" class="profile-name"></div>
@@ -28,83 +25,66 @@
         </div>
       </div>
       <hr class="divider">
-      <div class="designer-quote">
-
-      </div>
+      <div class="designer-quote"></div>
       <hr class="divider">
       <h1>Project</h1>
-      <div class="detail-project">
-        <div class="detail-project-img"></div>
-        <div class="detail-project-vidio"></div>
-      </div>
-      <div class="detail-project-tproject">
-
-      </div>
+      <div class="detail-project"></div>
     </div>
   </div>
 
-  <!-- 디자이너 아래 채팅 남기게 가능하도록하기. 파베로 받아 모듈화 -->
- <div class="comment-section">
-    <h3>댓글 <span style="font-size: 1rem; color: #888;">1</span></h3>
+  <div class="comment-section">
+    <h3>댓글 <span style="font-size: 1rem; color: #888">0</span></h3>
     <div class="comment-box">
       <div class="comment-avatar">👤</div>
       <div class="comment-content">
-        <textarea id="nameInput" placeholder="이름"></textarea>
+        <input id="nameInput" placeholder="이름">
         <textarea id="commentInput" placeholder="댓글을 입력해주세요."></textarea>
         <div class="comment-options">
-          <!-- 
-          <label><input type="checkbox" /> 비밀글</label>
-          -->
-          
           <button id="commentSubmitBtn">등록</button>
         </div>
       </div>
     </div>
-     <div class="comment-list"></div>
-</div>
-    <footer>
+    <div class="comment-list" id="commentList"></div>
+  </div>
+
+  <footer>
     <div class="footer-copyright">
       © 2023. DESIGNTHEHAM Co. all rights reserved.
     </div>
   </footer>
-    
-    <script type="module">
-  import { loadComments, addComment } from "/desiger_msg_md.js";
 
-  const params = new URLSearchParams(location.search);
-  const year = params.get("year");
-  const id = params.get("id");
+  <script type="module">
+    import { loadComments, addComment } from "/desiger_msg_md.js";
 
-  // 댓글 로드
-  loadComments(year, id);
+    const params = new URLSearchParams(location.search);
+    const year = params.get("year");
+    const id = params.get("id");
 
-  // 버튼 연결
-  const btn = document.querySelector("#commentSubmitBtn");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      addComment(year, id);
-    });
-  }
-</script>
+    loadComments(year, id);
 
-<script type="module" src="/js/desinger_Detail.js"></script>
-<script type="module" src="/js/desinger_msg_md.js"></script>
-<script src="/js/all_year.js"></script>
- <script>
-  fetch("/module/header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-md").innerHTML = data;
+    const btn = document.querySelector("#commentSubmitBtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        addComment(year, id);
+      });
+    }
+  </script>
 
-      // ✅ header 삽입 후에 headerText.js 실행
-      setTimeout(() => {
-        const script = document.createElement("script");
-        script.src = "/js/all_headerText.js";
-        document.body.appendChild(script);
-      }, 50); // wait a bit before injecting the logic script
-    });
-</script>
-
+  <script type="module" src="/js/desinger_Detail.js"></script>
+  <script type="module" src="/js/desinger_msg_md.js"></script>
+  <script src="/js/all_year.js"></script>
+  <script>
+    fetch("/module/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-md").innerHTML = data;
+        setTimeout(() => {
+          const script = document.createElement("script");
+          script.src = "/js/all_headerText.js";
+          document.body.appendChild(script);
+        }, 50);
+      });
+  </script>
 </body>
 
 </html>

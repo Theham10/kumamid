@@ -64,8 +64,7 @@ fetch(`/data/${year}.json`)
       if (!designer) return;
 
       const urls = [getUserAssetPostUrl(designer.name, post.posterThumb)];
-      const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
-
+      const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVR42mP8z8Dwn4EIwDiqAyUY0g0jmQJRFATqAyoAxXwAAgF9D5oTZkXEAAAAASUVORK5CYII=";
       postPromises.push(
         (async () => {
           let validUrl;
@@ -82,7 +81,7 @@ fetch(`/data/${year}.json`)
           div.innerHTML = `
             <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}" class="grid-item${isFallback ? " no-image" : ""}">
               <div class="designer-img-wrap">
-                <img src="${validUrl}" alt="${post.postName}_포스터" class="img-responsive">
+                ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
               </div>
               <h3 class="head_title"><span>${designer.name}</span></h3>
               <h3><span style='font-size:16px'>${post.postName}</span></h3>
@@ -123,7 +122,7 @@ fetch(`/data/${year}.json`)
             const urls = getUserAssetUrl(designer.name, "VideoSorce", video.thumbnail);
             validUrl = await loadFirstValidImageAsync(urls);
           } catch {
-            validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII="; // solid black placeholder
+            validUrl = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVR42mP8z8Dwn4EIwDiqAyUY0g0jmQJRFATqAyoAxXwAAgF9D5oTZkXEAAAAASUVORK5CYII="
             isFallback = true;
           }
           const div = document.createElement('div');
@@ -133,7 +132,7 @@ fetch(`/data/${year}.json`)
           div.innerHTML = `
             <a href="./videoView.html?year=${year}&id=${encodeURIComponent(video.id)}" class="grid-item${isFallback ? " no-image" : ""}">
               <div class="designer-img-wrap">
-                <img src="${validUrl}" alt="${designer.postName || "video"}_비디오썸네일" class="img-responsive">
+                ${isFallback ? "" : `<img src="${validUrl}" alt="${designer.postName || "video"}_비디오썸네일" class="img-responsive">`}
               </div>
               <h3 class="head_title"><span>${Array.isArray(video.designerName) ? video.designerName.join(", ") : video.designerName || "No Name"}</span></h3>
               <h3><span style='font-size:16px'>${video.postName || "No Title"}</span></h3>
@@ -167,7 +166,7 @@ fetch(`/data/${year}.json`)
     data.팀.forEach((team, index) => {
       const folder = encodeURIComponent(team.teamfolder || team.teamName);
       const imageUrl = `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FTeamWorkData%2F${folder}%2F${encodeURIComponent(team.teamThumbnail)}?alt=media`;
-      const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jDd8AAAAASUVORK5CYII=";
+      const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVR42mP8z8Dwn4EIwDiqAyUY0g0jmQJRFATqAyoAxXwAAgF9D5oTZkXEAAAAASUVORK5CYII=";
 
       teamPromises.push(
         (async () => {
@@ -185,7 +184,7 @@ fetch(`/data/${year}.json`)
           div.innerHTML = `
             <a href="./teamView.html?year=${year}&id=${encodeURIComponent(team.id)}" class="grid-item${isFallback ? " no-image" : ""}">
               <div class="designer-img-wrap">
-                <img src="${validUrl}" alt="${team.teamName}_썸네일" class="img-responsive">
+                ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
               </div>
               <h3 class="head_title"><span>${team.teamName}</span></h3>
               <h3><span style="font-size: 16px;">${team.videoName || ""}</span></h3>

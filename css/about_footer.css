@@ -1,7 +1,7 @@
-.bottom-info {
-    margin-left: 20px; /* SNS 아이콘과의 간격 */
-}
 
+*{
+      font-family: 'Pretendard', sans-serif;
+}
 .sns-wrap {
     display: flex; /* Flexbox 레이아웃 사용 */
     align-items: center; /* 세로 중앙 정렬 */

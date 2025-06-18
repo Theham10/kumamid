@@ -1,7 +1,11 @@
 .project-section-image img {
-  width: 40%;
+  width: 70%;
   display: block;
   margin: 0 auto;
+  margin-bottom: 30px;
+}
+.project-section-image{
+  padding: 0px 15%;
 }
 .project-main-img {
   opacity: 0;
@@ -15,10 +19,12 @@
   opacity: 1;
 }
 .project-section-description {
+  padding: 0 15%;
   text-align: center;
   margin: 0 auto;
   color: #fff;
 }
+
 
 .project-section-title {
   font-size: 2.2rem;
@@ -31,7 +37,6 @@
   line-height: 1.8;
   color: #ccc;
   margin-bottom: 40px;
-  max-width: 960px;
   margin: 0 auto;
   margin-top: 30px;
   font-weight: bold;
@@ -59,7 +64,7 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -188,7 +193,7 @@ body {
 
 .project-visual-section {
   width: 100%;
-  margin: 60px auto 40px auto;
+  margin-bottom: 60px;
   border-radius: 0;
   overflow: hidden;
 }
@@ -202,9 +207,8 @@ object-fit: cover;
 
 .project-info-section {
   width: 100%;
-  max-width: 1140px;
+  padding: 0 15%;
   margin: 0 auto;
-  padding: 40px 20px;
   background-color: #000;
   color: #fff;
   font-family: 'Pretendard', sans-serif;
@@ -237,12 +241,9 @@ hr{
 }
 
 .project-StillCut , .project-storyBoard{
-  width: 1440px;
-  max-width: 1440px;
-  max-width: 90%;
   height: auto;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0 15%;
 }
 
 .project-StillCut h1 , .project-storyBoard h1{
@@ -307,7 +308,7 @@ hr{
 .footer-divider {
   border-top: 1px solid #666;
   margin: 40px auto;
-  width: 70%;
+  width: 100%;
 
 }
 

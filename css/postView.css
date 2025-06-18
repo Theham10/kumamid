@@ -36,9 +36,9 @@
   line-height: 1.8;
   color: #ccc;
   margin-bottom: 40px;
-  max-width: 960px;
   margin: 0 auto;
   margin-top: 30px;
+  padding: 0 15%;
   font-weight: bold;
 }
 
@@ -64,7 +64,7 @@
 body {
   background: #000;
   color: #fff;
-  font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+  font-family: 'Pretendard', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -178,12 +178,12 @@ object-fit: cover;
 
 .project-info-section {
   width: 100%;
-  max-width: 1140px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 0 15%;
   background-color: #000;
   color: #fff;
   font-family: 'Pretendard', sans-serif;
+  margin-bottom: 60px;
 }
 
 .project-client {
