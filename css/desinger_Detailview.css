@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 2rem;
     flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
     width: 100%; /* 부모 너비에 맞춤 */
     box-sizing: border-box; /* 패딩 포함 너비 계산 */
@@ -61,14 +61,14 @@ body {
 }
 
 .profile-name {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #fff;
     margin-bottom: 0.75rem;
 }
 
 .profile-role {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #ddd;
     background-color: rgba(255, 255, 255, 0.08);
@@ -80,7 +80,7 @@ body {
 }
 
 .profile-email {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #aad4ff;
     background-color: rgba(255, 255, 255, 0.05);

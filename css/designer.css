@@ -6,7 +6,9 @@ body {
   padding: 0;
 }
 
-
+.head_title{
+  font-size: 1.5rem;
+}
 
 a {
   text-decoration: none;
