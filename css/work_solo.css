@@ -77,8 +77,8 @@ body {
   margin-bottom: 50px;
 }
 .page-title {
-  font-size:42px;
-  font-weight: 300;
+  font-size:1.5rem;
+  font-weight: bold;
   color: white;
   text-align: left;
   margin-top: 30px;
@@ -96,7 +96,7 @@ body {
   color: white;
   background: none;
   border: none;
-  font-size: 17px;
+  font-size: 1rem;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   margin-top: 30px;
@@ -124,7 +124,7 @@ body {
   }
 
   .page-title {
-    font-size: 36px;
+    font-size: 1.5rem;
     margin: 20px 0 12px;
     text-align: left;
   }
@@ -136,7 +136,7 @@ body {
   }
 
   .tab-button {
-    font-size: 14px;
+    font-size: 1rem;
     margin-top: 0;
   }
 }
