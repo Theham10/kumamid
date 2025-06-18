@@ -39,10 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector('.project-client').innerHTML = `<h2 style='color:#ffa647'>클라이언트 : ${postData.client}`;
         if (postData.clientDescription) {
           document.querySelector('.project-description').innerHTML = `
-          <hr style='margin-bottom:30px'>
           <h2 style='color:white'>Concept</h2><br/>
           ${postData.clientDescription}
-          <hr style='margin-top:30px'>`;
+          <hr style='margin-top:15px'>`;
         }
         if(postData.subDescription){
           document.querySelector('.project-section-text').innerHTML = `<h2>Visual Expression </h2><br>${postData.subDescription}`;

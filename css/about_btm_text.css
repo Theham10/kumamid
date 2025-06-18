@@ -8,10 +8,10 @@
       font-family: 'Pretendard', sans-serif;
 }
 .section-title {
-    width: 200px; /* h3 요소의 너비 */
-    flex-shrink: 0; /* h3 요소가 줄어들지 않도록 */
-    padding-right: 20px; /* h3 요소와 p 요소 사이 간격 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
+margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 150%;
+    color: white;
 }
 
 .section-content {

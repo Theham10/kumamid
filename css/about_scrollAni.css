@@ -3,6 +3,9 @@
   opacity: 0;
   transform: translateY(20px); /* 약간 아래에서 시작 */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15%;;
 }
 
 /* 활성화된 상태 (화면에 나타날 때) */
