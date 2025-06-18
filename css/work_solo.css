@@ -11,7 +11,7 @@ html, body {
 body {
   background-color: black;
   color: white;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 /* Project list and active tab panel grid layout */
@@ -21,7 +21,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  padding: 40px 200px;
+  padding: 0px 15%;
   justify-items: center;
   align-items: start;
 }
@@ -69,12 +69,12 @@ body {
   line-height: 1.4;
 }
 .work-header {
-  padding: 0px 200px;
+  padding: 50px 15%;
 
   text-align: left;
 }
 .page-title {
-  font-size: 50px;
+  font-size:42px;
   font-weight: 300;
   color: white;
   text-align: left;

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Pretendard', 'Nanum Gothic', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     background-color: #000;
     color: #fff;
     margin: 0;
@@ -7,16 +7,12 @@ body {
 }
 
 .detail-container {
-    display: flex;
-    flex-direction: column;
     align-items: center; /* 중앙 정렬을 위해 추가 */
 }
 
 .designer-header {
-    width: 1140px;
-    max-width: 100%; /* 반응형을 위해 추가 */
+    padding : 0px 15%;
     margin: 0 auto;
-    padding: 2rem 1rem;
     text-align: left;
 }
 
@@ -39,9 +35,7 @@ body {
     align-items: flex-start;
     gap: 4rem;
     flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
-    max-width: 1000px;
     width: 100%; /* 부모 너비에 맞춤 */
-    padding: 0 1rem; /* 좌우 패딩 */
     box-sizing: border-box; /* 패딩 포함 너비 계산 */
 }
 
@@ -62,7 +56,6 @@ body {
     justify-content: flex-end;
     align-self: flex-end;
     height: 100%;
-    max-width: 600px;
     min-height: 300px;
     flex-grow: 1; /* 남은 공간 차지 */
 }
@@ -103,7 +96,6 @@ body {
     border-top: 1px solid #e1e1e1;
     height: 1px;
     width: 100%;
-    max-width: 1140px; /* .detail-project와 너비 맞춤 */
 }
 
 .designer-quote {
@@ -113,7 +105,6 @@ body {
     text-align: center;
     font-weight: 700;
     margin-bottom: 5rem;
-    max-width: 1140px; /* 너비 제한 */
     padding: 0 1rem;
     box-sizing: border-box;
 }
@@ -127,14 +118,12 @@ h1.project-title {
     margin-top: 40px;
     margin-bottom: 30px;
     width: 100%;
-    max-width: 1140px;
 }
 
 .detail-project {
     display: grid; /* ⭐ 그리드 레이아웃으로 변경 */
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* ⭐ 최소 450px 너비로 2열 이상 유지, 유동적으로 열 개수 조정 */
     gap: 2rem; /* ⭐ 모든 project-item 사이의 간격 */
-    width: 1140px;
     max-width: 100%; /* 반응형을 위해 추가 */
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -183,7 +172,7 @@ h1.project-title {
 }
 
 .team-type{
-  width: 1080px;
+  width: 205%;
 }
 .project-item > div { /* 설명 div */
     width: 100%;
@@ -213,9 +202,7 @@ h1.project-title {
 /* 댓글 섹션 (기존 CSS 유지) */
 /* ========================================= */
 .comment-section {
-    max-width: 960px;
-    margin: 4rem auto;
-    padding: 0 1rem;
+    padding: 0 16%;
     color: white;
 }
 
@@ -223,7 +210,7 @@ h1.project-title {
     width: 100%;
     height: 120px;
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
@@ -231,22 +218,24 @@ h1.project-title {
     color: white;
 }
 
+
 #nameInput {
-    width: 100%;
-    height: 5%;
+    padding: 0.5rem;
+    width: 30%;
+    height: 3%;
     font-size: 1rem;
     border: none;
     border-radius: 8px;
     background-color: #111;
     color: white;
+    margin-bottom: 1rem;
+}
+#nameInput{
+    outline: 0.5px solid #494949;
 }
 
 .comment-section button {
     display: block;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: 0;
-    padding: 0.5rem 1.5rem;
     font-size: 1rem;
     background-color: #fff;
     color: #000;
@@ -286,6 +275,7 @@ h1.project-title {
     border-radius: 10px;
     border: 1px solid #333;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .comment-avatar {
@@ -294,11 +284,12 @@ h1.project-title {
 
 .comment-content {
     flex: 1;
+    position: relative; /* 🔥 필수 */
 }
 
 .comment-content textarea {
     width: 100%;
-    height: 100px;
+    height: 150px;
     padding: 1rem;
     font-size: 1rem;
     border: none;
@@ -309,10 +300,8 @@ h1.project-title {
 }
 
 .comment-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 0.5rem;
+    display: block; /* 더 이상 flex 정렬 불필요 */
 }
 
 .comment-options label {
@@ -321,11 +310,12 @@ h1.project-title {
 }
 
 .comment-options button {
+    position: relative; /* textarea 내부 고정 */
     padding: 0.4rem 1.5rem;
     font-size: 0.95rem;
     background-color: #111;
     color: #fff;
-    border: 1px solid #666;
+    border: 1px solid #494949;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -333,7 +323,6 @@ h1.project-title {
 
 .comment-options button:hover {
     background-color: #333;
-    color: #fff;
 }
 
 .comment-item {
@@ -369,6 +358,16 @@ h1.project-title {
     font-size: 1rem;
     color: #ddd;
     line-height: 1.6;
+}
+
+.comment-content textarea {
+    outline: 0.5px solid #494949;      /* 원하는 경우 테두리 추가 */
+}
+
+@media (max-width:1390px){
+    .team-type{
+        width: 100% !important;
+    }
 }
 
 /* ========================================= */
