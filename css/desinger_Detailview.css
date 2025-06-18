@@ -287,7 +287,7 @@ h1.project-title {
 }
 
 .comment-content textarea {
-    width: 100%;
+    width: 98%;
     height: 150px;
     padding: 1rem;
     font-size: 1rem;
@@ -299,8 +299,7 @@ h1.project-title {
 }
 
 .comment-options {
-    margin-top: 0.5rem;
-    
+    margin-top: 1.3rem;
     display: flex; /* 더 이상 flex 정렬 불필요 */
     justify-content: flex-end; /* 버튼과 레이블 사이 공간 분배 */
 }
