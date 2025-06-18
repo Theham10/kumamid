@@ -35,6 +35,11 @@ body {
 .logo a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
+    font-size: 13px;
+}
+.logo span{
+    font-size: 17px;
+    letter-spacing: 0.5px;
 }
 
 .nav ul {
@@ -53,7 +58,7 @@ body {
 }
 
 .nav ul li a:hover {
-    color: #ddd;
+    color: #fabc11;
 }
 
 .menu-icon {
