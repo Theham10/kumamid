@@ -299,7 +299,7 @@ h1.project-title {
 }
 
 .comment-options {
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     display: flex; /* 더 이상 flex 정렬 불필요 */
     justify-content: flex-end; /* 버튼과 레이블 사이 공간 분배 */
 }
