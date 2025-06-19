@@ -4,9 +4,7 @@
     align-items: flex-start; /* 위쪽 정렬 */
     margin-bottom: 20px; /* 섹션 간 간격 */
 }
-*{
-      font-family: 'Pretendard', sans-serif;
-}
+
 .section-title {
 margin-bottom: 10px;
     font-weight: 600;

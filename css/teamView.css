@@ -10,9 +10,7 @@
 .project-main-img.loaded {
   opacity: 1;
 }
-body{
-    font-family: 'Pretendard', sans-serif;
-}
+
 .content-box {
   text-align: center; /* 🔽 추가! */
 }

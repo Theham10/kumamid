@@ -2,7 +2,11 @@
 세부 텍스트 사이즈 조정 등은 페이지별 css에서 작업 부탁드립니다.
 */
 
-* {
+*, body {
+    font-family: 'Pretendard-Regular';
+}
+
+button, div {
     font-family: 'Pretendard-Regular';
 }
 

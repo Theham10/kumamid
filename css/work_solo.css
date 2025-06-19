@@ -11,7 +11,6 @@ html, body {
 body {
   background-color: black;
   color: white;
-  font-family: 'Pretendard', sans-serif;
 }
 
 /* Project list and active tab panel grid layout */
@@ -179,7 +178,6 @@ body {
   font-size: 1rem;
   font-weight: 400;
   color: #aaa;
-  font-family: 'Pretendard', sans-serif;
   pointer-events: none;
 }
 
