@@ -1,3 +1,9 @@
+#comment-input::-webkit-scrollbar { display: none; }
+
+#id-input::-webkit-scrollbar { display: none; }
+
+#pwd-input::-webkit-scrollbar { display: none; }
+
 
 .divider {
   border-bottom: 1px solid #404040;
