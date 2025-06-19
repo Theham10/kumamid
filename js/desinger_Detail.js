@@ -159,15 +159,15 @@ document.addEventListener("DOMContentLoaded", () => {
           };
         }
 
+        const projectTitleDiv = document.createElement("div");
+        projectTitleDiv.innerHTML = `<strong style="font-size:20px">${typeText}</strong><br/>`;
+        projectItemDiv.appendChild(projectTitleDiv);
+
+        mainProjectContainer.appendChild(projectItemDiv);
         if (mediaElement) {
           projectItemDiv.appendChild(mediaElement);
         }
 
-        const projectTitleDiv = document.createElement("div");
-        projectTitleDiv.innerHTML = `<strong style="font-size:20px">${title}</strong><br/><p style="font-size:14px; color:#e5e5e5">${typeText}</p>`;
-        projectItemDiv.appendChild(projectTitleDiv);
-
-        mainProjectContainer.appendChild(projectItemDiv);
       });
 
       const comment = designer.profileComment || "";
