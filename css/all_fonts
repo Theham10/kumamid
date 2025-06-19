@@ -1,0 +1,14 @@
+/* 태그 안받아오고 정말 폰트만 쏴주는 곳입니다. 
+세부 텍스트 사이즈 조정 등은 페이지별 css에서 작업 부탁드립니다.
+*/
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
