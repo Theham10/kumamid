@@ -43,6 +43,7 @@ body {
 .profile-img-container {
     width: 300px;
     flex-shrink: 0; /* 줄어들지 않도록 */
+    
 }
 
 .profile-img {
@@ -78,6 +79,12 @@ body {
     margin-bottom: 4px;
     width: max-content;
     margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    .profile-role { 
+        margin: auto;
+    }    
 }
 
 .profile-email {
@@ -126,9 +133,10 @@ h1.project-title {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* ⭐ 최소 450px 너비로 2열 이상 유지, 유동적으로 열 개수 조정 */
     gap: 2rem; /* ⭐ 모든 project-item 사이의 간격 */
     max-width: 100%; /* 반응형을 위해 추가 */
-    margin: 0 auto;
+    margin: auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
+    
 }
 
 /* 이제 .detail-project-img, .detail-project-vidio, .detail-project-tproject 는 HTML에서 제거되거나
@@ -365,6 +373,7 @@ h1.project-title {
     font-size: 0.9rem;
     color: #aaa;
     margin-bottom: 0.5rem;
+    
 }
 
 .comment-author {
