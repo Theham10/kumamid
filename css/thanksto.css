@@ -20,7 +20,7 @@ body {
   font-family: 'Pretendard', sans-serif;
 }
 .comment-board {
-  max-width: 80%;
+  max-width: 60%;
   margin: 0px auto;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -53,7 +53,7 @@ body {
 }
 
 #comment-input {
-  width: 50%;
+  width: 58%;
 }
 
 @media (max-width: 700px) {
