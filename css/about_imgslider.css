@@ -1,5 +1,5 @@
-*{
-  line-height: 1.5rem;
+p{
+  line-height: 1.8rem;;
 }
 
 .slide-container {
@@ -59,10 +59,10 @@
   width: 50%;
   background: #000;
   color: #fff;
-  padding: 60px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
+  padding-left: 5%;
 }
 
 .slide-right .label {
@@ -109,5 +109,30 @@
 
   .slide-right .desc {
     font-size: 16px;
+  }
+
+  .slide-right .label {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .slide-right h2 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .slide-right .desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
   }
 }

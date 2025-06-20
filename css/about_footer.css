@@ -24,8 +24,10 @@
 /* 모바일 스타일 */
 @media (max-width: 768px) {
     .sns-wrap {
-        flex-direction: column; /* 세로 방향으로 배치 */
-        align-items: flex-start; /* 왼쪽 정렬 */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .sns-icon {
@@ -42,5 +44,15 @@
         width: 30px;
         height: 30px;
         object-fit: contain;
+    }
+    .hero-title{
+        /* font-size: 1.3rem !important; */
+        text-align: center;
+    }
+    .hero-subscript{
+        /* font-size: 1rem !important; */
+        text-align: center;
+        font-size: 1rem !important;
+        color: rgb(215, 215, 215);
     }
 }
