@@ -160,12 +160,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const projectTitleDiv = document.createElement("div");
-        projectTitleDiv.innerHTML = `<strong style="font-size:20px">${typeText}</strong><br/>`;
+        projectTitleDiv.innerHTML = `<strong style="font-size:20px">${typeText}</strong><br/><strong>${title}</strong>`;
         projectItemDiv.appendChild(projectTitleDiv);
 
         mainProjectContainer.appendChild(projectItemDiv);
         if (mediaElement) {
-          projectItemDiv.appendChild(mediaElement);
+          const imageWrapper = document.createElement("div");
+          imageWrapper.classList.add("media-wrapper");
+          imageWrapper.appendChild(mediaElement);
+          projectItemDiv.appendChild(imageWrapper);
         }
 
       });

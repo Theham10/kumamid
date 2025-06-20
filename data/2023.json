@@ -1776,6 +1776,7 @@
   "팀": [
     {
       "id" : "100",
+      "teamfolder" : "Teamwow_web",
       "teamName": "Teamwow_web",
       "client":"KT&G",
       "teamtitle": "Team WOW",
@@ -1794,6 +1795,7 @@
     },
     {
       "id" : "101",
+      "teamfolder" : "경석주니어",
       "teamName": "경석주니어",
       "client":"Sportify",
       "teamtitle": "경석주니어",
@@ -1810,6 +1812,7 @@
       "teamPPMNote" : ["07.jpg", "08.jpg", "09.jpg"]
       }, {
       "id" : "102",
+      "teamfolder" : "골리앗",
       "teamName": "골리앗",
       "client":"쿠캣",
       "teamtitle": "골리앗",
@@ -1826,6 +1829,7 @@
       "teamPPMNote" : ["07.jpg", "08.jpg", "09.jpg", "10.jpg", "11.jpg"]
       },  {
       "id" : "103",
+      "teamfolder" : "르세라팀",
       "teamName": "르세라팀",
       "client":"여다",
       "teamtitle": "LE SSERATEAM",
@@ -1844,6 +1848,7 @@
       "teamPPMNote": ["15.jpeg", "16.jpeg", "17.jpeg", "18.jpeg", "19.jpeg"]
     },  {
       "id" : "105",
+      "teamfolder" : "박수",
       "teamName": "박수",
       "client":"트리플",
       "teamtitle": "박수",
@@ -1863,6 +1868,7 @@
       "teamPPMNote": ["11.JPG", "12.JPG", "13.JPG", "14.JPG", "15.JPG", "16.JPG"]
     },  {
       "id" : "106",
+      "teamfolder" : "베이스",
       "teamName": "베이스",
       "client":"Discord",
       "teamtitle": "BASS",
@@ -1879,6 +1885,7 @@
       "teamPPMNote": ["10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"]
     },  {
       "id" : "107",
+      "teamfolder" : "암리방범대",
       "teamName": "암리방범대",
       "client":"Notion",
       "teamtitle": "암리방범대",
@@ -1897,6 +1904,7 @@
 
     },  {
       "id" : "108",
+      "teamfolder" : "어메이징필름",
       "teamName": "어메이징필름",
       "client": "Heineken 0.0", 
       "teamtitle": "어메이징필름",
@@ -1914,6 +1922,7 @@
       "teamPPMNote": ["02.jpeg", "03.jpeg", "04.jpeg", "05.jpeg", "06.jpeg", "07.jpeg"]
     },  {
       "id" : "109",
+      "teamfolder" : "오우예씨몬",
       "teamName": "오우예씨몬",
       "client": "TOSS", 
       "teamtitle": "오우예~씨몬(C'mon)",
@@ -1932,6 +1941,7 @@
       "teamPPMNote": ["09.jpg", "10.jpg", "11.jpg", "12.jpg", "13.jpg", "14.jpg"]
     },  {
       "id" : "110",
+      "teamfolder" : "용호마차",
       "teamName": "용호마차",
       "client": "SONY", 
       "teamtitle": "용호마차",
@@ -1950,6 +1960,7 @@
       "teamPPMNote": ["11.jpg", "12.jpg", "13.jpg", "14.jpg", "15.jpg", "16.jpg"]
     },  {
       "id" : "111",
+      "teamfolder" : "초아",
       "teamName": "초아",
       "client": "Durex Feel Ultra Thin", 
       "teamtitle": "초아",
@@ -1970,6 +1981,7 @@
     
     },  {
       "id" : "112",
+      "teamfolder" : "트라이아스기",
       "teamName": "트라이아스기",
       "client": "당근마켓", 
       "teamtitle": "트라이아스기",
@@ -1989,6 +2001,7 @@
 
     },  {
       "id" : "113",
+      "teamfolder" : "하입보이",
       "teamName": "하입보이",
       "client": "OpenAI", 
       "teamtitle": "HypeBoy",

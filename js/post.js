@@ -32,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // 타이틀 및 설명 채우기
       document.title = postData.postName;
       if(year == '2023'){
+        document.querySelector('.project-title').innerHTML = `${postData.postName}`;
         document.querySelector('.project-client').innerHTML = `클라이언트 : ${postData.client}`;
-        document.querySelector('.project-description').innerHTML = postData.clientDescription;
+        document.querySelector('.project-description').innerHTML = `<hr style='margin-bottom:30px; margin-top:30px;color:rgb(36,36,36)'><span style='font-size:1.3rem; color:#ccc; text-align:center;'>${postData.clientDescription}<span><hr style='margin-top:30px;color:rgb(36,36,36);'>`;
         document.querySelector('.project-section-text').innerHTML = postData.subDescription;
       }else if(year == '2025'){
         document.querySelector('.project-client').innerHTML = `<h2 style='color:#ffa647'>클라이언트 : ${postData.client}`;
