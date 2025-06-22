@@ -1,3 +1,5 @@
+import { insertPosterNavigation } from './all_slidePost.js';
+
 const params = new URLSearchParams(window.location.search);
 const postId = params.get('id');
 const year = params.get("year")
@@ -55,9 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
         postData.posterThumb
           ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterThumb)}?alt=media`
           : "default.png";
-      document.querySelector('.project-footer-author').onclick = () => {
-        window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`
-      }
+      document.querySelector('.project-footer-author').addEventListener('click', (e) => {
+        if (!e.target.classList.contains('poster-nav')) {
+          window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`;
+        }
+      });
       document.querySelector('.project-section-image img').src =
         postData.posterFile
           ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsersWorkData%2F${encodeURIComponent(designer.name)}%2F${encodeURIComponent(postData.posterFile)}?alt=media`
@@ -68,5 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector('.footer-author-img').src =
         designer ? `https://firebasestorage.googleapis.com/v0/b/jvisiondesign-web.firebasestorage.app/o/${year}%2FUsers%2F${encodeURIComponent(designer.name)}.jpg?alt=media`
           : "fallback.jpg";
+
+      insertPosterNavigation(data, postId, year);
     });
 });
