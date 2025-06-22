@@ -13,6 +13,7 @@
 <body>
 
   <div id="header-md"></div>
+  <div class="work-header"></div>
   <div class="project-visual-section">
     <img class="project-main-img" src="" alt="프로젝트 대표 이미지" onload="this.classList.add('loaded')">
   </div>
@@ -80,6 +81,9 @@
     }, 500); // 이미지 렌더링 후 실행 (필요시 delay 조정)
   });
 </script>
-
+<script type="module">
+  import { createStyledPageTitle } from '/js/workheader.js';
+  createStyledPageTitle("Work");
+</script>
 </body>
 </html>

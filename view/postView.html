@@ -13,8 +13,8 @@
 
 </head>
 <body>
-
   <div id="header-md"></div>
+  <div class="work-header"></div>
   <div class="project-visual-section">
     <img class="project-main-img" src="" alt="프로젝트 대표 이미지" loading="eager"  onload="this.classList.add('loaded')" >
   </div>
@@ -61,6 +61,10 @@
         document.body.appendChild(script);
       }, 50); // wait a bit before injecting the logic script
     });
+</script>
+<script type="module">
+  import { createStyledPageTitle } from '/js/workheader.js';
+  createStyledPageTitle("Work");
 </script>
 </body>
 </html>

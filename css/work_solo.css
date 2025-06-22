@@ -18,8 +18,9 @@ body {
 #project-list,
 .tab-panel.active {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 30px;
+  margin-right: 20px;
   padding: 0 15%;;
   justify-items: center;
   align-items: start;
@@ -46,8 +47,8 @@ body {
 .designer-img-wrap {
   width: 100%;
   aspect-ratio: 1 / 1; /* 정사각형 */
-  max-width: 230px;
-  min-width: 230px;
+  max-width: 250px;
+  min-width: 250px;
   border-radius: 10px;
   background-color: #222;
   display: flex;
@@ -73,7 +74,7 @@ body {
 .work-header {
   padding:0px 15.5%;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .page-title {
   font-size:1.5rem;
