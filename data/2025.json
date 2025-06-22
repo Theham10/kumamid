@@ -638,16 +638,6 @@
       "posterThumb": "PosterSorce/02.png"
     },
     {
-      "id": "15",
-      "designerName": "김채원",
-      "postName": "CHERRY POP",
-      "client": "Cocacola",
-      "clientDescription": "코카콜라 체리 맛 특유의 청량감과 감각적 경험을 짧은 순간 안에 녹여냈습니다.<br/>단순한 제품 묘사를 넘어 감정의 팽창과 해방을 액체의 흐름과<br/>시각적 리듬으로 설계함으로써 짧지만 강렬한,한 모금이 기분을 바꾸는 것을 직관적으로 표현하였습니다.",
-      "subDescription": "코카콜라의 시원한 질감과 체리의 달콤한 맛을 시 각적으로 구현하였습니다.<br/>체리의 팽창과 폭발은 유리처럼 반짝이는 질감으로 표현하였으며,<br/>코카콜라의 시원함과 청량함은 액체의 움직임을 통해 감정이 터지고 응결되는 순간을 감각 중심의 내러티 브로 구성했습니다.",
-      "posterFile": "PosterSorce/01.jpg",
-      "posterThumb": "PosterSorce/02.jpg"
-    },
-    {
       "id": "16",
       "designerName": "류민서",
       "postName": "이건 사랑이 아니에요",
@@ -1021,7 +1011,7 @@
     {
       "id": "1004",
       "videoThumb": "01.jpg",
-      "vimeoId": "https://www.youtube.com/embed/DTYO8HyiMo0",
+      "vimeoId": "https://www.youtube.com/embed/NOU4Fae3L0M",
       "designerName": [
         "류민서"
       ],
@@ -1073,7 +1063,7 @@
     {
       "id": "1008",
       "videoThumb": "01.jpg",
-      "vimeoId": "https://www.youtube.com/embed/Gxo1WgJrBI",
+      "vimeoId": "https://youtube.com/embed/Gxo1WgJrBIY",
       "designerName": [
         "이가은"
       ],
@@ -1086,7 +1076,7 @@
     {
       "id": "1009",
       "videoThumb": "01.jpg",
-      "vimeoId": "https://www.youtube.com/embed/m0ZX3PesUvo",
+      "vimeoId": "https://www.youtube.com/embed/m0ZX3PesUvo?si=k9D7JkRgWhckt4DX",
       "designerName": [
         "강성주"
       ],
@@ -1111,12 +1101,12 @@
     },
     {
       "id": "1011",
-      "videoThumb": "",
-      "vimeoId": "",
+      "videoThumb": "01.jpg",
+      "vimeoId": "https://www.youtube.com/embed/hRfnHV2K-pg ",
       "designerName": [
         "김성원"
       ],
-      "thumbnail": "",
+      "thumbnail": "01.jpg",
       "postName": "당신의 알람시계",
       "client": "Planlux - 플랜룩스",
       "clientDescription": "알람시계 속 세상",
@@ -1177,7 +1167,7 @@
     {
       "id": "1019",
       "videoThumb": "01.jpg",
-      "vimeoId": "",
+      "vimeoId": "https://www.youtube.com/embed/JBELqFM3raI&",
       "designerName": [
         "박광혁"
       ],
@@ -1268,7 +1258,7 @@
     {
       "id": "1028",
       "videoThumb": "01.jpg",
-      "vimeoId": "",
+      "vimeoId": "https://www.youtube.com/embed/g2k_gp0Ej5c",
       "designerName": [
         "송예준"
       ],
@@ -1330,6 +1320,17 @@
       "clientDescription": "현실을 재구성하다",
       "videoDescription": "전시장에서 상영되고 있는 영상이 현실세계로 튀어나올만큼 리얼한 영상을 만드는 스튜디오라는걸 보여주는 스튜디오 홍보 영상입니다."
     },
+        {
+      "id": "1056",
+      "designerName": "김채원",
+      "videoThumb": "01.jpg",
+      "thumbnail" : "01.jpg",
+      "vimeoId": "https://www.youtube.com/embed/aYeG2CrGuE0",
+      "postName": "CHERRY POP",
+      "client": "Cocacola",
+      "clientDescription": "코카콜라 체리 맛 특유의 청량감과 감각적 경험을 짧은 순간 안에 녹여냈습니다.<br/>단순한 제품 묘사를 넘어 감정의 팽창과 해방을 액체의 흐름과<br/>시각적 리듬으로 설계함으로써 짧지만 강렬한,한 모금이 기분을 바꾸는 것을 직관적으로 표현하였습니다.",
+      "videoDescription": "코카콜라의 시원한 질감과 체리의 달콤한 맛을 시 각적으로 구현하였습니다.<br/>체리의 팽창과 폭발은 유리처럼 반짝이는 질감으로 표현하였으며,<br/>코카콜라의 시원함과 청량함은 액체의 움직임을 통해 감정이 터지고 응결되는 순간을 감각 중심의 내러티 브로 구성했습니다."
+    },
     {
       "id": "1034",
       "videoThumb": "01.jpg",
@@ -1346,7 +1347,7 @@
     {
       "id": "1035",
       "videoThumb": "01.jpg",
-      "vimeoId": "",
+      "vimeoId": "https://www.youtube.com/embed/ME9G4QbYzLA",
       "designerName": [
         "이예지"
       ],
@@ -1449,12 +1450,12 @@
     },
     {
       "id": "1044",
-      "videoThumb": "01.jpg",
-      "vimeoId": "",
+      "videoThumb": "01.png",
+      "vimeoId": "https://www.youtube.com/embed/mrLniIVRQMY",
       "designerName": [
         "지혜현"
       ],
-      "thumbnail": "01.jpg",
+      "thumbnail": "01.png",
       "postName": "The Last Entry",
       "client": "EMK",
       "clientDescription": "3D 시네마틱으로 되살아난 프랑켄슈타인의 비극",

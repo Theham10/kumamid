@@ -34,8 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // 타이틀 및 설명
       document.title = team.teamtitle || team.teamName;
       document.querySelector('.project-title').textContent = team.teamtitle || team.teamName;
-      document.querySelector('.project-client').innerHTML = `클라이언트 : ${team.client}`;
-      document.querySelector('.project-description').innerHTML = team.teamSubTitle;
+      document.querySelector('.project-client').innerHTML = `<br><br/><h2 style='color:#ffa647'>클라이언트 :${team.client} <h2/>`;
+      if(year=="2023"){
+        document.querySelector('.project-description').innerHTML = `<br/>${team.teamSubTitle}<br/>`;
+      }else if(year == "2025"){
+        document.querySelector('.project-description').innerHTML = `
+          <h2 style='color:white'>Concept</h2>
+        <br/>${team.teamSubTitle}
+        <hr style='margin-top:15px'>`;
+      }
       document.querySelector(".project-team-names").textContent = team.teamMembers?.join(", ") || "팀원 정보 없음";
 
       // ✅ teamDescription들만 별도 영역에 출력

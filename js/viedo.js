@@ -51,11 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const designerNames = Array.isArray(videoData.designerName) ? videoData.designerName : [videoData.designerName];
       const designer = data.디자이너.find(d => designerNames.includes(d.name));
 
-      document.title = videoData.postName;
-      document.querySelector('.project-title').innerHTML = `${videoData.postName}`;
-      document.querySelector('.project-client').innerHTML = `클라이언트 : ${videoData.client}`;
-      document.querySelector('.project-description').innerHTML = videoData.clientDescription;
-      document.querySelector('.project-section-text').innerHTML = videoData.videoDescription;
+      if(year == '2023'){
+        document.title = videoData.postName;
+        document.querySelector('.project-title').innerHTML = `${videoData.postName}`;
+        document.querySelector('.project-client').innerHTML = `클라이언트 : ${videoData.client}`;
+        document.querySelector('.project-description').innerHTML = videoData.clientDescription;
+        document.querySelector('.project-section-text').innerHTML = videoData.videoDescription;
+      }else if(year == '2025'){
+        document.querySelector('.project-client').innerHTML = `<h2 style='color:#ffa647'>클라이언트 : ${videoData.client}`;
+        if (videoData.clientDescription) {
+          document.querySelector('.project-description').innerHTML = `
+          <h2 style='color:white'>Concept</h2><br/>
+          ${videoData.clientDescription}
+          <hr style='margin-top:15px'>`;
+        }
+        if(videoData.videoDescription){
+          document.querySelector('.project-section-text').innerHTML = `<h2>Visual Expression </h2><br>${videoData.videoDescription}`;
+        }
+      }
 
       if (designer) {
         tryLoadImageByImageTag(

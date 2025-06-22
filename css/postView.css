@@ -25,7 +25,7 @@
   color: #fff;
 }
 .project-description{
-  text-align: center;
+  text-align: left;
 }
 
 .project-section-title {
@@ -167,7 +167,7 @@ body {
 
 .project-visual-section {
   width: 100%;
-  margin: 60px auto 40px auto;
+  margin: 30px auto 40px auto;
   border-radius: 0;
   overflow: hidden;
 }
@@ -226,12 +226,35 @@ object-fit: cover;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+  cursor: pointer;
+}
+
+.footer-author-img:hover {
+  opacity: 0.85;
 }
 
 .footer-author-name {
-  font-size: 5rem;
+  font-size: 3.8rem;
   font-weight: 800;
   color: #fff;
+  margin-right: 30px;
+}
+
+.footer-author-name:hover {
+  color: #fabc11;
+}
+
+.poster-nav {
+  font-size: 3rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 20px 15px;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.poster-nav:hover {
+  color: #fabc11;
 }
 
 .footer-icons {
@@ -242,9 +265,7 @@ object-fit: cover;
   margin: 20px 0;
 }
 
-.footer-icon {
-  cursor: pointer;
-}
+
 .footer-copyright{
   margin-top: auto;
   padding-top: 30px;

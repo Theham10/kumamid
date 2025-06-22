@@ -4,9 +4,11 @@
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
 .project-section-image{
   padding: 0px 15%;
 }
+
 .project-main-img {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -15,6 +17,7 @@
   object-fit: cover;
   display: block;
 }
+
 .project-main-img.loaded {
   opacity: 1;
 }
@@ -25,7 +28,6 @@
   color: #fff;
 }
 
-
 .project-section-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -33,12 +35,13 @@
 }
 
 .project-section-text {
-  font-size: 18px !important;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: #ccc;
   margin-bottom: 40px;
   margin: 0 auto;
   margin-top: 30px;
+  padding: 0 15%;
   font-weight: bold;
 }
 
@@ -73,7 +76,7 @@ body {
   margin-bottom: 32px;
 }
 .project-title {
-  font-size: 2ㄴrem;
+  font-size: 2.4rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
   letter-spacing: -1px;
@@ -195,6 +198,7 @@ body {
   margin-bottom: 60px;
   border-radius: 0;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .project-main-img {
@@ -210,7 +214,9 @@ object-fit: cover;
   margin: 0 auto;
   background-color: #000;
   color: #fff;
+  margin-bottom: 60px;
 }
+
 
 .project-client {
   font-size: 1.2rem;
@@ -219,11 +225,9 @@ object-fit: cover;
 }
 
 .project-description {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #ccc;
   line-height: 1.7;
-  text-align: center;
-
 }
 hr{
   width: 100%;

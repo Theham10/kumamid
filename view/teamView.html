@@ -19,9 +19,8 @@
 
 </head>
 <body>
-
-
   <div id="header-md"></div>
+  <div class="work-header"></div>
 
   <div class="project-visual-section">
     <img class="project-main-img" src="" alt="팀 대표 이미지" onload="this.classList.add('loaded')">
@@ -29,23 +28,12 @@
 
   <div class="project-info-section">
     <h3 class="project-title"></h3>
-    
         <p style="font-size: 15px;" class="project-client"></p>
         <p style="font-size: 15px;" class="project-team-names"></p>
-
         <div class="project-section-text" style="font-size: 14px; line-height: 1.6;"></div>
+        <h1 class="project-description"></h1>
   </div>
-
-  <footer class="project-footer">
-
-   <div class="footer-divider"></div>
-    <h1 class="project-description"></h1>
     </div>
-    
-    
-    <div class="footer-divider"></div>
-    
-    
     <!-- 영상 재생부문 -->
     <div class="content-box">
         <div class="project-video-wrap">
@@ -125,6 +113,10 @@
         document.body.appendChild(script);
       }, 50); // wait a bit before injecting the logic script
     });
+</script>
+<script type="module">
+  import { createStyledPageTitle } from '/js/workheader.js';
+  createStyledPageTitle("Work");
 </script>
 </body>
 </html>
