@@ -276,10 +276,13 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
 
 
 
-    //디저이너 데이터 렌더링 
-    const memberWrap = document.getElementById("team-members-wrap");
-    if (memberWrap && team.teamMembers?.length) {
-    team.teamMembers.forEach(name => {
+    // 디자이너 데이터 렌더링 (렌더링 먼저, 화살표는 그 후에 배치)
+    const teamWrap = document.getElementById("team-members-wrap");
+    if (teamWrap && team.teamMembers?.length) {
+      // Clear existing children to avoid duplication or stale content
+      teamWrap.innerHTML = "";
+
+      team.teamMembers.forEach(name => {
         const div = document.createElement("div");
         div.classList.add("member-box");
         const img = document.createElement("img");
@@ -296,8 +299,24 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
 
         div.appendChild(img);
         div.appendChild(span);
-        memberWrap.appendChild(div);
-    });
+        teamWrap.appendChild(div);
+      });
+    }
+
+    // Insert navigation arrows outside of .team-members-container
+    const container = document.querySelector('.team-members-container');
+    const parent = container?.parentNode;
+    if (container && parent) {
+      const leftArrow = document.createElement('div');
+      leftArrow.className = 'poster-nav left';
+      leftArrow.textContent = '‹';
+
+      const rightArrow = document.createElement('div');
+      rightArrow.className = 'poster-nav right';
+      rightArrow.textContent = '›';
+
+      parent.insertBefore(leftArrow, container);
+      parent.insertBefore(rightArrow, container.nextSibling);
     }
 
     /* 비디오, 사진, 사진, 사진 설명 텍스트 출력구간 */
@@ -328,6 +347,69 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
 
 
       // 푸터
-      document.querySelector('.footer-author-name').textContent = `팀원: ${team.teamMembers?.join(", ") || "정보 없음"}`;
+      const footerNameEl = document.querySelector('.footer-author-name');
+      if (footerNameEl) {
+        footerNameEl.textContent = `팀원: ${team.teamMembers?.join(", ") || "정보 없음"}`;
+      }
+      const footerAuthor = document.querySelector('.project-footer-author');
+      if (footerAuthor) {
+        const nameElem = footerAuthor.querySelector('.footer-author-name');
+        if (nameElem) {
+          const originalName = nameElem.textContent;
+          nameElem.innerHTML = `<span class="author-name-text">${originalName}</span>`;
+        }
+      }
+
+      // 🔽 포스터 네비게이션 추가 (팀 데이터용)
+      import('/js/all_slidePost.js').then(({ insertPosterNavigation }) => {
+        setTimeout(() => {
+          console.log("[DEBUG] all_slidePost.js module loaded");
+          console.log("[DEBUG] Trying to insert poster nav:", data.팀?.length, teamId, year);
+          insertPosterNavigation(data, teamId, year);
+        }, 0);
+      });
     });
 });
+
+const style = document.createElement('style');
+style.textContent = `
+  .poster-nav {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.2s;
+    z-index: 10;
+  }
+
+  .poster-nav.left {
+    position:absolute;
+    left: 0% !important;
+  }
+
+  .poster-nav.right {
+    position:absolute;
+    right: 0% !important;
+  }
+
+  .poster-nav:hover {
+    color: #ffa647;
+  }
+
+  @media (max-width: 768px) {
+    .poster-nav {
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+  }
+
+  #team-members-wrap {
+    position: relative;
+  }
+`;
+document.head.appendChild(style);

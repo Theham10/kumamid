@@ -16,6 +16,12 @@ export function createStyledPageTitle(text = "Works", containerSelector = ".work
   const h1 = document.createElement('h1');
   h1.className = 'page-title';
   h1.textContent = text;
+  h1.style.cursor = 'pointer';
+  const params = new URLSearchParams(window.location.search);
+  const year = params.get("year");
+  h1.addEventListener('click', () => {
+    window.location.href = `/view/졸작.html?year=${year}`;
+  });
 
   const container = document.querySelector(containerSelector);
   if (container) {
