@@ -306,19 +306,7 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
     // Insert navigation arrows outside of .team-members-container
     const container = document.querySelector('.team-members-container');
     const parent = container?.parentNode;
-    if (container && parent) {
-      const leftArrow = document.createElement('div');
-      leftArrow.className = 'poster-nav left';
-      leftArrow.textContent = '‹';
-
-      const rightArrow = document.createElement('div');
-      rightArrow.className = 'poster-nav right';
-      rightArrow.textContent = '›';
-
-      parent.insertBefore(leftArrow, container);
-      parent.insertBefore(rightArrow, container.nextSibling);
-    }
-
+ 
     /* 비디오, 사진, 사진, 사진 설명 텍스트 출력구간 */
     const vText = team["v-text"];
     const sText = team["s-text"];
