@@ -1,7 +1,15 @@
 export function insertPosterNavigation(data, postId, year) {
-  const currentIndex = data.포스트.findIndex(p => p.id === postId);
-  const footerAuthor = document.querySelector('.project-footer-author');
-  const nameElem = footerAuthor.querySelector('.footer-author-name');
+  console.log("[DEBUG] insertPosterNavigation called:", postId, year);
+  const isVideo = data.비디오?.some(p => p.id === postId);
+  const isTeam = data.팀?.some(p => p.id === postId);
+  const list = isVideo ? data.비디오 : isTeam ? data.팀 : data.포스트;
+  const currentIndex = list.findIndex(p => p.id === postId);
+  const footerAuthor = document.querySelector('.project-footer-author') || document.querySelector('.team-members-container');
+  if (!footerAuthor) {
+    console.warn("⚠️ .project-footer-author or .team-members-container not found.");
+    return;
+  }
+  const nameElem = footerAuthor.querySelector('.footer-author-name') || document.createElement('div');
   const originalName = nameElem.textContent;
   let nameHTML = `<span class="author-name-text">${originalName}</span>`;
   nameElem.innerHTML = nameHTML;
@@ -16,17 +24,19 @@ export function insertPosterNavigation(data, postId, year) {
 
   if (currentIndex > 0) {
     leftNav.onclick = () => {
-      const prevId = data.포스트[currentIndex - 1].id;
-      window.location.href = `/view/postView.html?year=${year}&id=${prevId}`;
+      const prevId = list[currentIndex - 1].id;
+      const nextHref = isVideo ? '/view/videoView.html' : isTeam ? '/view/teamView.html' : '/view/postView.html';
+      window.location.href = `${nextHref}?year=${year}&id=${prevId}`;
     };
   } else {
     leftNav.style.display = 'none';
   }
 
-  if (currentIndex < data.포스트.length - 1) {
+  if (currentIndex < list.length - 1) {
     rightNav.onclick = () => {
-      const nextId = data.포스트[currentIndex + 1].id;
-      window.location.href = `/view/postView.html?year=${year}&id=${nextId}`;
+      const nextId = list[currentIndex + 1].id;
+      const nextHref = isVideo ? '/view/videoView.html' : isTeam ? '/view/teamView.html' : '/view/postView.html';
+      window.location.href = `${nextHref}?year=${year}&id=${nextId}`;
     };
   } else {
     rightNav.style.display = 'none';
@@ -35,7 +45,7 @@ export function insertPosterNavigation(data, postId, year) {
   const navWrapper = document.createElement('div');
   navWrapper.className = 'poster-nav-wrapper';
   navWrapper.appendChild(leftNav);
-  navWrapper.appendChild(nameElem);
+  if (nameElem) navWrapper.appendChild(nameElem);
   navWrapper.appendChild(rightNav);
 
   footerAuthor.appendChild(navWrapper);

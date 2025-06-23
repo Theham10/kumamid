@@ -170,5 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         footerContainer.appendChild(footer);
       });
+
+      import("/js/all_slidePost.js").then(module => {
+        module.insertPosterNavigation(data, videoId, year);
+      });
     });
 });
