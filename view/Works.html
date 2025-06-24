@@ -1,0 +1,75 @@
+<!-- 연도별 졸업작품 페이지 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/work_solo.css">
+  <link rel="stylesheet" href="/css/all_header.css">
+  <link rel="stylesheet" href="/css/all_fonts.css">
+  <script src="/js/all_headerText.js"></script>
+  <script src="/js/all_year.js"></script>
+
+  <!-- head 안에 삽입 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+  <style>
+    .tab-button {
+      position: relative;
+      overflow: hidden;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    .tab-button span {
+      display: inline-block;
+      background: linear-gradient(to right, #ffc107 50%, #959595 50%);
+      background-size: 200% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: background-position 1s cubic-bezier(0.65, 0, 0.35, 1),
+        transform 0.8s ease;
+    }
+
+    .tab-button.active span {
+      background-position: 0 0;
+      transform: scale(1.05);
+      font-weight: bold;
+    }
+  </style>
+
+  <title>한국영상대학교 영상디자인과 졸업전시</title>
+</head>
+
+<body>
+
+  <div id="header-md"></div>
+
+  <div class="work-header">
+    <h1 class="page-title">Works</h1>
+    <!-- ✅ 탭 메뉴 영역 추가 -->
+    <div class="tab-menu">
+      <button class="tab-button active" data-tab="post"><span>포스터</span></button>
+      <button class="tab-button" data-tab="video"><span>비디오</span></button>
+      <button class="tab-button" data-tab="team"><span>팀</span></button>
+    </div>
+  </div>
+
+  <!-- ✅ 탭 콘텐츠 영역 -->
+  <div id="tab-content">
+    <div id="post" class="tab-panel active"></div>
+    <div id="video" class="tab-panel"></div>
+    <div id="team" class="tab-panel"></div>
+  </div>
+  <footer>
+    <div class="footer-copyright">
+      © 2023. DESIGNTHEHAM Co. all rights reserved.
+    </div>
+  </footer>
+  <script type="module" src="/js/work_Post.js"></script>
+</body>
+
+</html>
