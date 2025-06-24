@@ -11,7 +11,7 @@ body, html {
 .video-container {
   position: relative;
   width: 100%;
-  height: 80vh; /* 세로비율 맞춰서 아래 푸터하면 됨 */
+  height: 95vh; /* 세로비율 맞춰서 아래 푸터하면 됨 */
   overflow: hidden;
 }
 
