@@ -37,22 +37,31 @@
   .nav a.active-nav::after {
     content: "";
     display: block;
-    width: 100%;
+    width: 0;
     height: 4px;
-    background-color:rgb(243, 129, 87);
-
+    background-color: rgb(243, 129, 87);
     position: absolute;
     bottom: -22px;
     left: 0;
+    animation: underlineGrow 1s ease forwards;
+  }
+
+  @keyframes underlineGrow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
  </style>
   <link rel="stylesheet" href="/css/all_fonts.css">
 <header class="header">
   <div class="selectYear">
     <div class="year-selector">
-      <button onclick="goToYear(2023)">2023</button>
-      <button onclick="goToYear(2024)">2024</button>
       <button onclick="goToYear(2025)">2025</button>
+      <button onclick="goToYear(2024)">2024</button>
+      <button onclick="goToYear(2023)">2023</button>
     </div>
   </div>
   <div class="inner">

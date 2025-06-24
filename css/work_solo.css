@@ -19,9 +19,8 @@ body {
 .tab-panel.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 30px;
   margin-right: 20px;
-  padding: 0 15%;;
+  padding: 0 15%;
   justify-items: center;
   align-items: start;
 }
@@ -38,6 +37,9 @@ body {
   color: white;
   text-decoration: none;
   transition: transform 0.3s ease;
+  animation: pieceTogether 0.6s ease-out forwards;
+  opacity: 0;
+  margin-bottom: 24px;
 }
 
 .grid-item:hover {
@@ -143,10 +145,10 @@ body {
 #project-list,
 .tab-panel.active {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 2fr));
+  gap: 40px 30px;
   margin-right: 20px;
-  padding: 0 0;
+  padding: 0 15%;
   justify-items: center;
   align-items: start;
 }
@@ -196,4 +198,15 @@ body {
 @keyframes shimmer {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
+}
+
+@keyframes pieceTogether {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
