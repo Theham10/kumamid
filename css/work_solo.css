@@ -140,6 +140,17 @@ body {
     margin-top: 0;
   }
 }
+#project-list,
+.tab-panel.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 30px;
+  margin-right: 20px;
+  padding: 0 0;
+  justify-items: center;
+  align-items: start;
+}
+
 .footer-copyright{
   margin-top: auto;
   padding-top: 30px;
