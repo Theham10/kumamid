@@ -4,6 +4,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+
 }
 
 
@@ -132,7 +133,7 @@ h1.project-title {
     display: grid; /* ⭐ 그리드 레이아웃으로 변경 */
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* ⭐ 최소 450px 너비로 2열 이상 유지, 유동적으로 열 개수 조정 */
     gap: 2rem; /* ⭐ 모든 project-item 사이의 간격 */
-    max-width: 100%; /* 반응형을 위해 추가 */
+    max-width: 1280px;
     margin: auto;
     padding: 2rem 1rem;
     box-sizing: border-box;
