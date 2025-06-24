@@ -24,8 +24,9 @@ const currentPage = location.pathname.split("/").pop().toLowerCase();
         const linkPage = match[1].toLowerCase().replace('.html', '');
         const currentPath = currentPage.replace('.html', '');
 
-        const resolvedPath = ['teamview', 'postview', 'videoview'].includes(currentPath) ? 'works' : currentPath;
-
+        let resolvedPath = ['teamview', 'postview', 'videoview'].includes(currentPath) ? 'works' : currentPath;
+        resolvedPath = 'designerdetail'.includes(currentPath) ? 'designer' : resolvedPath;
+        console.log(resolvedPath)
         if (resolvedPath === linkPage) {
           link.classList.add("active-nav");
         } else {

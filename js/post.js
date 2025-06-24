@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           : "default.png";
       document.querySelector('.project-footer-author').addEventListener('click', (e) => {
         if (!e.target.classList.contains('poster-nav')) {
-          window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`;
+          window.location.href = `/view/designerDetail.html?year=${year}&id=${designer.name}`;
         }
       });
       document.querySelector('.project-section-image img').src =

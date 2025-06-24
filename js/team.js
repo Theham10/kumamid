@@ -290,7 +290,7 @@ function setupAutoSlider(imageList, teamName, containerId, textList = []) {
         img.alt = name;
         img.classList.add("member-img");
         img.onclick = () => {
-          window.location.href=`/view/디자이너상세정보.html?year=${year}&id=${name}`
+          window.location.href=`/view/designerDetail.html?year=${year}&id=${name}`
         }
 
         const span = document.createElement("span");

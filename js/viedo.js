@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         footer.appendChild(nameDiv);
 
         footer.onclick = () => {
-          window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`;
+          window.location.href = `/view/designerDetail.html?year=${year}&id=${designer.name}`;
         };
 
         footerContainer.appendChild(footer);
