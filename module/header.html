@@ -19,7 +19,7 @@
 
   .header.scrolled a,
   .header.scrolled .logo {
-    color: white !important;
+    color: rgb(187, 187, 187);  
     transition: color 0.4s ease;
   }
   .header a,
@@ -31,15 +31,16 @@
     display: inline-block;
     position: relative;
     font-weight: 700;
-    color: black;
+    color: rgb(207, 58, 58);
   }
 
   .nav a.active-nav::after {
     content: "";
     display: block;
     width: 100%;
-    height: 5px;
-    background-color: rgb(255, 118, 6);
+    height: 4px;
+    background-color:rgb(243, 129, 87);
+
     position: absolute;
     bottom: -22px;
     left: 0;
@@ -65,6 +66,7 @@
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <nav class="nav">
       <ul>
+        <li><a id="exhition" onclick="goTo('intro.html')"></a></li>
         <li><a onclick="goTo('about.html')">About</a></li>
         <li><a onclick="goTo('Works.html')">Works</a></li>
         <li><a onclick="goTo('designer.html')">Designer</a></li>
@@ -75,19 +77,12 @@
 </header>
 <script src="/js/all_year.js"></script>
 <script>
-function goToYear(year) {
-  window.location.href = `/view/Works.html?year=${year}`;
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const activeYear = new URLSearchParams(window.location.search).get("year");
-  if (activeYear) {
-    const yearButtons = document.querySelectorAll(".year-selector button");
-    yearButtons.forEach(btn => {
-      if (btn.textContent.trim() === activeYear) {
-        btn.style.color = "red";
-        btn.style.fontWeight = "bold";
-      }
-    });
-  }
-});
+  requestAnimationFrame(() => {
+    const params = new URLSearchParams(window.location.search);
+    const year = params.get("year");
+    const exhibitionEl = document.getElementById('exhition');
+    if (year && exhibitionEl) {
+      exhibitionEl.innerHTML = `Exhibition ${year}`;
+    }
+  });
 </script>

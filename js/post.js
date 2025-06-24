@@ -4,22 +4,6 @@ const params = new URLSearchParams(window.location.search);
 const postId = params.get('id');
 const year = params.get("year")
 
-fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
-
-    requestAnimationFrame(() => {
-      if (year) {
-        const count = parseInt(year) - 1999 + 1;
-        const displayText = `제 ${count}회 ${year} 졸업전`;
-        const el = document.querySelector("#header-md #exhibition-info");
-        if (el) el.textContent = displayText;
-      }
-    });
-  });
-
-
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`/data/${year}.json`)
     .then(res => res.json())

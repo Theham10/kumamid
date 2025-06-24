@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/css/videoView.css">
   <link rel="stylesheet" href="/css/all_header.css">
   <link rel="stylesheet" href="/css/all_fonts.css">
+<script src="/js/all_headerText.js"></script>
+
   <!-- head 안에 삽입 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
@@ -54,19 +56,6 @@
 <script type="module" src="/js/viedo.js"></script>
 <script src="/js/all_year.js"></script>
 <script>
-  fetch("/module/header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-md").innerHTML = data;
-
-      // ✅ header 삽입 후에 headerText.js 실행
-      setTimeout(() => {
-        const script = document.createElement("script");
-        script.src = "/js/all_headerText.js";
-        document.body.appendChild(script);
-      }, 50);
-    });
-
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       const stillCutContainer = document.querySelector(".project-section-stillcut");
@@ -80,10 +69,17 @@
       }
     }, 500); // 이미지 렌더링 후 실행 (필요시 delay 조정)
   });
+  
 </script>
-<script type="module">
-  import { createStyledPageTitle } from '/js/workheader.js';
-  createStyledPageTitle("Work");
+<script>
+  const yearParam = new URLSearchParams(window.location.search).get("year");
+  const interval = setInterval(() => {
+    const el = document.getElementById("exhition");
+    if (el && yearParam) {
+      el.textContent = `Exhibition ${yearParam}`;
+      clearInterval(interval); // 딱 한 번만 실행
+    }
+  }, 100);
 </script>
 </body>
 </html>

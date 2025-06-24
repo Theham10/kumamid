@@ -8,13 +8,6 @@ const year = params.get("year");
 if(!year){
    
 }
-
-  fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
-  });
-  
   fetch(`/data/${year}.json`)
   .then(res => res.json())
   .then(data => {

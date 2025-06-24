@@ -5,24 +5,9 @@
 <link rel="stylesheet" href="/css/all_header.css" />
 <link rel="stylesheet" href="/css/all_fonts.css">
 <!-- head 안에 삽입 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <script src="/js/all_headerText.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 </head>
-<script src="/js/all_year.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname.split("/").pop().toLowerCase();
-    const navLinks = document.querySelectorAll(".nav a");
-    navLinks.forEach(link => {
-      const linkPath = link.getAttribute("onclick");
-      if (!linkPath) return;
-      const match = linkPath.match(/goTo\('(.+?)'\)/);
-      if (match && match[1].toLowerCase() === currentPath) {
-        link.classList.add("active-nav");
-      }
-    });
-  });
-</script>
 </head>
 
 <body>
@@ -37,7 +22,7 @@
       © 2023. DESIGNTHEHAM Co. all rights reserved.
     </div>
   </footer>
+  <script type="module" src="/js/desinger_list.js"></script>
+  <script src="/js/all_year.js"></script>
 </body>
-<script type="module" src="/js/desinger_list.js"></script>
-
 </html>
