@@ -165,7 +165,7 @@ body {
   background: none;
   border: none; /* Remove border */
   color: rgb(111, 111, 111);
-  font-weight: 1000;
+  font-weight:700;
   letter-spacing: 1px;
   padding: 5px 5px;
   cursor: pointer;
@@ -183,7 +183,9 @@ body {
   box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-
+.header.scrolled .selectYear{
+    border-bottom: 1px solid rgb(109, 109, 109);
+}
 .header.scrolled a,
 .header.scrolled .logo {
   color: rgb(187, 187, 187);
