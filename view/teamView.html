@@ -100,23 +100,15 @@
 
   <script type="module" src="/js/team.js"></script>
 <script src="/js/all_year.js"></script>
- <script>
-  fetch("/module/header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-md").innerHTML = data;
-
-      // ✅ header 삽입 후에 headerText.js 실행
-      setTimeout(() => {
-        const script = document.createElement("script");
-        script.src = "/js/all_headerText.js";
-        document.body.appendChild(script);
-      }, 50); // wait a bit before injecting the logic script
-    });
-</script>
-<script type="module">
-  import { createStyledPageTitle } from '/js/workheader.js';
-  createStyledPageTitle("Work");
+<script>
+  const yearParam = new URLSearchParams(window.location.search).get("year");
+  const interval = setInterval(() => {
+    const el = document.getElementById("exhition");
+    if (el && yearParam) {
+      el.textContent = `Exhibition ${yearParam}`;
+      clearInterval(interval); // 딱 한 번만 실행
+    }
+  }, 100);
 </script>
 </body>
 </html>

@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="/css/desinger_Detailview.css">
   <link rel="stylesheet" href="/css/all_header.css">
   <link rel="stylesheet" href="/css/all_fonts.css">
-
+      <script src="/js/all_headerText.js"></script>
+    <script src="/js/all_year.js"></script>
 </head>
 
 <body>
@@ -74,19 +75,6 @@
 
   <script type="module" src="/js/desinger_Detail.js"></script>
   <script type="module" src="/js/desinger_msg_md.js"></script>
-  <script src="/js/all_year.js"></script>
-  <script>
-    fetch("/module/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-md").innerHTML = data;
-        setTimeout(() => {
-          const script = document.createElement("script");
-          script.src = "/js/all_headerText.js";
-          document.body.appendChild(script);
-        }, 50);
-      });
-  </script>
 </body>
 
 </html>

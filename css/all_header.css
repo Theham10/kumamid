@@ -5,12 +5,24 @@
 }
 
 .header {
-    background: black; /* 배경색 검정 */
-    color: #fff; /* 글자색 하양 */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    background: white; /* 변경된 배경색 */
+    color: black;       /* 변경된 글자색 */
+    margin-bottom: 30px;
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
+}
+.header a, .logo {
+    transition: color 0.4s ease;
+}
+
+body {
+    padding-top: 120px; /* Adjust based on header height */
 }
 
 .inner {
@@ -18,26 +30,33 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+    height: 65px;
 }
 
 .logo {
     font-size: 1.2rem; /* PC 폰트사이즈 */
-    font-weight: bold;
-    padding-left: 15%;
+    font-weight: 700;
+    position: relative;
+    left: 3%;
 }
 
 .logo a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
     font-size: 13px;
+    transition: color 0.3s ease;
 }
 .logo span{
     font-size: 17px;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
 }
-.nav{
-    padding-right: 16%;
+.nav {
+    display: flex;
+    justify-content: center;
+    padding-right: 0; /* Remove right padding */
+    flex: 1;
 }
 
 .nav ul {
@@ -49,14 +68,37 @@
 .nav ul li a {
     text-decoration: none;
     color: inherit; /* 부모 요소의 색상 상속 */
-    font-size: 1.1rem;
-    font-weight: 300 !important;
-    transition: color 0.2s;
-    color: #ddd;
+    font-size: 110%;
+    transition: color 0.3s ease;
+    color: rgba(48, 48, 48, 0.3);
+    font-weight: 1000;
+    letter-spacing: 1px;
+    
 }
 
-.nav ul li a:hover {
+/* .nav ul li a:hover {
     color: #fabc11;
+} */
+
+.nav a.active-nav::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: rgb(243, 129, 87);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  animation: underlineGrow 0.4s ease forwards;
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 .menu-icon {
@@ -72,8 +114,6 @@
 /* Mobile */
 @media (max-width: 768px) {
     .header {
-        padding-top: 35px;
-        padding-bottom: 35px;
     }
 
     .inner {
@@ -127,4 +167,48 @@
     #menu-toggle:checked + .menu-icon::before {
         content: '\u2715'; /* 닫기 엑스(X) 유니코드 */
     }
+}
+
+.year-selector {
+  position: absolute;
+  top: 5px;
+  right: 50px; /* Adjusted spacing */
+  display: flex;
+  gap: 15px;
+}
+.selectYear{
+    border-bottom: 1px solid rgb(214, 214, 214);
+    height: 40px;
+}
+
+
+.year-selector button {
+  background: none;
+  border: none; /* Remove border */
+  color: rgb(111, 111, 111);
+  font-weight:700;
+  letter-spacing: 1px;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.year-selector button:hover {
+  color: #000;
+}
+
+.header.scrolled {
+  background-color: #111;
+  color: rgb(188, 188, 188);
+  box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.header.scrolled .selectYear{
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+.header.scrolled a,
+.header.scrolled .logo {
+  color: rgb(187, 187, 187);
+  transition: color 0.4s ease;
 }

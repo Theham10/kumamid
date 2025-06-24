@@ -20,7 +20,7 @@ export function createStyledPageTitle(text = "Works", containerSelector = ".work
   const params = new URLSearchParams(window.location.search);
   const year = params.get("year");
   h1.addEventListener('click', () => {
-    window.location.href = `/view/졸작.html?year=${year}`;
+    window.location.href = `/view/Works.html?year=${year}`;
   });
 
   const container = document.querySelector(containerSelector);

@@ -4,22 +4,6 @@ const params = new URLSearchParams(window.location.search);
 const postId = params.get('id');
 const year = params.get("year")
 
-fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
-
-    requestAnimationFrame(() => {
-      if (year) {
-        const count = parseInt(year) - 1999 + 1;
-        const displayText = `제 ${count}회 ${year} 졸업전`;
-        const el = document.querySelector("#header-md #exhibition-info");
-        if (el) el.textContent = displayText;
-      }
-    });
-  });
-
-
 document.addEventListener("DOMContentLoaded", () => {
   fetch(`/data/${year}.json`)
     .then(res => res.json())
@@ -59,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
           : "default.png";
       document.querySelector('.project-footer-author').addEventListener('click', (e) => {
         if (!e.target.classList.contains('poster-nav')) {
-          window.location.href = `/view/디자이너상세정보.html?year=${year}&id=${designer.name}`;
+          window.location.href = `/view/designerDetail.html?year=${year}&id=${designer.name}`;
         }
       });
       document.querySelector('.project-section-image img').src =

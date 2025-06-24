@@ -22,14 +22,14 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   align-items: flex-start;
 }
 
 .menu-overlay button {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
   color: white;
   cursor: pointer;
@@ -55,8 +55,8 @@
     </video>
 </div>
 <div class="menu-overlay">
-    <button onclick="goTo('졸작.html')">Works</button>
-    <button onclick="goTo('디자이너리스트.html')">Designer</button>
+    <button onclick="goTo('Works.html')">Works</button>
+    <button onclick="goTo('designer.html')">Designer</button>
     <button onclick="goTo('ThanksTo.html')">Thanks To</button>
 </div>
 
@@ -80,6 +80,15 @@
 </script>
 <script src="/js/all_year.js"></script>
 <script type="module" src="/module/header.html"></script>
-
+<script>
+  const yearParam = new URLSearchParams(window.location.search).get("year");
+  const interval = setInterval(() => {
+    const el = document.getElementById("exhition");
+    if (el && yearParam) {
+      el.textContent = `Exhibition ${yearParam}`;
+      clearInterval(interval); // 딱 한 번만 실행
+    }
+  }, 100);
+</script>
 </body>
 </html>

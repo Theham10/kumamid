@@ -1,19 +1,70 @@
-<!-- header.html -->
- <script>
+<script>
   const params = new URLSearchParams(window.location.search);
   const year = params.get("year");
-  document.appendChild(`${year}`); // Assuming this is a placeholder for the year in the header
-  
- </script>
- <style>
+</script>
+<style>
+  .header {
+    transition: background-color 0.4s ease, color 0.4s ease;
+    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
+  }
   .header ul{
     cursor: pointer;
+  }
+  .header.scrolled {
+    background-color: #111;
+    color: white;
+    box-shadow: 0 2px 10px rgba(150, 150, 150, 0.25);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  .header.scrolled a,
+  .header.scrolled .logo {
+    color: rgb(187, 187, 187);  
+    transition: color 0.4s ease;
+  }
+  .header a,
+  .logo {
+    transition: color 0.4s ease;
+  }
+
+  .nav a.active-nav {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    color: rgb(207, 58, 58);
+  }
+
+  .nav a.active-nav::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: rgb(243, 129, 87);
+    position: absolute;
+    bottom: -22px;
+    left: 0;
+    animation: underlineGrow 1s ease forwards;
+  }
+
+  @keyframes underlineGrow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
  </style>
   <link rel="stylesheet" href="/css/all_fonts.css">
 <header class="header">
+  <div class="selectYear">
+    <div class="year-selector">
+      <button onclick="goToYear(2025)">2025</button>
+      <button onclick="goToYear(2024)">2024</button>
+      <button onclick="goToYear(2023)">2023</button>
+    </div>
+  </div>
   <div class="inner">
-    
   <h1 class="logo">
     <a href="/index.html">
       한국영상대학교 영상디자인과<br>
@@ -24,12 +75,23 @@
     <label for="menu-toggle" class="menu-icon">&#9776;</label>
     <nav class="nav">
       <ul>
+        <li><a id="exhition" onclick="goTo('intro.html')"></a></li>
         <li><a onclick="goTo('about.html')">About</a></li>
-        <li><a onclick="goTo('졸작.html')">Works</a></li>
-        <li><a onclick="goTo('디자이너리스트.html')">Designer</a></li>
+        <li><a onclick="goTo('Works.html')">Works</a></li>
+        <li><a onclick="goTo('designer.html')">Designer</a></li>
         <li><a onclick="goTo('ThanksTo.html')">Thanks to</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <script src="/js/all_year.js"></script>
+<script>
+  requestAnimationFrame(() => {
+    const params = new URLSearchParams(window.location.search);
+    const year = params.get("year");
+    const exhibitionEl = document.getElementById('exhition');
+    if (year && exhibitionEl) {
+      exhibitionEl.innerHTML = `Exhibition ${year}`;
+    }
+  });
+</script>

@@ -5,22 +5,6 @@ const params = new URLSearchParams(window.location.search);
 const designerId = params.get('id');
 const year = params.get("year");
 
-// 헤더 로드
-fetch("/module/header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header-md").innerHTML = data;
-    requestAnimationFrame(() => {
-      if (year) {
-        const count = parseInt(year) - 1999 + 1;
-        const displayText = `제 ${count}회 ${year} 졸업전`;
-        const el = document.querySelector("#header-md #exhibition-info");
-        if (el) el.textContent = displayText;
-      }
-    });
-  })
-  .catch(error => console.error("Error loading header:", error));
-
 document.addEventListener("DOMContentLoaded", () => {
   const fallbackImg = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVR42mP8z8Dwn4EIwDiqAyUY0g0jmQJRFATqAyoAxXwAAgF9D5oTZkXEAAAAASUVORK5CYII=";
 
