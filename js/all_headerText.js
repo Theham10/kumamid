@@ -10,7 +10,7 @@ fetch("/module/header.html")
         const buttons = document.querySelectorAll(".year-selector button");
         buttons.forEach(btn => {
           if (btn.textContent === year) {
-            btn.style.color = "red";
+            btn.style.color = "#ff6363";
             btn.style.fontWeight = "bold";
           }
         });
