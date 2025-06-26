@@ -26,7 +26,7 @@ const currentPage = location.pathname.split("/").pop().toLowerCase();
 
         let resolvedPath = ['teamview', 'postview', 'videoview'].includes(currentPath) ? 'works' : currentPath;
         resolvedPath = 'designerdetail'.includes(currentPath) ? 'designer' : resolvedPath;
-        console.log(resolvedPath)
+  
         if (resolvedPath === linkPage) {
           link.classList.add("active-nav");
         } else {

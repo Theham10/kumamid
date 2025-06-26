@@ -19,6 +19,28 @@ document.querySelectorAll(".tab-button").forEach(button => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  requestAnimationFrame(() => {
+    const params = new URLSearchParams(window.location.search);
+    const selectedTab = params.get("tab");
+
+    if (selectedTab) {
+      document.querySelectorAll(".tab-button").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+
+      const targetButton = document.querySelector(`.tab-button[data-tab="${selectedTab}"]`);
+      const targetPanel = document.getElementById(selectedTab);
+      
+      if (targetButton && targetPanel) {
+        targetButton.classList.add("active");
+        targetPanel.classList.add("active");
+      } else {
+        console.warn('탭 요소를 찾을 수 없음:', selectedTab);
+      }
+    }
+  });
+});
+
 // header
 
 // 이미지 URL 중 유효한 첫 번째를 찾는 함수 (콜백 버전)
