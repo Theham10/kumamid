@@ -137,6 +137,7 @@ html, body {
   background-color: #1e1e1e;
   position: relative;
   overflow: hidden;
+  min-width: 210px;
 }
 
 .grid-item.no-image .designer-img-wrap::before {

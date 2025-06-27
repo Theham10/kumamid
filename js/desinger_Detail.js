@@ -123,7 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } else if (project.type === 'team') {
           mediaElement = document.createElement("img");
-          const imageUrl = TeamAssetUrl(encodeURIComponent(project.data.teamfolder), encodeURIComponent(project.data.teamThumbnail));
+          const imageUrl = TeamAssetUrl(project.data.teamfolder, project.data.teamThumbnail);
+          console.log(imageUrl);
           const testImg = new Image();
           testImg.onload = () => {
             mediaElement.src = imageUrl;
