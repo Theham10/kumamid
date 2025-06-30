@@ -190,6 +190,6 @@ html, body {
   html, body {
     max-width: 100% !important;
     margin: 0 !important;
-    overflow-x: hidden;
+    padding: 60px 2px !important
   }
 }
