@@ -113,5 +113,6 @@ margin-bottom: 10px;
     body,html{
         min-width: 420px;
         padding: 0px 10px !important;
+        padding-top: 60px !important;
     };
-}
+  }
