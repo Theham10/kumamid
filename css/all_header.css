@@ -333,7 +333,4 @@ header.scrolled .selectYear .year-selector button{
     font-size: 1.8rem;
     line-height: 1;
   }
-  #menu-toggle:checked + .menu-icon::before {
-    content: '\u2715'; /* 닫기 X */
-  }
 }

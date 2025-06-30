@@ -1,52 +1,92 @@
-<script>
-  const params = new URLSearchParams(window.location.search);
-  window.year = params.get("year");
-</script>
-<link rel="stylesheet" href="/css/all_fonts.css">
-<header class="header">
-  <div class="selectYear">
-    <div class="year-selector">
-      <button onclick="goToYear(2025)">2025</button>
-      <button onclick="alert('준비중입니다!')">2024</button>
-      <button onclick="goToYear(2023)">2023</button>
-    </div>
-  </div>
-  <div>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/all_fonts.css" />
+  <link rel="stylesheet" href="/css/all_header.css" />
+  <title>한국영상대학교 영상디자인과 졸업전시</title>
+</head>
 
-  </div>
-  <div class="inner">
-    <h1 class="logo">
-      <a href="/index.html">
-        한국영상대학교 영상디자인과<br>
-        <span id="exhibition-info"></span>
-      </a>
-    </h1>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="nav">
-      <ul>
-        <li><a id="exhition" onclick="goTo('intro.html')"></a></li>
-        <li><a onclick="goTo('about.html')">About</a></li>
-        <li class="dropdown">
-          <a onclick="goTo('Works.html')">Works</a>
-          <ul class="dropdown-menu">
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=post`">포스터</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=video`">비디오</a></li>
-            <li><a onclick="window.location.href = `Works.html?year=${year}&tab=team`">TVCF(팀)</a></li>
-          </ul>
-        </li>
-        <li><a onclick="goTo('designer.html')">Designer</a></li>
-        <li><a onclick="goTo('ThanksTo.html')">Thanks to</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<script src="/js/all_year.js"></script>
-<script>
-  requestAnimationFrame(() => {
-    const exhibitionEl = document.getElementById('exhition');
-    if (year && exhibitionEl) {
-      exhibitionEl.innerHTML = `Exhibition ${year}`;
+<body>
+  <!-- ✅ 헤더 시작 -->
+  <header class="header">
+    <div class="selectYear">
+      <div class="year-selector">
+        <button onclick="goToYear(2025)">2025</button>
+        <button onclick="alert('준비중입니다!')">2024</button>
+        <button onclick="goToYear(2023)">2023</button>
+      </div>
+    </div>
+
+    <div class="inner">
+      <h1 class="logo">
+        <a href="/index.html">
+          한국영상대학교 영상디자인과<br>
+          <span id="exhibition-info"></span>
+        </a>
+      </h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="nav">
+        <ul>
+          <li><a id="exhibition-link"></a></li>
+          <li><a onclick="goTo('about.html')">About</a></li>
+          <li class="dropdown">
+            <a>Works</a>
+            <ul class="dropdown-menu">
+              <li><a id="poster-link">포스터</a></li>
+              <li><a id="video-link">비디오</a></li>
+              <li><a id="team-link">TVCF(팀)</a></li>
+            </ul>
+          </li>
+          <li><a onclick="goTo('designer.html')">Designer</a></li>
+          <li><a onclick="goTo('ThanksTo.html')">Thanks to</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ✅ 기본 스크립트 -->
+  <script>
+    // 전역 year 설정
+    const params = new URLSearchParams(window.location.search);
+    const year = params.get("year") || "2025";
+    window.year = year;
+
+    // 페이지 이동 함수
+    function goTo(page) {
+      window.location.href = `${page}?year=${year}`;
     }
-  });
-</script>
+
+    function goToYear(targetYear) {
+      window.location.href = `index.html?year=${targetYear}`;
+    }
+    
+    // 외곽 클릭 시 메뉴 닫기
+    document.addEventListener('click', function (event) {
+      const toggle = document.getElementById('menu-toggle');
+      const menu = document.querySelector('.nav');
+      const icon = document.querySelector('.menu-icon');
+      if (!menu || !icon || !toggle.checked) return;
+      if (!menu.contains(event.target) && !icon.contains(event.target)) {
+        toggle.checked = false;
+      }
+    });
+
+    // 메뉴 링크 동적 설정
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('exhibition-link').textContent = `Exhibition ${year}`;
+      document.getElementById('poster-link').onclick = () => {
+        window.location.href = `Works.html?year=${year}&tab=post`;
+      };
+      document.getElementById('video-link').onclick = () => {
+        window.location.href = `Works.html?year=${year}&tab=video`;
+      };
+      document.getElementById('team-link').onclick = () => {
+        window.location.href = `Works.html?year=${year}&tab=team`;
+      };
+    });
+  </script>
+</body>
+</html>
