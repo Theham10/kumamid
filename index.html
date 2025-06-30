@@ -142,6 +142,11 @@
     </style>
 </body>
 <script src="/js/all_year.js"></script>
-<script type="module" src="/module/header.html"></script>
-
+<script>
+  selectYear = (year) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set("year", year);
+    window.location.href = `view/intro.html?${params.toString()}`;
+  };
+</script>
 </html>
