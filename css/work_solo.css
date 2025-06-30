@@ -62,7 +62,7 @@ html, body {
 
 .designer-img-wrap img {
   width: 100%;
-  min-height: 260px;
+  min-height: 253px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
@@ -179,7 +179,7 @@ html, body {
   html , body {
     max-width: 1280px;
     margin: 0 auto;
-    min-width: 462px;
+    min-width: 410px;
   }
 }
 @media(max-width: 360px) {
@@ -188,8 +188,10 @@ html, body {
   }
 }@media (max-width: 768px) {
   html, body {
-    max-width: 100% !important;
     margin: 0 !important;
-    padding: 60px 2px !important
+    padding: 60px 0px !important
+  }
+  #project-list, .tab-panel.active {
+    gap: 20px;;
   }
 }
