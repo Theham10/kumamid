@@ -186,4 +186,10 @@ html, body {
   html,body{
     padding: 0px 0px;
   }
+}@media (max-width: 768px) {
+  html, body {
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow-x: hidden;
+  }
 }
