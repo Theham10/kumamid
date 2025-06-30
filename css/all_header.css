@@ -268,13 +268,27 @@ header.scrolled .selectYear .year-selector button{
 /* MOBILE */
 .menu-icon {
   display: none;
-  font-size: 1.5rem;
   cursor: pointer;
 }
 #menu-toggle {
   display: none;
 }
 @media (max-width: 768px) {
+  .inner {
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+  }
+}
+  @media (max-width: 1060px) {
   .inner {
     position: relative;
   }
@@ -298,6 +312,7 @@ header.scrolled .selectYear .year-selector button{
     z-index: 10;
     align-items: center;
     justify-content: center;
+    color: red !important;
   }
   #menu-toggle:checked + .menu-icon + .nav {
     display: flex;
@@ -308,8 +323,13 @@ header.scrolled .selectYear .year-selector button{
     padding: 20px;
     text-align: center;
   }
+  .nav ul li{
+  }
   .nav ul li a {
-    font-size: 1.2rem;
+    color: rgb(114, 114, 114);
+  }
+ a.active-nav {
+    color: #eeeeee !important;
   }
   #menu-toggle:checked + .menu-icon {
     font-size: 1.8rem;
