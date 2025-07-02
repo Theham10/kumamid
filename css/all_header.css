@@ -296,21 +296,6 @@ header.scrolled .selectYear .year-selector button{
     right: 5%;
     transform: translateY(-50%);
   }
-}
-  @media (max-width: 1060px) {
-  .inner {
-    position: relative;
-  }
-  .logo {
-    position: absolute;
-  }
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-  }
   .nav {
     display: none;
     position: fixed;
@@ -321,7 +306,7 @@ header.scrolled .selectYear .year-selector button{
     z-index: 10;
     align-items: center;
     justify-content: center;
-    color: red !important;
+    margin-top: 0px;
   }
   #menu-toggle:checked + .menu-icon + .nav {
     display: flex;
@@ -332,57 +317,17 @@ header.scrolled .selectYear .year-selector button{
     padding: 20px;
     text-align: center;
   }
-  .nav ul li a {
-    color: rgb(114, 114, 114);
+.active-nav{
+    color: #ff6363 !important;
   }
- a.active-nav {
-    color: #eeeeee !important;
+  .nav ul li a {
+    font-size: 1.2rem;
+    color: white;
   }
   #menu-toggle:checked + .menu-icon {
     font-size: 1.8rem;
     line-height: 1;
   }
-}
-@media (min-width: 961px) {
-  .menu-icon {
-    display: none !important;
+  #menu-toggle:checked + .menu-icon::before {
   }
-
-  .nav {
-    display: flex !important;
-    position: static !important;
-    height: auto !important;
-    background: none !important;
-    transform: none !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-  }
-}
-@media (max-width: 768px) {
-  body{
-    padding-bottom: 120px !important;
-  }
-  .year-selector {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    display: flex;
-    gap: 8px;
-  }
-  .nav a.active-nav::after {
-    bottom: 6px;
-  }
-  .nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px !important;
-
-    }
-    .nav ul li a {
-    padding-bottom: 13px;
-}
-    .nav .dropdown{
-      padding: 0px !important;
-    }
 }
