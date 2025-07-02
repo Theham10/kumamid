@@ -343,6 +343,22 @@ header.scrolled .selectYear .year-selector button{
     line-height: 1;
   }
 }
+@media (min-width: 961px) {
+  .menu-icon {
+    display: none !important;
+  }
+
+  .nav {
+    display: flex !important;
+    position: static !important;
+    height: auto !important;
+    background: none !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
 @media (max-width: 768px) {
   body{
     padding-bottom: 120px !important;
