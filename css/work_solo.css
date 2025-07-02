@@ -62,7 +62,9 @@ html, body {
 
 .designer-img-wrap img {
   width: 100%;
-  min-height: 253px;
+  min-height: 327px;
+  min-width: 211px;
+  max-height: 327px;
   object-fit: cover;
   object-position: center;
   border-radius: 10px;
