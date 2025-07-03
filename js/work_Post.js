@@ -115,7 +115,7 @@ fetch(`/data/${year}.json`)
     </div>
     <h3 class="head_title">포스터</h3>
     <h3><span style="font-size: 16px;">${post.postName}</span></h3>
-    <p class="kor_sub">디자이너: ${designer.name}</p>
+    <p class="kor_sub">${designer.name}</p>
   </a>
 `;
           return {
