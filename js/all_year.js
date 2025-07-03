@@ -37,12 +37,10 @@ document.addEventListener("click", (event) => {
       toggle.checked = false;
       console.log("❎ X 버튼 클릭 → 메뉴 닫힘");
     }
-    // 메뉴 아이콘이나 토글 클릭 시는 브라우저 기본 동작에 맡김 (열리거나 닫힘)
     return; // 이 경우 더 이상 아래 코드를 실행하지 않습니다.
   }
 
   // 메뉴가 열려있고, 메뉴 아이콘/토글/X 버튼 외의 다른 곳을 클릭했다면 메뉴 닫기
-  // (이전 요청대로 .nav 내부 클릭도 닫힘 처리)
   if (isMenuOpen) {
     toggle.checked = false; // 메뉴 닫기
     console.log("❎ 외부 클릭 → 메뉴 닫힘");
@@ -75,8 +73,18 @@ if (typeof window.checkHeaderReady === "undefined") {
       });
 
       if (header) {
+        const logoImg = header.querySelector(".logo img");
+
         window.addEventListener("scroll", () => {
-          header.classList.toggle("scrolled", window.scrollY > 10);
+          const isScrolled = window.scrollY > 10;
+          header.classList.toggle("scrolled", isScrolled);
+
+          // 로고 이미지 경로 변경
+          if (logoImg) {
+            logoImg.src = isScrolled
+              ? "/img/kumamid_logoWhite.png"
+              : "/img/kumamid_profile.png";
+          }
         });
       }
 
