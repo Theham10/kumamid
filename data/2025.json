@@ -1180,7 +1180,7 @@
     {
       "id": "1020",
       "videoThumb": "01.gif",
-      "vimeoId": "",
+      "vimeoId": "https://www.youtube.com/embed/TnmlSioEZDk",
       "designerName": [
         "박나영"
       ],
@@ -1643,8 +1643,8 @@
         "이원정"
       ],
       "teamThumbnail": "01.png",
-      "video": "https://www.youtube.com/embed/D32jPd0CExk",
       "mainImage": "01.png",
+      "video": "https://www.youtube.com/embed/D32jPd0CExk",
       "membersImg": "02.jpg"
     },
     {
