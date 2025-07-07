@@ -108,16 +108,16 @@ fetch(`/data/${year}.json`)
           const div = document.createElement('div');
           if (isFallback) div.classList.add("no-image");
           div.innerHTML = `
-  <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}"
-     class="grid-item${isFallback ? " no-image" : ""}">
-    <div class="designer-img-wrap">
-      ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
-    </div>
-    <h3 class="head_title">포스터</h3>
-    <h3><span style="font-size: 16px;">${post.postName}</span></h3>
-    <p class="kor_sub">디자이너: ${designer.name}</p>
-  </a>
-`;
+            <a href="./postView.html?year=${year}&id=${encodeURIComponent(post.id)}"
+              class="grid-item${isFallback ? " no-image" : ""}">
+              <div class="designer-img-wrap">
+                ${isFallback ? "" : `<img src="${validUrl}" class="img-responsive">`}
+              </div>
+              <h3 class="head_title">포스터</h3>
+              <h3><span style="font-size: 16px;">${post.postName}</span></h3>
+              <p class="kor_sub">${designer.name}</p>
+            </a>
+          `;
           return {
             index,
             html: div.innerHTML
