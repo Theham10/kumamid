@@ -119,9 +119,14 @@
     한국영상대학교 영상디자인과 졸업작품 전시회<br>
     Exhibition of Graduation Projects from the Department of Film Design at Korea National University of Arts
   </div>
-
+  
   <!-- 🟡 연도 리스트 + 영상 로딩 스크립트 -->
   <script>
+    function selectYear(year){
+      window.location.href = `/view/intro.html?year=${year}`;
+    }
+
+    
     const bgVideo = document.getElementById("bgVideo");
     bgVideo.src = "/video/2025.mp4";  // ✅ 초기 기본값
     bgVideo.load();
@@ -159,12 +164,10 @@
               };
             });
             // 클릭 시 페이지 이동
-            year.addEventListener('click', () => {
-              window.location.href = `/view/intro.html?year=${year.textContent.trim()}`;
-            });
           });
         });
-    });
+      });
+      
   </script>
 
   <!-- 기타 스크립트 -->
